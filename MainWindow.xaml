@@ -4,9 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz_show"
+        xmlns:quiz="clr-namespace:Quiz_show.usercontrols"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Icon="Images/Powertoys.png"
+        Title="Wer wird Milionär?" 
+        Height="450" Width="800">
+    <Canvas>
+        <quiz:Frage question="?" a_="" b_="" c_="" d_=""></quiz:Frage>
+    </Canvas>
 </Window>
