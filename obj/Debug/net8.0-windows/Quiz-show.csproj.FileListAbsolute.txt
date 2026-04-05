@@ -6,7 +6,6 @@ C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\bin\Debug\net8.0-windows\
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\usercontrols\Frage.g.cs
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Quiz-show_MarkupCompile.cache
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Quiz-show_MarkupCompile.lref
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\MainWindow.baml
@@ -22,3 +21,6 @@ C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Quiz-show.pdb
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Quiz-show.genruntimeconfig.cache
 C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\ref\Quiz-show.dll
+C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Allgemein.g.cs
+C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\matte\OneDrive\Schule\POS\exersices\Quiz-show\obj\Debug\net8.0-windows\Allgemein.baml

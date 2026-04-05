@@ -157,7 +157,7 @@ namespace Quiz_show.usercontrols {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quiz-show;V1.0.0.0;component/usercontrols/frage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quiz-show;component/usercontrols/frage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\usercontrols\Frage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

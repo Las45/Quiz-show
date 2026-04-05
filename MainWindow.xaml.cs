@@ -17,10 +17,16 @@ namespace Quiz_show
     /// </summary>
     public partial class MainWindow : Window
     {
+        Quizclass steuerung = new Quizclass();
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void Allgemein_Click(object sender, RoutedEventArgs e)
+        {
+            Allgemein window = new Allgemein();
+            window.Show();
+        }
     }
 }
