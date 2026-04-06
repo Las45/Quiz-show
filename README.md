@@ -1,5 +1,7 @@
-This hole thing is for a school projekt. The goal of this App is to improve your knowled about some thopics.  
-Things that will probably come:
-1. A point were you can create your own quiz
-2. Stats
-3. Save you progress when you have to go while a quiz
+This whole thing is for a school project. The goal of this app is to improve your knowledge about some topics.  
+Features that will probably be included:
+1. A section where you can create your own quiz
+2. Statistics
+3. Save your progress when you have to leave during a quiz
+
+**Everything is still in progress**
