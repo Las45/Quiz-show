@@ -17,4 +17,8 @@
     <Resource Include="Images\Powertoys.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Frames\" />
+  </ItemGroup>
+
 </Project>
