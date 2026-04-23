@@ -5,3 +5,4 @@ Features that will probably be included:
 3. Save your progress when you have to leave during a quiz
 
 **Everything is still in progress**
+Another idea is, to make it like Wechat
