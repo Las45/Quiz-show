@@ -1,0 +1,26 @@
+﻿<Window x:Class="Quiz_show.TranslatorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz_show"
+        mc:Ignorable="d"
+        Title="TranslatorWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <StackPanel>
+
+            <TextBlock Text="Wort eingeben:"/>
+            <TextBox Name="InputBox" Margin="0,5,0,10"/>
+
+            <ComboBox Name="LanguageBox" Margin="0,5,0,10">
+                <ComboBoxItem Content="Deutsch → Englisch"/>
+                <ComboBoxItem Content="Englisch → Deutsch"/>
+            </ComboBox>
+
+            <Button Content="Übersetzen" Click="Translate_Click"/>
+
+            <TextBlock Name="OutputText" Margin="0,15,0,0" FontSize="16"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
