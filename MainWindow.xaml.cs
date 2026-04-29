@@ -28,5 +28,11 @@ namespace Quiz_show
             Allgemein window = new Allgemein();
             window.Show();
         }
+
+        private void OpenTranslator(object sender, RoutedEventArgs e)
+        {
+            TranslatorWindow window = new TranslatorWindow();
+            window.Show();
+        }
     }
 }
