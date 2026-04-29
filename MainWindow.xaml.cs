@@ -1,4 +1,5 @@
-﻿using Quiz_show.usercontrols;
+﻿using Quiz_show.Frames;
+using Quiz_show.usercontrols;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,6 +22,8 @@ namespace Quiz_show
         public MainWindow()
         {
             InitializeComponent();
+            Homepage homepage = new Homepage();
+            homepage.ShowsNavigationUI = true;
         }
 
         private void Allgemein_Click(object sender, RoutedEventArgs e)

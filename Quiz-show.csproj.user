@@ -5,6 +5,9 @@
     <Compile Update="Allgemein.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Frames\Homepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="usercontrols\Frage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
