@@ -19,17 +19,17 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
+        Dictionary<string, Page> frames = new Dictionary<string, Page>();
         public MainWindow()
         {
+            frames.Add("Home", new Homepage());
+            frames.Add("Login", new Login());
+            frames.Add("Registrieren", new Register());
+            frames.Add("Passwort_forgotten", new forgotten_password());
+            Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
-            Homepage homepage = new Homepage();
-            homepage.ShowsNavigationUI = true;
-        }
-
-        private void Allgemein_Click(object sender, RoutedEventArgs e)
-        {
-            Allgemein window = new Allgemein();
-            window.Show();
+            Logging.logger.Information("Window wurde geladen");
+            Main_frames.Content = frames["Home"];
         }
     }
 }

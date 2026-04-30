@@ -10,9 +10,6 @@
         Title="Wer wird Milionär?" 
         Height="450" Width="800">
     <Canvas>
-        <Button x:Name="Allgemein" Content="Allgemein" Canvas.Left="10" Canvas.Top="86" Height="50" Width="120" Background="White" Click="Allgemein_Click"></Button>
-        <Button x:Name="Pos" Content="Programmieren" Canvas.Left="150" Canvas.Top="86" Height="50" Width="120" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Button x:Name="Geschichte" Content="Geschichte" Canvas.Left="290" Canvas.Top="86" Height="50" Width="120" Background="White" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
+        <Frame x:Name="Main_frames" NavigationUIVisibility="Hidden"></Frame>
     </Canvas>
 </Window>
