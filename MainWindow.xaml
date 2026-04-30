@@ -8,8 +8,11 @@
         mc:Ignorable="d"
         Icon="Images/Powertoys.png"
         Title="Wer wird Milionär?" 
+        SizeChanged="Window_SizeChanged"
         Height="450" Width="800">
-    <Canvas>
-        <Frame x:Name="Main_frames" NavigationUIVisibility="Hidden"></Frame>
-    </Canvas>
+    <Grid>
+        <StackPanel x:Name="window">
+            <Frame x:Name="Main_frames" NavigationUIVisibility="Hidden"></Frame>
+        </StackPanel>
+    </Grid>
 </Window>

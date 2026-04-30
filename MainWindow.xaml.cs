@@ -22,6 +22,7 @@ namespace Quiz_show
         Dictionary<string, Page> frames = new Dictionary<string, Page>();
         public MainWindow()
         {
+            Logging.init();
             frames.Add("Home", new Homepage());
             frames.Add("Login", new Login());
             frames.Add("Registrieren", new Register());
@@ -30,6 +31,15 @@ namespace Quiz_show
             InitializeComponent();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = frames["Home"];
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            foreach (Page page in frames.Values)
+            {
+                page.Height = window.ActualHeight;
+                page.Width = window.ActualWidth;
+            }
         }
     }
 }
