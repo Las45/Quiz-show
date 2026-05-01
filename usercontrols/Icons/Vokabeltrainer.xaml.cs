@@ -24,6 +24,22 @@ namespace Quiz_show.usercontrols.Icons
         {
             InitializeComponent();
         }
-        
+
+        private void Vokabel_rect_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Vokabel_rect.Stroke = Brushes.LightBlue;
+            Vokabel_rect.StrokeThickness = 2;
+        }
+
+        private void Vokabel_rect_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Vokabel_rect.StrokeThickness = 0;
+
+        }
+
+        private void Vokabel_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
