@@ -20,6 +20,9 @@
     <Compile Update="Frames\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TranslatorWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="usercontrols\Frage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
