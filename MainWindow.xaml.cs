@@ -41,5 +41,11 @@ namespace Quiz_show
                 page.Width = window.ActualWidth;
             }
         }
+
+        private void OpenTranslator(object sender, RoutedEventArgs e)
+        {
+            TranslatorWindow window = new TranslatorWindow();
+            window.Show();
+        }
     }
 }
