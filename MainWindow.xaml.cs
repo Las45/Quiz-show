@@ -30,7 +30,7 @@ namespace Quiz_show
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
             Logging.logger.Information("Window wurde geladen");
-            Main_frames.Content = frames["Home"];
+            Main_frames.Content = frames["Login"];
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
