@@ -10,19 +10,28 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Quiz_show.Frames
+namespace Quiz_show.Windows
 {
     /// <summary>
     /// Interaktionslogik für Register.xaml
     /// </summary>
-    public partial class Register : Page
+    public partial class Register : Window
     {
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void erstellen_register_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void abb_register_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -21,25 +21,24 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
-        Dictionary<string, Page> frames = new Dictionary<string, Page>();
+        public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
         Users_list users;
         public MainWindow()
         {
             Logging.init();
-            frames.Add("Home", new Homepage());
-            frames.Add("Login", new Login(users));
-            frames.Add("Registrieren", new Register());
-            frames.Add("Passwort_forgotten", new forgotten_password());
+            Frames.Add("Home", new Homepage());
+            Frames.Add("Login", new Login(users, this));
+            Frames.Add("Passwort_forgotten", new forgotten_password());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
             users = new Users_list();
             Logging.logger.Information("Window wurde geladen");
-            Main_frames.Content = frames["Login"];
+            Main_frames.Content = Frames["Login"];
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            foreach (Page page in frames.Values)
+            foreach (Page page in Frames.Values)
             {
                 page.Height = window.ActualHeight;
                 page.Width = window.ActualWidth;
@@ -55,6 +54,10 @@ namespace Quiz_show
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             users.Save_users(); 
+        }
+        public void Change_Frame(string frame)
+        {
+            Main_frames.Content = Frames[frame];
         }
     }
 }

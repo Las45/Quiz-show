@@ -1,18 +1,6 @@
 ﻿using Quiz_show.Klassen;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Quiz_show.Frames
 {
@@ -22,16 +10,16 @@ namespace Quiz_show.Frames
     public partial class Login : Page
     {
         Users_list users_;
-        bool 
-        public Login(Users_list users_)
+        MainWindow mw;
+        public Login(Users_list users_, MainWindow window)
         {
             InitializeComponent();
             this.users_ = users_;
+            mw = window;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
             Window window = Window.GetWindow(this);
             window.Height = 400;
             window.Width = 400;
@@ -39,12 +27,25 @@ namespace Quiz_show.Frames
 
         private void Weiter_login_Click(object sender, RoutedEventArgs e)
         {
-            foreach(User us in users_.Users)
-            {
-                if (us.EMail == email_login.Text && us.Password == us.Password)
+            try{
+                int count = 0;
+                foreach (User us in users_.Users)
                 {
-                    
-                }
+                    if (us.EMail == email_login.Text && us.Password == us.Password)
+                    {
+                        mw.Change_Frame("Home");
+                        break;
+                    }
+                    count++;
+                    if (count == users_.Users.Count()-2)
+                    {
+                        MessageBox.Show("Dieser User Existiert nicht");
+                    }
+                } 
+            }
+            catch
+            {
+                MessageBox.Show("Es gibt keine Users");
             }
         }
 
@@ -55,7 +56,8 @@ namespace Quiz_show.Frames
 
         private void New_user_loin_Click(object sender, RoutedEventArgs e)
         {
-
+            Windows.Register register = new Windows.Register();
+            register.ShowDialog();
         }
     }
 }

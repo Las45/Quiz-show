@@ -11,7 +11,7 @@
     <Grid>
         <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue">
             <TextBox x:Name="email_login" FontSize="20" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="password_login" FontSize="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
+            <PasswordBox x:Name="password_login" FontSize="10" Canvas.Left="58" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
             <Label Content="E-Mail" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="43"/>
             <Label Content="Passwort" Canvas.Left="4" Canvas.Top="37"/>
             <Button x:Name="Weiter_login" Content="Weiter" Canvas.Left="176" Canvas.Top="83" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Weiter_login_Click" Height="33" Width="56"/>
