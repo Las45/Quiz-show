@@ -6,10 +6,18 @@
       xmlns:local="clr-namespace:Quiz_show.Frames"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="400"
+      Loaded="Page_Loaded"
       Title="Login">
-    <Canvas>
-        <TextBox Canvas.Left="140" TextWrapping="Wrap" Text="" Canvas.Top="107" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <TextBox Canvas.Left="140" TextWrapping="Wrap" Text="" Canvas.Top="146" Width="120" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    <Grid>
+        <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue">
+            <TextBox x:Name="email_login" FontSize="20" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="password_login" FontSize="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
+            <Label Content="E-Mail" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="43"/>
+            <Label Content="Passwort" Canvas.Left="4" Canvas.Top="37"/>
+            <Button x:Name="Weiter_login" Content="Weiter" Canvas.Left="176" Canvas.Top="83" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Weiter_login_Click" Height="33" Width="56"/>
+            <Button x:Name="Password_fg_login" Content="Password forgotten" Canvas.Left="64" Canvas.Top="96" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Password_fg_login_Click"/>
+            <Button x:Name="New_user_loin" Content="New User" Canvas.Left="4" Canvas.Top="96" HorizontalAlignment="Center" VerticalAlignment="Top" Click="New_user_loin_Click"/>
 
-    </Canvas>
+        </Canvas>
+    </Grid>
 </Page>

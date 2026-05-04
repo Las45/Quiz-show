@@ -23,4 +23,8 @@
     <Resource Include="Images\Powertoys.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Windows\" />
+  </ItemGroup>
+
 </Project>

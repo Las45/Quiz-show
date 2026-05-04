@@ -1,6 +1,8 @@
 ﻿using Quiz_show.Frames;
+using Quiz_show.Klassen;
 using Quiz_show.usercontrols;
 using System.Text;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,15 +22,17 @@ namespace Quiz_show
     {
         Quizclass steuerung = new Quizclass();
         Dictionary<string, Page> frames = new Dictionary<string, Page>();
+        Users_list users;
         public MainWindow()
         {
             Logging.init();
             frames.Add("Home", new Homepage());
-            frames.Add("Login", new Login());
+            frames.Add("Login", new Login(users));
             frames.Add("Registrieren", new Register());
             frames.Add("Passwort_forgotten", new forgotten_password());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
+            users = new Users_list();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = frames["Login"];
         }
@@ -46,6 +50,11 @@ namespace Quiz_show
         {
             TranslatorWindow window = new TranslatorWindow();
             window.Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            users.Save_users(); 
         }
     }
 }

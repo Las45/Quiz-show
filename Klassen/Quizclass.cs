@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace Quiz_show
+namespace Quiz_show.Klassen
 {
     internal class Quizclass
     {
