@@ -2,13 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="Allgemein.xaml.cs">
+    <Compile Update="usercontrols\Icons\Vokabeltrainer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\forgotten_password.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\Homepage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="TranslatorWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="usercontrols\Frage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

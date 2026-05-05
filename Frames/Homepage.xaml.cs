@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Quiz_show
+namespace Quiz_show.Frames
 {
     /// <summary>
-    /// Interaktionslogik für Allgemein.xaml
+    /// Interaktionslogik für Homepage.xaml
     /// </summary>
-    public partial class Allgemein : Window
+    public partial class Homepage : Page
     {
-        public Allgemein()
+        public Homepage()
         {
             InitializeComponent();
         }
