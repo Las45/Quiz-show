@@ -56,7 +56,7 @@ namespace Quiz_show.Frames
 
         private void New_user_loin_Click(object sender, RoutedEventArgs e)
         {
-            Windows.Register register = new Windows.Register();
+            Windows.Register register = new Windows.Register(users_);
             register.ShowDialog();
         }
     }

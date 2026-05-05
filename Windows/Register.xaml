@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Quiz_show.Windows"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="800">
+        ResizeMode="NoResize"
+        Title="Register" Height="400" Width="400">
     <Grid>
         <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue">
-            <TextBox x:Name="email_register" FontSize="20" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="email_register" FontSize="10" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <PasswordBox x:Name="password_register" FontSize="10" Canvas.Left="58" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
-            <PasswordBox x:Name="password_again_register" FontSize="10" Canvas.Left="58" Canvas.Top="66" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" Height="20" />
+            <PasswordBox PasswordChanged="password_again_register_PasswordChanged" x:Name="password_again_register" FontSize="10" Canvas.Left="58" Canvas.Top="66" Width="160" HorizontalAlignment="Center" VerticalAlignment="Top" Height="20" />
             <Label Content="E-Mail" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="43"/>
             <Label Content="Passwort" Canvas.Left="4" Canvas.Top="37"/>
             <Button x:Name="erstellen_register" Content="Erstellen" Canvas.Left="130" Canvas.Top="96" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="53" Click="erstellen_register_Click"/>

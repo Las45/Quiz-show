@@ -26,12 +26,12 @@ namespace Quiz_show
         public MainWindow()
         {
             Logging.init();
+            users = new Users_list();
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(users, this));
             Frames.Add("Passwort_forgotten", new forgotten_password());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
-            users = new Users_list();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = Frames["Login"];
         }
