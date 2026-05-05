@@ -31,7 +31,7 @@ namespace Quiz_show.Frames
                 int count = 0;
                 foreach (User us in users_.Users)
                 {
-                    if (us.EMail == email_login.Text && us.Password == us.Password)
+                    if ((us.EMail == email_login.Text) && (us.Password == password_login.Password))
                     {
                         mw.Change_Frame("Home");
                         break;

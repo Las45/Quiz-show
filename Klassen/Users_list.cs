@@ -23,11 +23,8 @@ namespace Quiz_show.Klassen
             string users_string;
             try
             {
-                using (StreamReader sr = new StreamReader("users.json"))
-                {
-                    users_string = sr.ReadToEnd();
-                }
-                JsonSerializer.Deserialize<List<User>>(users_string);
+                users_string = File.ReadAllText("users.json");
+                Users = JsonSerializer.Deserialize<List<User>>(users_string);
             }
             catch (Exception ex)
             {
