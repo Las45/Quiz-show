@@ -12,7 +12,7 @@ namespace Quiz_show.Klassen
     internal class Quizclass
     {
         public string Fragen;
-
+        public int CurrentQuestion;
         public Quizclass() 
         { 
             
