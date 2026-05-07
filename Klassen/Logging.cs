@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz_show
+namespace Quiz_show.Klassen
 {
     public static class Logging
     {

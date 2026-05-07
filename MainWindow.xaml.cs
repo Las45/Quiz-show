@@ -45,12 +45,6 @@ namespace Quiz_show
             }
         }
 
-        private void OpenTranslator(object sender, RoutedEventArgs e)
-        {
-            TranslatorWindow window = new TranslatorWindow();
-            window.Show();
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             users.Save_users(); 

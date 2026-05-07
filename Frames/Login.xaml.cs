@@ -27,21 +27,22 @@ namespace Quiz_show.Frames
 
         private void Weiter_login_Click(object sender, RoutedEventArgs e)
         {
-            try{
-                int count = 0;
+            int count = 0;
+            try
+            {
                 foreach (User us in users_.Users)
                 {
-                    if (us.EMail == email_login.Text && us.Password == us.Password)
+                    if ((us.EMail == email_login.Text) && (us.Password == password_login.Password))
                     {
                         mw.Change_Frame("Home");
                         break;
                     }
                     count++;
-                    if (count == users_.Users.Count()-2)
-                    {
-                        MessageBox.Show("Dieser User Existiert nicht");
-                    }
-                } 
+                }
+                if (count >= users_.Users.Count())
+                {
+                    MessageBox.Show("Dieser User Existiert nicht oder das Password ist falsch");
+                }
             }
             catch
             {
