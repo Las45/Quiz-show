@@ -24,5 +24,12 @@ namespace Quiz_show.Frames
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Window window = Window.GetWindow(this);
+            window.Height = 1000;
+            window.Width = 2000;
+        }
     }
 }
