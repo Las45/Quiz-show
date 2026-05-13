@@ -24,21 +24,25 @@ namespace Quiz_show.usercontrols.Icons
         {
             InitializeComponent();
         }
+
+        private void Shop_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+
+            if (main != null)
+            {
+                main.Change_Frame("Shop");
+            }
+        }
+
         private void Shop_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Shop_rect1.Stroke = Brushes.LightBlue;
-            Shop_rect1.StrokeThickness = 2;
+            Shop_rect1.Opacity = 0.7;
         }
 
         private void Shop_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Shop_rect1.StrokeThickness = 0;
-
-        }
-
-        private void Shop_rect_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
+            Shop_rect1.Opacity = 1;
         }
     }
 }

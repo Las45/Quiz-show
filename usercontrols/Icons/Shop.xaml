@@ -7,8 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="400">
     <Canvas>
+        
         <Rectangle Stroke="Transparent" StrokeThickness="0" MouseEnter="Shop_rect_MouseEnter" MouseLeave="Shop_rect_MouseLeave" MouseUp="Shop_rect_MouseUp" x:Name="Shop_rect1" Height="200" Width="400" Fill="LightBlue" RadiusX="10" RadiusY="10"/>
         <Label MouseEnter="Shop_rect_MouseEnter" MouseLeave="Shop_rect_MouseLeave" MouseUp="Shop_rect_MouseUp" x:Name="Shop_label" Content="Shop" Canvas.Left="136" Canvas.Top="63" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="48" Width="128" Height="74"/>
 
     </Canvas>
+    
 </UserControl>
