@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Quiz_show"
         xmlns:quiz="clr-namespace:Quiz_show.usercontrols"
         mc:Ignorable="d"
-        Icon="Images/Powertoys.png"
-        Title="Wer wird Milionär?" 
+        Icon="Images/Icon.png"
+        Title="Lernix" 
         Closing="Window_Closing"
         Height="450" Width="800">
     <Grid x:Name="window">
