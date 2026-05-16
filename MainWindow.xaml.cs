@@ -31,6 +31,7 @@ namespace Quiz_show
             Frames.Add("Login", new Login(users, this));
             Frames.Add("Passwort_forgotten", new forgotten_password());
             Frames.Add("Shop", new Shoppage());
+            Frames.Add("Achievements", new Achievementspage());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
             Logging.logger.Information("Window wurde geladen");
