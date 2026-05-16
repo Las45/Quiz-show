@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Supabase;
 
 namespace Quiz_show
 {
@@ -22,18 +23,19 @@ namespace Quiz_show
     {
         Quizclass steuerung = new Quizclass();
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
-        Users_list users;
+        Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
         {
             Logging.init();
-            users = new Users_list();
             Frames.Add("Home", new Homepage());
-            Frames.Add("Login", new Login(users, this));
+            Frames.Add("Login", new Login(this, client));
             Frames.Add("Passwort_forgotten", new forgotten_password());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = Frames["Login"];
+
+
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -47,7 +49,7 @@ namespace Quiz_show
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            users.Save_users(); 
+
         }
         public void Change_Frame(string frame)
         {
