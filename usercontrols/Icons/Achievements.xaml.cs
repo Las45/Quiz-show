@@ -26,19 +26,25 @@ namespace Quiz_show.usercontrols.Icons
         }
         private void Achievements_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Achievements_rect1.Stroke = Brushes.LightBlue;
-            Achievements_rect1.StrokeThickness = 2;
+            Achievements_rect1.Opacity = 0.7;
+
         }
 
         private void Achievements_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Achievements_rect1.StrokeThickness = 0;
+            Achievements_rect1.Opacity = 1;
 
         }
 
         private void Achievements_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
 
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+
+            if (main != null)
+            {
+                main.Change_Frame("Achievements");
+            }
         }
     }
 }
