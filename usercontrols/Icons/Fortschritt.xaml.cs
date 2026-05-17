@@ -16,24 +16,24 @@ using System.Windows.Shapes;
 namespace Quiz_show.usercontrols.Icons
 {
     /// <summary>
-    /// Interaktionslogik für Vokabeltrainer.xaml
+    /// Interaktionslogik für UserControl1.xaml
     /// </summary>
-    public partial class Vokabeltrainer : UserControl
+    public partial class Fortschritt : UserControl
     {
-        public Vokabeltrainer()
+        public Fortschritt()
         {
             InitializeComponent();
         }
 
         private void Vokabel_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Vokabel_rect.Stroke = Brushes.LightBlue;
-            Vokabel_rect.StrokeThickness = 2;
+            Vokabel_rect1.Stroke = Brushes.LightBlue;
+            Vokabel_rect1.StrokeThickness = 2;
         }
 
         private void Vokabel_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Vokabel_rect.StrokeThickness = 0;
+            Vokabel_rect1.StrokeThickness = 0;
 
         }
 

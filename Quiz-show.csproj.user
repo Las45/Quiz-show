@@ -2,7 +2,25 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="usercontrols\Icons\Vokabeltrainer.xaml.cs">
+    <Compile Update="Frames\Achievementspage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\QuizAuswahl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\Shoppage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Icons\Achievements.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Icons\Exit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Icons\Fortschritt.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Icons\Quiz.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Frames\forgotten_password.xaml.cs">
@@ -15,6 +33,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="usercontrols\Frage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="usercontrols\Icons\Shop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Windows\Register.xaml.cs">
