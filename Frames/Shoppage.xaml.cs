@@ -16,20 +16,13 @@ using System.Windows.Shapes;
 namespace Quiz_show.Frames
 {
     /// <summary>
-    /// Interaktionslogik für Homepage.xaml
+    /// Interaktionslogik für Shoppage.xaml
     /// </summary>
-    public partial class Homepage : Page
+    public partial class Shoppage : Page
     {
-        public Homepage()
+        public Shoppage()
         {
             InitializeComponent();
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            Window window = Window.GetWindow(this);
-            window.Height = 1000;
-            window.Width = 2000;
         }
     }
 }
