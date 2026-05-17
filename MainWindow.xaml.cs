@@ -29,13 +29,11 @@ namespace Quiz_show
             Logging.init();
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
-            Frames.Add("Passwort_forgotten", new forgotten_password());
+            Frames.Add("Passwort_forgotten", new forgotten_password(client, this));
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = Frames["Login"];
-
-
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -51,9 +49,13 @@ namespace Quiz_show
         {
 
         }
-        public void Change_Frame(string frame)
+        public void Change_Frame_by_name(string frame)
         {
             Main_frames.Content = Frames[frame];
+        }
+        public void Change_Frame(Page frame)
+        {
+            Main_frames.Content = frame;
         }
     }
 }

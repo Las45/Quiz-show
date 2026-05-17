@@ -2,10 +2,16 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="Frames\OTP_PIN_F_Reset.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Frames\Register_1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Frames\Register_2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Frames\Reset_password.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="usercontrols\Icons\Vokabeltrainer.xaml.cs">

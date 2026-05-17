@@ -11,6 +11,7 @@ namespace Quiz_show.Frames
     {
         MainWindow mw;
         Supabase.Client client;
+        public Windows.Register register;
         public Login(MainWindow window, Supabase.Client client)
         {
             InitializeComponent();
@@ -30,22 +31,22 @@ namespace Quiz_show.Frames
             try
             {
                 await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
-                this.mw.Change_Frame("Home");
+                this.mw.Change_Frame_by_name("Home");
             }
             catch
             {
-                MessageBox.Show("Es gibt diesen User nicht");
+                MessageBox.Show("Es gibt diesen User nicht oder das Passwort ist falsch");
             }
         }
 
         private void Password_fg_login_Click(object sender, RoutedEventArgs e)
         {
-
+            mw.Change_Frame_by_name("Passwort_forgotten");
         }
 
         private void New_user_loin_Click(object sender, RoutedEventArgs e)
         {
-            Windows.Register register = new Windows.Register(this.client);
+            register = new Windows.Register(this.client);
             register.ShowDialog();
         }
     }
