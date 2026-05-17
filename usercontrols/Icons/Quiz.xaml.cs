@@ -27,19 +27,25 @@ namespace Quiz_show.usercontrols.Icons
 
         private void Quiz_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Quiz_rect.Stroke = Brushes.LightBlue;
-            Quiz_rect.StrokeThickness = 2;
+            Quiz_rect.Opacity = 0.7;
         }
 
         private void Quiz_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Quiz_rect.StrokeThickness = 0;
+            Quiz_rect.Opacity = 1;
 
         }
 
         private void Quiz_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
 
+
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+
+            if (main != null)
+            {
+                main.Change_Frame("Quiz");
+            }
         }
     }
 }
