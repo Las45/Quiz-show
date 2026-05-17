@@ -5,6 +5,9 @@
     <Compile Update="Frames\Achievementspage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Frames\QuizAuswahl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Frames\Shoppage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

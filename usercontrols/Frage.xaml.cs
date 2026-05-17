@@ -21,6 +21,8 @@ namespace Quiz_show.usercontrols
     public partial class Frage : UserControl
     {
         string question_;
+
+        public string correct_answer;
         public string question 
         { 
             set
