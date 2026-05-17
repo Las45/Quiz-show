@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Quiz_show.usercontrols
 {
@@ -20,17 +11,18 @@ namespace Quiz_show.usercontrols
     /// </summary>
     public partial class Frage : UserControl
     {
-        string question_;
+        public event Action FrageBeendet;
 
         public string correct_answer;
-        public string question 
-        { 
+
+        public string question
+        {
             set
             {
                 Question.Content = value;
-            }       
+            }
         }
-        string a__;
+
         public string a_
         {
             set
@@ -38,7 +30,7 @@ namespace Quiz_show.usercontrols
                 a.Content = value;
             }
         }
-        string b__;
+
         public string b_
         {
             set
@@ -46,7 +38,7 @@ namespace Quiz_show.usercontrols
                 b.Content = value;
             }
         }
-        string c__;
+
         public string c_
         {
             set
@@ -54,7 +46,7 @@ namespace Quiz_show.usercontrols
                 c.Content = value;
             }
         }
-        string d__;
+
         public string d_
         {
             set
@@ -66,6 +58,21 @@ namespace Quiz_show.usercontrols
         public Frage()
         {
             InitializeComponent();
+        }
+
+        private void CheckAnswer(string answer)
+        {
+            if (answer == correct_answer)
+            {
+                MessageBox.Show("Richtig!");
+                
+            }
+            else
+            {
+                MessageBox.Show("Falsch!");
+            }
+
+            FrageBeendet?.Invoke();
         }
 
         private void a_rect_MouseEnter(object sender, MouseEventArgs e)
@@ -98,20 +105,10 @@ namespace Quiz_show.usercontrols
             a_rect.StrokeThickness = 0;
         }
 
-        private void a_rect_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void b_rect_MouseLeave(object sender, MouseEventArgs e)
         {
             b_rect.Stroke = Brushes.Black;
             b_rect.StrokeThickness = 0;
-        }
-
-        private void b_rect_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
         }
 
         private void c_rect_MouseLeave(object sender, MouseEventArgs e)
@@ -120,20 +117,30 @@ namespace Quiz_show.usercontrols
             c_rect.StrokeThickness = 0;
         }
 
-        private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void d_rect_MouseLeave(object sender, MouseEventArgs e)
         {
             d_rect.Stroke = Brushes.Black;
             d_rect.StrokeThickness = 0;
         }
 
+        private void a_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CheckAnswer("a");
+        }
+
+        private void b_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CheckAnswer("b");
+        }
+
+        private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            CheckAnswer("c");
+        }
+
         private void d_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            CheckAnswer("d");
         }
     }
 }
