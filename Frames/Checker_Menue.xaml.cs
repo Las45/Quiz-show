@@ -24,5 +24,17 @@ namespace Quiz_show.Frames
         {
             InitializeComponent();
         }
+        public void Save()
+        {
+
+        }
+        public void Load()
+        {
+
+        }
+        public void Update()
+        {
+
+        }
     }
 }

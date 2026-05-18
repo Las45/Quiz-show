@@ -51,7 +51,7 @@ namespace Quiz_show
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            ((Checker_Menue)Frames["Stats"]).Save();
         }
         public void Change_Frame_by_name(string frame)
         {
