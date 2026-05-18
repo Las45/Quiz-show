@@ -6,9 +6,23 @@
       xmlns:local="clr-namespace:Quiz_show.Frames"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Checker_Menue">
+      Title="Statistic">
 
     <Grid>
-        
+        <Canvas>
+            <ProgressBar x:Name="Pos_progressbar" Height="20" Canvas.Left="90" Canvas.Top="70" Width="610"/>
+            <ProgressBar x:Name="NSCS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="126" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="CABS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="182" Width="610" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <ProgressBar x:Name="English_progressbar" Height="20" Canvas.Left="90" Canvas.Top="238" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="Geschichte_progressbar" Height="20" Canvas.Left="90" Canvas.Top="294" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Pos" Canvas.Left="90" Canvas.Top="95" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="NSCS" Canvas.Left="90" Canvas.Top="151" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="CABS" Canvas.Left="90" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Englisch" Canvas.Left="90" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        </Canvas>
     </Grid>
 </Page>
