@@ -34,6 +34,7 @@ namespace Quiz_show.Frames
             try
             {
                 await client.Auth.VerifyOTP(e_mail, pin_register.Text, Supabase.Gotrue.Constants.EmailOtpType.Email);
+                Window.GetWindow(this).Close();
             }
             catch 
             {

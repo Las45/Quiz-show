@@ -43,7 +43,7 @@ namespace Quiz_show.usercontrols.Icons
 
             if (main != null)
             {
-                main.Change_Frame("Achievements");
+                main.Change_Frame_by_name("Achievements");
             }
         }
     }
