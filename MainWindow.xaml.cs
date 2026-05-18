@@ -29,6 +29,7 @@ namespace Quiz_show
             Logging.init();
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
+            Frames.Add("Stats", new Checker_Menue());
             Frames.Add("Passwort_forgotten", new forgotten_password(client, this));
             Frames.Add("Shop", new Shoppage());
             Frames.Add("Quiz", new QuizAuswahl());

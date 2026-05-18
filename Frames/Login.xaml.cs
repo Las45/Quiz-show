@@ -30,6 +30,7 @@ namespace Quiz_show.Frames
         {
             try
             {
+                Logging.logger.Debug("Sign In with Password");
                 await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
                 this.mw.Change_Frame_by_name("Home");
             }
@@ -41,11 +42,13 @@ namespace Quiz_show.Frames
 
         private void Password_fg_login_Click(object sender, RoutedEventArgs e)
         {
+            Logging.logger.Debug("Password has been forgotten");
             mw.Change_Frame_by_name("Passwort_forgotten");
         }
 
         private void New_user_loin_Click(object sender, RoutedEventArgs e)
         {
+            Logging.logger.Debug("A new User was Created");
             register = new Windows.Register(this.client);
             register.ShowDialog();
         }
