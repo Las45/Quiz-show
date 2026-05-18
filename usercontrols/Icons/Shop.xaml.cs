@@ -31,7 +31,7 @@ namespace Quiz_show.usercontrols.Icons
 
             if (main != null)
             {
-                main.Change_Frame("Shop");
+                main.Change_Frame_by_name("Shop");
             }
         }
 
