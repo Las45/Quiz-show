@@ -1,97 +1,277 @@
-﻿using Quiz_show.usercontrols;
+﻿using Quiz_show.Klassen;
+using Quiz_show.usercontrols;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Quiz_show.Frames
 {
-    /// <summary>
-    /// Interaktionslogik für QuizAuswahl.xaml
-    /// </summary>
     public partial class QuizAuswahl : Page
     {
+        private Quizclass quiz = new Quizclass();
+
+        private Checker checker = new Checker();
+
+        private Random random = new Random();
+
+        private int aktuelleFrage = 0;
+
+        private List<Klassen.Frage> quizFragen;
+
         public QuizAuswahl()
         {
             InitializeComponent();
+
+            // Fragen hinzufügen
+
+            // Prompt: Erstelle mir 20 Frage zum the Programmieren von C#
+            // KI: Chat GPT
+            // Anfang KI:
+            quiz.Add(new Klassen.Frage(
+                "Wofür steht POS?",
+                new List<string>()
+                {
+                    "Programmierung und Software",
+                    "Piece of System",
+                    "Program of Service",
+                    "Part of Software"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welcher Datentyp speichert ganze Zahlen?",
+                new List<string>()
+                {
+                    "string",
+                    "bool",
+                    "int",
+                    "double"
+                },
+                2
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was macht Console.WriteLine()?",
+                new List<string>()
+                {
+                    "Löscht Text",
+                    "Gibt Text aus",
+                    "Speichert Daten",
+                    "Startet Schleife"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welches Zeichen beendet eine Anweisung in C#?",
+                new List<string>()
+                {
+                    ".",
+                    ";",
+                    ":",
+                    ","
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welche Schleife läuft solange eine Bedingung wahr ist?",
+                new List<string>()
+                {
+                    "for",
+                    "switch",
+                    "while",
+                    "class"
+                },
+                2
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Wie erstellt man ein Objekt?",
+                new List<string>()
+                {
+                    "new",
+                    "create",
+                    "make",
+                    "class"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was bedeutet == ?",
+                new List<string>()
+                {
+                    "zuweisen",
+                    "gleich vergleichen",
+                    "ungleich",
+                    "plus"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Wie nennt man eine Methode ohne Rückgabe?",
+                new List<string>()
+                {
+                    "void",
+                    "int",
+                    "string",
+                    "bool"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was macht if?",
+                new List<string>()
+                {
+                    "Schleife",
+                    "Bedingung",
+                    "Array",
+                    "Objekt"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was speichert string?",
+                new List<string>()
+                {
+                    "Text",
+                    "Zahlen",
+                    "Farben",
+                    "Buttons"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welche Klasse ist ein Fenster?",
+                new List<string>()
+                {
+                    "Page",
+                    "Window",
+                    "Label",
+                    "Canvas"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Wie kommentiert man einzeilig?",
+                new List<string>()
+                {
+                    "//",
+                    "/*",
+                    "#",
+                    "--"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was ist ein Array?",
+                new List<string>()
+                {
+                    "eine Schleife",
+                    "eine Liste",
+                    "ein Fenster",
+                    "eine Farbe"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welche Zahl beginnt ein Arrayindex?",
+                new List<string>()
+                {
+                    "1",
+                    "-1",
+                    "0",
+                    "2"
+                },
+                2
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was bedeutet else?",
+                new List<string>()
+                {
+                    "wiederholen",
+                    "ansonsten",
+                    "stoppen",
+                    "starten"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was macht Random?",
+                new List<string>()
+                {
+                    "Farben",
+                    "Zufallszahlen",
+                    "Fenster",
+                    "Buttons"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Wie heißt die Hauptklasse in WPF?",
+                new List<string>()
+                {
+                    "Page",
+                    "Window",
+                    "MainWindow",
+                    "Grid"
+                },
+                2
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Was ist XAML?",
+                new List<string>()
+                {
+                    "Datenbank",
+                    "Designsprache",
+                    "Spiel",
+                    "Compiler"
+                },
+                1
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Welche Klasse enthält Kinder?",
+                new List<string>()
+                {
+                    "Grid",
+                    "Brush",
+                    "Color",
+                    "Mouse"
+                },
+                0
+            ));
+
+            quiz.Add(new Klassen.Frage(
+                "Wie speichert man Wahr/Falsch?",
+                new List<string>()
+                {
+                    "bool",
+                    "string",
+                    "int",
+                    "char"
+                },
+                0
+            ));
         }
 
-
-        private List<(string frage, string a, string b, string c, string d, string richtig)> fragen = new List<(string, string, string, string, string, string)>()
-        {
-            // Prompt: Erstelle mit 50 fragen über das Thema C# Programmieren und gib mir jewals 4 Antwortmöglichkeiten wobei nur eine richtig ist.
-            // KI: ChatGPT
-            // Anfang KI:
-            ("Wofür steht POS?", "Point of Sale", "Piece of System", "Program of Service", "Part of Software", "a"),
-            ("Welcher Datentyp speichert ganze Zahlen?", "string", "bool", "int", "double", "c"),
-            ("Was macht Console.WriteLine()?", "Löscht Text", "Gibt Text aus", "Speichert Daten", "Startet Schleife", "b"),
-            ("Welches Zeichen beendet eine Anweisung in C#?", ".", ";", ":", ",", "b"),
-            ("Welche Schleife läuft solange eine Bedingung wahr ist?", "for", "switch", "while", "class", "c"),
-            ("Wie erstellt man ein Objekt?", "new", "create", "make", "class", "a"),
-            ("Welche Farbe hat ein bool true?", "rot", "gelb", "grün", "keine", "d"),
-            ("Was bedeutet == ?", "zuweisen", "gleich vergleichen", "ungleich", "plus", "b"),
-            ("Welche Klasse zeigt Nachrichten?", "MessageBox", "Console", "Window", "Label", "a"),
-            ("Wie nennt man eine Methode ohne Rückgabe?", "void", "int", "string", "bool", "a"),
-
-            ("Was macht if?", "Schleife", "Bedingung", "Array", "Objekt", "b"),
-            ("Was speichert string?", "Text", "Zahlen", "Farben", "Buttons", "a"),
-            ("Welche Schleife hat Start, Bedingung und Schritt?", "while", "for", "if", "switch", "b"),
-            ("Was bedeutet public?", "privat", "sichtbar", "versteckt", "geschützt", "b"),
-            ("Welche Klasse ist ein Fenster?", "Page", "Window", "Label", "Canvas", "b"),
-            ("Wie kommentiert man einzeilig?", "//", "/*", "#", "--", "a"),
-            ("Was ist ein Array?", "eine Schleife", "eine Liste", "ein Fenster", "eine Farbe", "b"),
-            ("Was macht break?", "stoppt", "startet", "kopiert", "zeichnet", "a"),
-            ("Welche Zahl beginnt ein Arrayindex?", "1", "-1", "0", "2", "c"),
-            ("Was bedeutet else?", "wiederholen", "ansonsten", "stoppen", "starten", "b"),
-
-            ("Welche Klasse zeigt Text?", "Label", "Rectangle", "Canvas", "Brush", "a"),
-            ("Was macht Random?", "Farben", "Zufallszahlen", "Fenster", "Buttons", "b"),
-            ("Wie heißt die Hauptklasse in WPF?", "Page", "Window", "MainWindow", "Grid", "c"),
-            ("Welche Farbe ist Brushes.Blue?", "Rot", "Gelb", "Blau", "Grün", "c"),
-            ("Wie macht man eine Methode?", "void Name()", "method()", "class()", "new()", "a"),
-            ("Was macht return?", "zurückgeben", "speichern", "löschen", "starten", "a"),
-            ("Was ist XAML?", "Datenbank", "Designsprache", "Spiel", "Compiler", "b"),
-            ("Was macht InitializeComponent()?", "lädt UI", "stoppt App", "speichert Daten", "macht Zufall", "a"),
-            ("Welche Klasse enthält Kinder?", "Grid", "Brush", "Color", "Mouse", "a"),
-            ("Was macht MouseEnter?", "Klick", "Maus geht hinein", "Maus verlässt", "Doppelklick", "b"),
-
-            ("Wie speichert man Wahr/Falsch?", "bool", "string", "int", "char", "a"),
-            ("Was bedeutet && ?", "oder", "nicht", "und", "plus", "c"),
-            ("Welche Datei enthält Design?", ".cs", ".xaml", ".exe", ".dll", "b"),
-            ("Wie heißt der Klick Event?", "MouseUp", "MouseBlue", "MouseClicker", "ButtonDown", "a"),
-            ("Was macht Children.Add()?", "löscht", "hinzufügen", "kopieren", "beenden", "b"),
-            ("Welche Klasse macht Farben?", "Brushes", "Colorsystem", "Paint", "UI", "a"),
-            ("Was bedeutet private?", "öffentlich", "nur intern", "sichtbar", "vererbbar", "b"),
-            ("Wie startet man eine App?", "Main()", "Run()", "Start()", "Open()", "a"),
-            ("Was macht Visibility.Hidden?", "anzeigen", "verstecken", "löschen", "verschieben", "b"),
-            ("Was ist Canvas.Left?", "Farbe", "Position", "Größe", "Text", "b"),
-
-            ("Was macht Opacity?", "Position", "Transparenz", "Text", "Klick", "b"),
-            ("Welche Klasse zeigt Rechtecke?", "Rectangle", "Label", "Window", "Grid", "a"),
-            ("Wie prüft man Ungleich?", "!=", "==", ">=", "<=", "a"),
-            ("Welche Klasse speichert Listen?", "List", "Canvas", "Window", "Brush", "a"),
-            ("Was macht foreach?", "durchläuft Liste", "zeichnet", "speichert", "löscht", "a"),
-            ("Welche Methode löscht Kinder?", "Children.Clear()", "Delete()", "RemoveAll()", "Destroy()", "a"),
-            ("Was ist Margin?", "Abstand", "Farbe", "Klick", "Schrift", "a"),
-            ("Welche Klasse macht Zufall?", "Random", "Brush", "Mouse", "Grid", "a"),
-            ("Was macht ToString()?", "zu Text machen", "löschen", "starten", "stoppen", "a"),
-            ("Welche Sprache nutzt WPF?", "HTML", "XAML", "CSS", "PHP", "b")
-        };
         // Ende KI
-
-        private Random Random = new Random();
-        private int aktuelleFrage = 0;
-        private List<(string frage, string a, string b, string c, string d, string richtig)> quizFragen;
 
         private void RectQuiz1_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -105,57 +285,85 @@ namespace Quiz_show.Frames
 
         private void RectQuiz1_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            quizFragen = fragen
+            checker.Quizzes_correct = 0;
 
-
-                .OrderBy(x => Random.Next())
+            quizFragen = quiz.Questions
+                .OrderBy(x => random.Next())
                 .Take(20)
                 .ToList();
 
             aktuelleFrage = 0;
 
-
-            ZeigeFrage();
             QuizContainer.Visibility = Visibility.Visible;
             RectQuizBackground.Visibility = Visibility.Visible;
+
+            ZeigeFrage();
         }
 
         private void ZeigeFrage()
         {
             QuizContainer.Children.Clear();
 
-            Frage frageControl = new Frage();
-
-
+            usercontrols.Frage frageControl = new usercontrols.Frage();
 
             var f = quizFragen[aktuelleFrage];
 
             frageControl.question = f.frage;
-            frageControl.a_ = f.a;
-            frageControl.b_ = f.b;
-            frageControl.c_ = f.c;
-            frageControl.d_ = f.d;
 
+            frageControl.a_ = f.antworten[0];
+            frageControl.b_ = f.antworten[1];
+            frageControl.c_ = f.antworten[2];
+            frageControl.d_ = f.antworten[3];
 
-            frageControl.correct_answer = f.richtig;
-            frageControl.FrageBeendet += NaechsteFrage;
+            string correctAnswer = "";
+
+            if (f.richtig == 0)
+            {
+                correctAnswer = "a";
+            }
+            else if (f.richtig == 1)
+            {
+                correctAnswer = "b";
+            }
+            else if (f.richtig == 2)
+            {
+                correctAnswer = "c";
+            }
+            else
+            {
+                correctAnswer = "d";
+            }
+
+            frageControl.correct_answer = correctAnswer;
+
+            frageControl.FrageBeendet += NächsteFrage;
 
 
             QuizContainer.Children.Add(frageControl);
-
-
         }
 
-        private void NaechsteFrage()
+        private void NächsteFrage(bool richtig)
         {
+            if (richtig)
+            {
+                checker.Quizzes_correct++;
+            }
+
             aktuelleFrage++;
 
             if (aktuelleFrage >= quizFragen.Count)
             {
-                MessageBox.Show("Quiz beendet!");
+                checker.Calculate(quizFragen.Count);
+
+                MessageBox.Show(
+                    "Quiz beendet!\n\n" +
+                    "Richtig: " + checker.Quizzes_correct + "\n" +
+                    "Prozent: " + checker.Quizzes_prozent + "%"
+                );
 
                 QuizContainer.Visibility = Visibility.Hidden;
                 RectQuizBackground.Visibility = Visibility.Hidden;
+
                 return;
             }
 

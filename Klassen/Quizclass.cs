@@ -9,17 +9,17 @@ using System.Windows;
 
 namespace Quiz_show.Klassen
 {
-    internal class Quizclass
+    public class Quizclass
     {
-        public string Fragen;
-        public int CurrentQuestion;
-        public Quizclass() 
-        { 
-            
-        }
 
-        public void Load()
+        public List<Frage> Questions = new List<Frage>();
+
+
+
+        public void Add(Frage frage)
         {
+
+            Questions.Add(frage);
 
         }
     }
