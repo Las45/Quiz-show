@@ -9,13 +9,14 @@ namespace Quiz_show.Frames
     /// </summary>
     public partial class Login : Page
     {
-        Users_list users_;
         MainWindow mw;
-        public Login(Users_list users_, MainWindow window)
+        Supabase.Client client;
+        public Windows.Register register;
+        public Login(MainWindow window, Supabase.Client client)
         {
             InitializeComponent();
-            this.users_ = users_;
-            mw = window;
+            this.mw = window;
+            this.client = client;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -25,39 +26,27 @@ namespace Quiz_show.Frames
             window.Width = 400;
         }
 
-        private void Weiter_login_Click(object sender, RoutedEventArgs e)
+        private async void Weiter_login_Click(object sender, RoutedEventArgs e)
         {
-            int count = 0;
             try
             {
-                foreach (User us in users_.Users)
-                {
-                    if ((us.EMail == email_login.Text) && (us.Password == password_login.Password))
-                    {
-                        mw.Change_Frame("Home");
-                        break;
-                    }
-                    count++;
-                }
-                if (count >= users_.Users.Count())
-                {
-                    MessageBox.Show("Dieser User Existiert nicht oder das Password ist falsch");
-                }
+                await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
+                this.mw.Change_Frame_by_name("Home");
             }
             catch
             {
-                MessageBox.Show("Es gibt keine Users");
+                MessageBox.Show("Es gibt diesen User nicht oder das Passwort ist falsch");
             }
         }
 
         private void Password_fg_login_Click(object sender, RoutedEventArgs e)
         {
-
+            mw.Change_Frame_by_name("Passwort_forgotten");
         }
 
         private void New_user_loin_Click(object sender, RoutedEventArgs e)
         {
-            Windows.Register register = new Windows.Register(users_);
+            register = new Windows.Register(this.client);
             register.ShowDialog();
         }
     }

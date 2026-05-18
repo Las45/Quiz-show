@@ -17,28 +17,32 @@ using System.Windows.Shapes;
 namespace Quiz_show.Frames
 {
     /// <summary>
-    /// Interaktionslogik für forgotten_password.xaml
+    /// Interaktionslogik für OTP_PIN_F_Reset.xaml
     /// </summary>
-    public partial class forgotten_password : Page
+    public partial class OTP_PIN_F_Reset : Page
     {
         Supabase.Client client;
+        string e_mail;
         MainWindow window;
-        public forgotten_password(Supabase.Client client, MainWindow window)
+        public OTP_PIN_F_Reset(Supabase.Client client, string e_mail, MainWindow window)
         {
             InitializeComponent();
             this.client = client;
+            this.e_mail = e_mail;
             this.window = window;
         }
 
-        private async void reset_reset_Click(object sender, RoutedEventArgs e)
+        private async void reset_password_Click(object sender, RoutedEventArgs e)
         {
-            await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text));
-            window.Change_Frame(new OTP_PIN_F_Reset(client, e_mail_reset.Text, window));
-        }
-
-        private void abb_reset_Click(object sender, RoutedEventArgs e)
-        {
-            window.Change_Frame_by_name("Login");
+            try
+            {
+                await client.Auth.VerifyOTP(e_mail, pin_register.Text, Supabase.Gotrue.Constants.EmailOtpType.Email);
+                window.Change_Frame(new Reset_password(client, window));
+            }
+            catch
+            {
+                MessageBox.Show("PIN ist falsch");
+            }
         }
     }
 }
