@@ -11,7 +11,7 @@ namespace Quiz_show.usercontrols
     /// </summary>
     public partial class Frage : UserControl
     {
-        public event Action FrageBeendet;
+        public event Action<bool> FrageBeendet;
 
         public string correct_answer;
 
@@ -62,17 +62,18 @@ namespace Quiz_show.usercontrols
 
         private void CheckAnswer(string answer)
         {
-            if (answer == correct_answer)
+            bool richtig = answer == correct_answer;
+
+            if (richtig)
             {
                 MessageBox.Show("Richtig!");
-                
             }
             else
             {
                 MessageBox.Show("Falsch!");
             }
 
-            FrageBeendet?.Invoke();
+            FrageBeendet?.Invoke(richtig);
         }
 
         private void a_rect_MouseEnter(object sender, MouseEventArgs e)
