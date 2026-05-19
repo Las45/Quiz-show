@@ -26,19 +26,18 @@ namespace Quiz_show.usercontrols.Icons
         }
         private void Exit_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Exit_rect1.Stroke = Brushes.LightBlue;
-            Exit_rect1.StrokeThickness = 2;
+            Exit_rect1.Opacity = 0.7;
         }
 
         private void Exit_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Exit_rect1.StrokeThickness = 0;
+            Exit_rect1.Opacity = 1;
 
         }
 
         private void Exit_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }
