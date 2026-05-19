@@ -1,4 +1,5 @@
-﻿using Quiz_show.Windows;
+﻿using Quiz_show.Klassen;
+using Quiz_show.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +42,7 @@ namespace Quiz_show.Frames
             }
             catch
             {
+                Logging.logger.Error("The PIN was wrong at the password reset");
                 MessageBox.Show("PIN ist falsch");
             }
         }

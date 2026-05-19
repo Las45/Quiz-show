@@ -1,4 +1,5 @@
-﻿using Quiz_show.Windows;
+﻿using Quiz_show.Klassen;
+using Quiz_show.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,14 @@ namespace Quiz_show.Frames
 
         private async void reset_reset_Click(object sender, RoutedEventArgs e)
         {
-            await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text));
+            try{
+                await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text)); 
+            }
+            catch (Exception ex) 
+            {
+                Logging.logger.Error($"A Error has occured: {ex.Message}");
+                MessageBox.Show("Ein fehler ist aufgetreten");
+            }
             window.Change_Frame(new OTP_PIN_F_Reset(client, e_mail_reset.Text, window));
         }
 

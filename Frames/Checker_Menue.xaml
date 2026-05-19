@@ -1,0 +1,28 @@
+﻿<Page x:Class="Quiz_show.Frames.Checker_Menue"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Quiz_show.Frames"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Statistic">
+
+    <Grid>
+        <Canvas>
+            <ProgressBar x:Name="Pos_progressbar" Height="20" Canvas.Left="90" Canvas.Top="70" Width="610"/>
+            <ProgressBar x:Name="NSCS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="126" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="CABS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="182" Width="610" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <ProgressBar x:Name="English_progressbar" Height="20" Canvas.Left="90" Canvas.Top="238" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="Geschichte_progressbar" Height="20" Canvas.Left="90" Canvas.Top="294" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Pos" Canvas.Left="90" Canvas.Top="95" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="NSCS" Canvas.Left="90" Canvas.Top="151" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="CABS" Canvas.Left="90" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Label Content="Englisch" Canvas.Left="90" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+        </Canvas>
+    </Grid>
+</Page>
