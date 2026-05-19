@@ -38,21 +38,7 @@
         <!-- KI: ChatGPT -->
         <!-- Anfang: KI -->
 
-        <Path Name="PathExit"
-      Width="150"
-      Height="100"
-      Fill="#156082"
-      Stroke="#082430"
-      StrokeThickness="4"
-      Stretch="Fill"
-      HorizontalAlignment="Left"
-      VerticalAlignment="Top"
-      Margin="130,563,0,0"
-      Cursor="Hand"
-      MouseEnter="PathExit_MouseEnter"
-      MouseLeave="PathExit_MouseLeave"
-      MouseUp="PathExit_MouseUp"
-
+        <Path Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand" MouseEnter="PathExit_MouseEnter" MouseLeave="PathExit_MouseLeave" MouseUp="PathExit_MouseUp"
       Data="M46,8 
             L46,34 
             L76,34 
