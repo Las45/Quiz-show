@@ -39,25 +39,6 @@
         <Label Name="Achievement3" Content="1er Schüler" HorizontalAlignment="Left" Margin="1024,392,0,0" VerticalAlignment="Top" Height="76" Width="295" FontSize="48" Foreground="#FF450000"/>
         <Label Name="Achievement5" Content="Erlange absolute &#xD;&#xA;    Gleichheit" HorizontalAlignment="Left" Margin="772,685,0,0" VerticalAlignment="Top" Height="221" Width="840" FontSize="48" Foreground="#FF450000"/>
 
-        <!-- Prompt: Erkläre mir wie Path in Wpf funktioniert. -->
-        <!-- KI: ChatGPT -->
-        <!-- Anfang: KI -->
-
-        <Path Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand" MouseEnter="PathExit_MouseEnter" MouseLeave="PathExit_MouseLeave" MouseUp="PathExit_MouseUp"
-      Data="M46,8 
-            L46,34 
-            L76,34 
-            L76,8 
-            L108,8 
-            L108,44 
-            C108,62 92,62 76,62 
-            L46,62 
-            L46,82 
-            L8,45 
-            L46,8 
-            Z"/>
-
-        <!-- Ende KI -->
 
     </Grid>
 </Page>
