@@ -369,22 +369,5 @@ namespace Quiz_show.Frames
 
             ZeigeFrage();
         }
-
-        private void PathExit_MouseEnter(object sender, MouseEventArgs e)
-        {
-            PathExit.Opacity = 0.7;
-        }
-
-        private void PathExit_MouseLeave(object sender, MouseEventArgs e)
-        {
-            PathExit.Opacity = 1;
-        }
-
-        private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow main = (MainWindow)Application.Current.MainWindow;
-
-            main.Change_Frame_by_name("Home");
-        }
     }
 }
