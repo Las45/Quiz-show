@@ -1,5 +1,4 @@
 ﻿using Quiz_show.Frames;
-using Quiz_show.Klassen;
 using Quiz_show.usercontrols;
 using System.Text;
 using System.Text.Json;
@@ -13,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Supabase;
+using Quiz_show.src.Klassen;
 
 namespace Quiz_show
 {

@@ -10,8 +10,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Icon.png" />
-    <None Remove="Images\Powertoys.png" />
+    <None Remove="src\Images\Icon.png" />
+    <None Remove="src\Images\Powertoys.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,10 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Icon.png">
+    <Resource Include="src\Images\Icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Powertoys.png" />
+    <Resource Include="src\Images\Powertoys.png" />
   </ItemGroup>
 
 </Project>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz_show.Klassen
+namespace Quiz_show.src.Klassen
 {
     internal class Quiz
     {

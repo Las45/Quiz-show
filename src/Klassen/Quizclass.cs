@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace Quiz_show.Klassen
+namespace Quiz_show.src.Klassen
 {
     public class Quizclass
     {
