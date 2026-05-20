@@ -29,6 +29,7 @@ namespace Quiz_show
             Logging.init();
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
+            Frames.Add("Stats", new Checker_Menue());
             Frames.Add("Passwort_forgotten", new forgotten_password(client, this));
             Frames.Add("Shop", new Shoppage());
             Frames.Add("Quiz", new QuizAuswahl());
@@ -50,7 +51,7 @@ namespace Quiz_show
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            ((Checker_Menue)Frames["Stats"]).Save();
         }
         public void Change_Frame_by_name(string frame)
         {
