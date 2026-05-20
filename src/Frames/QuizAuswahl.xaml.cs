@@ -1,4 +1,4 @@
-﻿using Quiz_show.Klassen;
+﻿using Quiz_show.src.Klassen;
 using Quiz_show.usercontrols;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace Quiz_show.Frames
 
         private int aktuelleFrage = 0;
 
-        private List<Klassen.Frage> quizFragen;
+        private List<src.Klassen.Frage> quizFragen;
 
         public QuizAuswahl()
         {
@@ -30,7 +30,7 @@ namespace Quiz_show.Frames
             // Prompt: Erstelle mir 20 Frage zum the Programmieren von C#
             // KI: Chat GPT
             // Anfang KI:
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wofür steht POS?",
                 new List<string>()
                 {
@@ -42,7 +42,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welcher Datentyp speichert ganze Zahlen?",
                 new List<string>()
                 {
@@ -54,7 +54,7 @@ namespace Quiz_show.Frames
                 2
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was macht Console.WriteLine()?",
                 new List<string>()
                 {
@@ -66,7 +66,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welches Zeichen beendet eine Anweisung in C#?",
                 new List<string>()
                 {
@@ -78,7 +78,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welche Schleife läuft solange eine Bedingung wahr ist?",
                 new List<string>()
                 {
@@ -90,7 +90,7 @@ namespace Quiz_show.Frames
                 2
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wie erstellt man ein Objekt?",
                 new List<string>()
                 {
@@ -102,7 +102,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was bedeutet == ?",
                 new List<string>()
                 {
@@ -114,7 +114,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wie nennt man eine Methode ohne Rückgabe?",
                 new List<string>()
                 {
@@ -126,7 +126,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was macht if?",
                 new List<string>()
                 {
@@ -138,7 +138,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was speichert string?",
                 new List<string>()
                 {
@@ -150,7 +150,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welche Klasse ist ein Fenster?",
                 new List<string>()
                 {
@@ -162,7 +162,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wie kommentiert man einzeilig?",
                 new List<string>()
                 {
@@ -174,7 +174,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was ist ein Array?",
                 new List<string>()
                 {
@@ -186,7 +186,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welche Zahl beginnt ein Arrayindex?",
                 new List<string>()
                 {
@@ -198,7 +198,7 @@ namespace Quiz_show.Frames
                 2
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was bedeutet else?",
                 new List<string>()
                 {
@@ -210,7 +210,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was macht Random?",
                 new List<string>()
                 {
@@ -222,7 +222,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wie heißt die Hauptklasse in WPF?",
                 new List<string>()
                 {
@@ -234,7 +234,7 @@ namespace Quiz_show.Frames
                 2
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Was ist XAML?",
                 new List<string>()
                 {
@@ -246,7 +246,7 @@ namespace Quiz_show.Frames
                 1
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Welche Klasse enthält Kinder?",
                 new List<string>()
                 {
@@ -258,7 +258,7 @@ namespace Quiz_show.Frames
                 0
             ));
 
-            quiz.Add(new Klassen.Frage(
+            quiz.Add(new src.Klassen.Frage(
                 "Wie speichert man Wahr/Falsch?",
                 new List<string>()
                 {

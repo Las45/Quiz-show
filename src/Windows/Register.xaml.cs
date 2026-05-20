@@ -1,5 +1,5 @@
 ﻿using Quiz_show.Frames;
-using Quiz_show.Klassen;
+using Quiz_show.src.Klassen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
