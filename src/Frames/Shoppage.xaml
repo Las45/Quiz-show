@@ -10,14 +10,14 @@
       Title="Shop" Foreground="#FF5C1003">
 
     <Grid>
-        <Rectangle Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectRotButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectGoldButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectOriginalButton_MouseUp" Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectRotButton_MouseUp"  Name="RectRotButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectGoldButton_MouseUp"  Name="RectGoldButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
-        <Rectangle Name="RectOriginalBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectGrünBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectSilberBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectOriginalBackground_MouseUp"  Name="RectOriginalBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectGrünBackground_MouseUp"  Name="RectGrünBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectSilberBackground_MouseUp"  Name="RectSilberBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
         <Label Content="Shop" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="127" Width="200" FontSize="80" Foreground="#FF450000"/>

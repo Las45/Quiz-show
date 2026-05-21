@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz_show.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Drawing;
 
 namespace Quiz_show.Frames
 {
@@ -25,22 +27,6 @@ namespace Quiz_show.Frames
             InitializeComponent();
         }
 
-        private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            MainWindow main = (MainWindow)Application.Current.MainWindow;
-
-            main.Change_Frame_by_name("Home");
-
-        }
-
-        private void PathExit_MouseLeave(object sender, MouseEventArgs e)
-        {
-            PathExit.Opacity = 1;
-        }
-
-        private void PathExit_MouseEnter(object sender, MouseEventArgs e)
-        {
-            PathExit.Opacity = 0.7;
-        }
+        
     }
 }

@@ -12,6 +12,13 @@
   <ItemGroup>
     <None Remove="Images\Icon.png" />
     <None Remove="Images\Powertoys.png" />
+    <None Remove="JSON\POS_Fragen.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="JSON\POS_Fragen.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
