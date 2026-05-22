@@ -1,4 +1,5 @@
-﻿using Quiz_show.Windows;
+﻿using Quiz_show.src.Klassen;
+using Quiz_show.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,12 +46,14 @@ namespace Quiz_show.Frames
                     {
                         Password = new_password_again.Password
                     });
+                    Logging.logger.Debug("The password was successfully reseted");
                     // Claude ende
                     window.Change_Frame_by_name("Login");
                 }
             }
-            catch 
+            catch (Exception ex) 
             {
+                Logging.logger.Error($"Couldn't change the password: {ex.Message}");
                 MessageBox.Show("Konnte das Passwort nicht ändern");
             }
         }

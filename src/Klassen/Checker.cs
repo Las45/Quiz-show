@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Quiz_show.Klassen
+namespace Quiz_show.src.Klassen
 {
     public class Checker
     {
@@ -20,7 +20,7 @@ namespace Quiz_show.Klassen
 
         public void Calculate(int gesamt)
         {
-            Quizzes_prozent = (Quizzes_correct * 100) / gesamt;
+            Quizzes_prozent = Quizzes_correct * 100 / gesamt;
         }
     }
 }

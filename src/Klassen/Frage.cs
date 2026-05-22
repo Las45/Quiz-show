@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Quiz_show.Klassen
+namespace Quiz_show.src.Klassen
 {
     public class Frage
     {

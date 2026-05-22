@@ -3,7 +3,12 @@ using System.IO;
 using System.Text.Json;
 using System.Windows;
 
+<<<<<<< HEAD
 namespace Quiz_show.Klassen
+=======
+
+namespace Quiz_show.src.Klassen
+>>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0
 {
     public class Quizclass
     {

@@ -23,7 +23,7 @@
 
 
 
-        <Label Name="LabelQuiz1" MouseEnter="RectQuiz1_MouseEnter" MouseLeave="RectQuiz1_MouseLeave" MouseUp="RectQuiz1_MouseUp" Content="POS" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="76" Width="116" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="LabelQuiz1" Content="POS" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="76" Width="116" FontSize="48" Foreground="#FF450000"/>
         <Label Name="LabelQuiz2" Content="CABS" HorizontalAlignment="Left" Margin="492,550,0,0" VerticalAlignment="Top" Height="76" Width="176" FontSize="48" Foreground="#FF450000"/>
 
         <Label Name="LabelQuiz3" Content="NSCS" HorizontalAlignment="Left" Margin="690,262,0,0" VerticalAlignment="Top" Height="76" Width="226" FontSize="48" Foreground="#FF450000"/>
@@ -34,27 +34,6 @@
 
         <Rectangle Name="RectQuizBackground" Height="1000" Width="1500" Fill="White" Visibility="Hidden"/>
 
-        <!-- Prompt: Erkläre mir wie Path in Wpf funktioniert. -->
-        <!-- KI: ChatGPT -->
-        <!-- Anfang: KI -->
-
-        <Path Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand" MouseEnter="PathExit_MouseEnter" MouseLeave="PathExit_MouseLeave" MouseUp="PathExit_MouseUp"
-      Data="M46,8 
-            L46,34 
-            L76,34 
-            L76,8 
-            L108,8 
-            L108,44 
-            C108,62 92,62 76,62 
-            L46,62 
-            L46,82 
-            L8,45 
-            L46,8 
-            Z"/>
-
-        <!-- Ende KI -->
-
         <Grid Name="QuizContainer" Width="800" Height="400" Background="Transparent" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
     </Grid>
 </Page>

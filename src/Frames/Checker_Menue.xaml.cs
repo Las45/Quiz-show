@@ -16,13 +16,25 @@ using System.Windows.Shapes;
 namespace Quiz_show.Frames
 {
     /// <summary>
-    /// Interaktionslogik für Achievementspage.xaml
+    /// Interaktionslogik für Checker_Menue.xaml
     /// </summary>
-    public partial class Achievementspage : Page
+    public partial class Checker_Menue : Page
     {
-        public Achievementspage()
+        public Checker_Menue()
         {
             InitializeComponent();
+        }
+        public void Save()
+        {
+
+        }
+        public void Load()
+        {
+
+        }
+        public void Update()
+        {
+
         }
     }
 }

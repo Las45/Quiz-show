@@ -26,6 +26,7 @@ namespace Quiz_show.Frames
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void UpdateUI()
         {
@@ -108,5 +109,7 @@ namespace Quiz_show.Frames
 
 
 
+=======
+>>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0
     }
 }
