@@ -29,7 +29,12 @@ namespace Quiz_show.Frames
 
             try
             {
-                string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"JSON","POS_Fragen.json");
+                string path = System.IO.Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "src",
+                    "JSON",
+                    "POS_Fragen.json"
+                );
 
                 if (!System.IO.File.Exists(path))
                 {
