@@ -10,8 +10,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <None Remove="src\Images\Icon.png" />
     <None Remove="src\Images\Powertoys.png" />
+    <None Remove="src\JSON\POS_Fragen.json" />
+=======
+<<<<<<<< HEAD:src/Quiz-show.csproj
+    <None Remove="Images\Icon.png" />
+    <None Remove="Images\Powertoys.png" />
+    <None Remove="JSON\POS_Fragen.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="JSON\POS_Fragen.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+========
+    <None Remove="src\Images\Icon.png" />
+    <None Remove="src\Images\Powertoys.png" />
+>>>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0:Quiz-show.csproj
+>>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0
   </ItemGroup>
 
   <ItemGroup>
@@ -28,4 +46,23 @@
     <Resource Include="src\Images\Powertoys.png" />
   </ItemGroup>
 
+<<<<<<< HEAD
+	<ItemGroup>
+		<ApplicationDefinition Include="src\App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="src\JSON\POS_Fragen.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="src\MainWindow.xaml">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Page>
+	</ItemGroup>
+
+=======
+>>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0
 </Project>
