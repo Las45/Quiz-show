@@ -1,6 +1,8 @@
-﻿using Quiz_show.Klassen;
+﻿using Quiz_show.src.Klassen;
+using Quiz_show.usercontrols.Icons;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,6 @@ namespace Quiz_show.Frames
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
 
         private void UpdateUI()
         {
@@ -109,7 +110,5 @@ namespace Quiz_show.Frames
 
 
 
-=======
->>>>>>> 0c985d25c9bd066bcf49fcc533061dc2878291a0
     }
 }

@@ -7,6 +7,9 @@ using System.Windows.Media;
 
 namespace Quiz_show.usercontrols
 {
+    /// <summary>
+    /// Interaktionslogik für Frage.xaml
+    /// </summary>
     public partial class FrageUserControl : UserControl
     {
         private Frage daten;
@@ -52,7 +55,7 @@ namespace Quiz_show.usercontrols
             CheckAnswer(1);
         }
 
-        private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
+        public FrageUserControl()
         {
             CheckAnswer(2);
         }
