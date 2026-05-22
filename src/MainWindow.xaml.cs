@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Supabase;
 using Quiz_show.src.Klassen;
+using Quiz_show.Klassen;
 
 namespace Quiz_show
 {
@@ -22,6 +23,7 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
+        
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
         Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()

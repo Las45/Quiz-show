@@ -10,29 +10,29 @@
       Title="Shop" Foreground="#FF5C1003">
 
     <Grid>
-        <Rectangle Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectRotButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectGoldButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectOriginalButton_MouseUp" Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectRotButton_MouseUp"  Name="RectRotButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectGoldButton_MouseUp"  Name="RectGoldButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
-        <Rectangle Name="RectOriginalBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectGrünBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectSilberBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectOriginalBackground_MouseUp"  Name="RectOriginalBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectGrünBackground_MouseUp"  Name="RectGrünBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseUp="RectSilberBackground_MouseUp"  Name="RectSilberBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
         <Label Content="Shop" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="127" Width="200" FontSize="80" Foreground="#FF450000"/>
 
 
 
-        <Label Name="LabelOriginalButton" Content="Original" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelOriginalBackground" Content="Original" HorizontalAlignment="Left" Margin="260,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectOriginalButton_MouseUp"  Name="LabelOriginalButton" Content="Original" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectOriginalBackground_MouseUp"  Name="LabelOriginalBackground" Content="Original" HorizontalAlignment="Left" Margin="260,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
 
-        <Label Name="LabelRotButton" Content="Rot" HorizontalAlignment="Left" Margin="710,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelGrünBackground" Content="Grün" HorizontalAlignment="Left" Margin="690,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectRotButton_MouseUp"  Name="LabelRotButton" Content="Rot" HorizontalAlignment="Left" Margin="710,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectGrünBackground_MouseUp"  Name="LabelGrünBackground" Content="Grün" HorizontalAlignment="Left" Margin="690,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
 
 
-        <Label Name="LabelGoldButton" Content="Gold" HorizontalAlignment="Left" Margin="1090,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelSilberBackground" Content="Silber" HorizontalAlignment="Left" Margin="1090,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectGoldButton_MouseUp"  Name="LabelGoldButton" Content="Gold" HorizontalAlignment="Left" Margin="1090,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectSilberBackground_MouseUp" Name="LabelSilberBackground" Content="Silber" HorizontalAlignment="Left" Margin="1090,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
 
         <Label Name="Price1" Content="20 Coins" HorizontalAlignment="Left" Margin="650,392,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
         <Label Name="Price2" Content="30 Coins" HorizontalAlignment="Left" Margin="650,742,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
@@ -44,6 +44,33 @@
         <Label Content="Button Design:" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Height="76" Width="460" FontSize="48" Foreground="#FF450000"/>
         <Label Content="Background Design:" HorizontalAlignment="Left" Margin="530,450,0,0" VerticalAlignment="Top" Height="76" Width="473" FontSize="48" Foreground="#FF450000"/>
 
+        <Path Name="PathExit"
+      Width="150"
+      Height="100"
+      Fill="#156082"
+      Stroke="#082430"
+      StrokeThickness="4"
+      Stretch="Fill"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Margin="79,430,0,0"
+      Cursor="Hand"
 
+      MouseEnter="PathExit_MouseEnter"
+      MouseLeave="PathExit_MouseLeave"
+      MouseUp="PathExit_MouseUp"
+
+      Data="M46,8 
+            L46,34 
+            L76,34 
+            L76,8 
+            L108,8 
+            L108,44 
+            C108,62 92,62 76,62 
+            L46,62 
+            L46,82 
+            L8,45 
+            L46,8 
+            Z"/>
     </Grid>
 </Page>

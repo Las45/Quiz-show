@@ -9,7 +9,7 @@ namespace Quiz_show.usercontrols
     /// <summary>
     /// Interaktionslogik für Frage.xaml
     /// </summary>
-    public partial class Frage : UserControl
+    public partial class FrageUserControl : UserControl
     {
         public event Action<bool> FrageBeendet;
 
@@ -55,7 +55,7 @@ namespace Quiz_show.usercontrols
             }
         }
 
-        public Frage()
+        public FrageUserControl()
         {
             InitializeComponent();
         }

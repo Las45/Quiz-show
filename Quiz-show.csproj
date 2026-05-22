@@ -28,4 +28,12 @@
     <Resource Include="src\Images\Powertoys.png" />
   </ItemGroup>
 
+	<ItemGroup>
+		<ApplicationDefinition Include="src\App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="src\JSON\" />
+	</ItemGroup>
+
 </Project>
