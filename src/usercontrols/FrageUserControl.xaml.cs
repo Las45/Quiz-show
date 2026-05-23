@@ -1,4 +1,5 @@
 ﻿using Quiz_show.Klassen;
+using Quiz_show.src.Klassen;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,7 +15,7 @@ namespace Quiz_show.usercontrols
     {
         private Frage daten;
 
-        public event Action<int> FrageBeendet;
+        public event Action<bool> FrageBeendet;
 
         public FrageUserControl(Frage frage)
         {
@@ -42,7 +43,7 @@ namespace Quiz_show.usercontrols
             else
                 MessageBox.Show("Falsch!");
 
-            FrageBeendet?.Invoke(index);
+            FrageBeendet?.Invoke(richtig);
         }
 
         private void a_rect_MouseUp(object sender, MouseButtonEventArgs e)
@@ -55,7 +56,7 @@ namespace Quiz_show.usercontrols
             CheckAnswer(1);
         }
 
-        public FrageUserControl()
+        private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
             CheckAnswer(2);
         }
