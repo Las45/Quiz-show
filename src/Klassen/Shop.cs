@@ -8,7 +8,7 @@ public static class Shop
 {
     public static double Money = 200;
 
-
+    public static event Action ShopUpdated;
     public static List<ShopItems> Freigeschaltet = new();
 
 
@@ -44,6 +44,8 @@ public static class Shop
         {
             Console.WriteLine("Nicht genug Geld!");
         }
+
+        ShopUpdated?.Invoke();
     }
 
     // Auswählen
