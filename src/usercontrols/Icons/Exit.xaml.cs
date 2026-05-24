@@ -23,6 +23,15 @@ namespace Quiz_show.usercontrols.Icons
         public Exit()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            Exit_rect1.Fill = new SolidColorBrush(Shop.GetButtonColor());
         }
         private void Exit_rect_MouseEnter(object sender, MouseEventArgs e)
         {

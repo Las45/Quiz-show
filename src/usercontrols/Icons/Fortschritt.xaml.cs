@@ -23,17 +23,25 @@ namespace Quiz_show.usercontrols.Icons
         public Fortschritt()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            Vokabel_rect1.Fill = new SolidColorBrush(Shop.GetButtonColor());
         }
 
         private void Vokabel_rect_MouseEnter(object sender, MouseEventArgs e)
         {
-            Vokabel_rect1.Stroke = Brushes.LightBlue;
-            Vokabel_rect1.StrokeThickness = 2;
+            Vokabel_rect1.Opacity = 0.7;
         }
 
         private void Vokabel_rect_MouseLeave(object sender, MouseEventArgs e)
         {
-            Vokabel_rect1.StrokeThickness = 0;
+            Vokabel_rect1.Opacity = 1;
 
         }
 
