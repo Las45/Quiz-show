@@ -19,36 +19,38 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Rectangle Name="RectOriginalButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="0"/>
-            <Rectangle Name="RectRotButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="0"/>
-            <Rectangle Name="RectGoldButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="0"/>
+            <Rectangle Name="RectOriginalButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="1"/>
+            <Rectangle Name="RectRotButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="1"/>
+            <Rectangle Name="RectGoldButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="1"/>
 
-            <Rectangle Name="RectOriginalBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="1"/>
-            <Rectangle Name="RectGrünBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="1"/>
-            <Rectangle Name="RectSilberBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="1"/>
+            <Rectangle Name="RectOriginalBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="3"/>
+            <Rectangle Name="RectGrünBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="3"/>
+            <Rectangle Name="RectSilberBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="3"/>
 
-            <Label Content="Shop" VerticalAlignment="Top" Height="127" Width="200" FontSize="80" Foreground="#FF450000" Grid.Column="1" Grid.Row="0"/>
+            <Label Content="Shop" VerticalAlignment="Top" Height="125" Width="200" FontSize="80" Foreground="#FF450000" Grid.Column="1" Grid.Row="0"/>
 
-            <Label Name="LabelOriginalButton" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-            <Label Name="LabelOriginalBackground" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+            <Label Name="LabelOriginalButton" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="0" Grid.Row="1"/>
+            <Label Name="LabelOriginalBackground" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="0" Grid.Row="3"/>
 
-            <Label Name="LabelRotButton" Content="Rot" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-            <Label Name="LabelGrünBackground" Content="Grün" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-
-            <Label Name="LabelGoldButton" Content="Gold" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-            <Label Name="LabelSilberBackground" Content="Silber" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-            <Label Name="Price1" Content="20 Coins" Height="75" Width="190" FontSize="48" Foreground="#FF450000"/>
-            <Label Name="Price2" Content="30 Coins" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-            <Label Name="Price3" Content="100 Coins" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
-            <Label Name="Price4" Content="100 Coins" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
+            <Label Name="LabelRotButton" Content="Rot" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center"/>
+            <Label Name="LabelGrünBackground" Content="Grün" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="Center"/>
 
 
-            <Label Content="Button Design:" Height="76" Width="460" FontSize="48" Foreground="#FF450000"/>
-            <Label Content="Background Design:" Height="76" Width="473" FontSize="48" Foreground="#FF450000" Margin="0,62,0,62" Grid.Row="1"/>
+            <Label Name="LabelGoldButton" Content="Gold" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Center"/>
+            <Label Name="LabelSilberBackground" Content="Silber" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="3" HorizontalContentAlignment="Center"/>
+
+            <Label Name="Price1" Content="20 Coins" Height="75" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="1" Margin="130,284,130,0" />
+            <Label Name="Price2" Content="30 Coins" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="3" Margin="136,282,146,2"/>
+
+            <Label Name="Price3" Content="100 Coins" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="1" Margin="65,284,25,0"/>
+            <Label Name="Price4" Content="100 Coins" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="3" Margin="102,280,0,0"/>
+
+
+            <Label Content="Button Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="0" Margin="75,105,75,5"/>
+            <Label Content="Background Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="2" Margin="0,0,0,0" HorizontalAlignment="Center"/>
 
 
         </Grid>
