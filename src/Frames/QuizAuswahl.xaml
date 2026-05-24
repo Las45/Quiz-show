@@ -11,26 +11,26 @@
 
     <Grid>
         <Rectangle MouseEnter="RectQuiz1_MouseEnter" MouseLeave="RectQuiz1_MouseLeave" MouseUp="RectQuiz1_MouseUp" Name="RectQuiz1" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectQuiz2" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectQuiz3" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseEnter="RectQuiz2_MouseEnter" MouseLeave="RectQuiz2_MouseLeave" MouseUp="RectQuiz2_MouseUp" Name="RectQuiz2" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseEnter="RectQuiz3_MouseEnter" MouseLeave="RectQuiz3_MouseLeave" MouseUp="RectQuiz3_MouseUp" Name="RectQuiz3" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
-        <Rectangle x:Name="RectQuiz4" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="450,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle x:Name="RectQuiz5" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="850,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseEnter="RectQuiz4_MouseEnter" MouseLeave="RectQuiz4_MouseLeave" MouseUp="RectQuiz4_MouseUp" x:Name="RectQuiz4" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="450,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle MouseEnter="RectQuiz5_MouseEnter" MouseLeave="RectQuiz5_MouseLeave" MouseUp="RectQuiz5_MouseUp" x:Name="RectQuiz5" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="850,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
         <Label Content="Quiz:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="127" Width="715" FontSize="80" Foreground="#FF450000" Margin="650,31,0,0"/>
 
 
 
-        <Label Name="LabelQuiz1" Content="POS" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="76" Width="116" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelQuiz2" Content="CABS" HorizontalAlignment="Left" Margin="492,550,0,0" VerticalAlignment="Top" Height="76" Width="176" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectQuiz1_MouseUp" MouseEnter="RectQuiz1_MouseEnter" MouseLeave="RectQuiz1_MouseLeave" Name="LabelQuiz1" Content="POS" HorizontalAlignment="Left" Margin="292,262,0,0" VerticalAlignment="Top" Height="76" Width="116" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectQuiz4_MouseUp" MouseEnter="RectQuiz4_MouseEnter" MouseLeave="RectQuiz4_MouseLeave" Name="LabelQuiz4" Content="CABS" HorizontalAlignment="Left" Margin="492,550,0,0" VerticalAlignment="Top" Height="76" Width="176" FontSize="48" Foreground="#FF450000"/>
 
-        <Label Name="LabelQuiz3" Content="NSCS" HorizontalAlignment="Left" Margin="690,262,0,0" VerticalAlignment="Top" Height="76" Width="226" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelQuiz4" Content="Geschichte" HorizontalAlignment="Left" Margin="862,563,0,0" VerticalAlignment="Top" Height="76" Width="288" FontSize="36" Foreground="#FF450000"/>
+        <Label MouseUp="RectQuiz2_MouseUp" MouseEnter="RectQuiz2_MouseEnter" MouseLeave="RectQuiz2_MouseLeave" Name="LabelQuiz2" Content="NSCS" HorizontalAlignment="Left" Margin="690,262,0,0" VerticalAlignment="Top" Height="76" Width="226" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectQuiz5_MouseUp" MouseEnter="RectQuiz5_MouseEnter" MouseLeave="RectQuiz5_MouseLeave" Name="LabelQuiz5" Content="Geschichte" HorizontalAlignment="Left" Margin="862,563,0,0" VerticalAlignment="Top" Height="76" Width="288" FontSize="36" Foreground="#FF450000"/>
 
 
-        <Label Name="LabelQuiz5" Content="Englisch" HorizontalAlignment="Left" Margin="1058,262,0,0" VerticalAlignment="Top" Height="76" Width="184" FontSize="48" Foreground="#FF450000"/>
+        <Label MouseUp="RectQuiz3_MouseUp" MouseEnter="RectQuiz3_MouseEnter" MouseLeave="RectQuiz3_MouseLeave" Name="LabelQuiz3" Content="Englisch" HorizontalAlignment="Left" Margin="1058,262,0,0" VerticalAlignment="Top" Height="76" Width="184" FontSize="48" Foreground="#FF450000"/>
 
         <Rectangle Name="RectQuizBackground" Height="1000" Width="1500" Fill="White" Visibility="Hidden"/>
 
