@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Quiz_show.Frames
 {
@@ -25,6 +26,21 @@ namespace Quiz_show.Frames
         public QuizAuswahl()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuiz1.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuiz2.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuiz3.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuiz4.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuiz5.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            RectQuizBackground.Fill = new SolidColorBrush(Shop.GetBackgroundColor());
         }
 
         private void LadeQuiz(string jsonDatei)

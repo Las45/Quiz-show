@@ -59,7 +59,7 @@
       MouseEnter="PathExit_MouseEnter"
       MouseLeave="PathExit_MouseLeave"
       MouseUp="PathExit_MouseUp"
-
+       
       Data="M46,8 
             L46,34 
             L76,34 
