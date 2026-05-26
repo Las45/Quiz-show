@@ -9,33 +9,49 @@
       d:DesignWidth="1500"
       Title="Shop" Foreground="#FF5C1003">
 
-    <Grid>
-        <Rectangle MouseUp="RectOriginalButton_MouseUp" Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle MouseUp="RectRotButton_MouseUp"  Name="RectRotButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle MouseUp="RectGoldButton_MouseUp"  Name="RectGoldButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+    <Viewbox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Rectangle Name="RectOriginalButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="1"/>
+            <Rectangle Name="RectRotButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="1"/>
+            <Rectangle Name="RectGoldButton" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="1"/>
+
+            <Rectangle Name="RectOriginalBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="0" Grid.Row="3"/>
+            <Rectangle Name="RectGrünBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="1" Grid.Row="3"/>
+            <Rectangle Name="RectSilberBackground" Fill="SkyBlue" Height="200" Stroke="Black" Width="200" Grid.Column="2" Grid.Row="3"/>
+
+            <Label Content="Shop" VerticalAlignment="Top" Height="125" Width="200" FontSize="80" Foreground="#FF450000" Grid.Column="1" Grid.Row="0"/>
+
+            <Label Name="LabelOriginalButton" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="0" Grid.Row="1"/>
+            <Label Name="LabelOriginalBackground" Content="Original" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="0" Grid.Row="3"/>
+
+            <Label Name="LabelRotButton" Content="Rot" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center"/>
+            <Label Name="LabelGrünBackground" Content="Grün" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="3" HorizontalContentAlignment="Center"/>
 
 
-        <Rectangle MouseUp="RectOriginalBackground_MouseUp"  Name="RectOriginalBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle MouseUp="RectGrünBackground_MouseUp"  Name="RectGrünBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle MouseUp="RectSilberBackground_MouseUp"  Name="RectSilberBackground" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,550,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+            <Label Name="LabelGoldButton" Content="Gold" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Center"/>
+            <Label Name="LabelSilberBackground" Content="Silber" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="3" HorizontalContentAlignment="Center"/>
+
+            <Label Name="Price1" Content="20 Coins" Height="75" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="1" Margin="130,284,130,0" />
+            <Label Name="Price2" Content="30 Coins" Height="76" Width="190" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="3" Margin="136,282,146,2"/>
+
+            <Label Name="Price3" Content="100 Coins" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="1" Margin="65,284,25,0"/>
+            <Label Name="Price4" Content="100 Coins" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="3" Margin="102,280,0,0"/>
 
 
-        <Label Content="Shop" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="127" Width="200" FontSize="80" Foreground="#FF450000"/>
+            <Label Content="Button Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="0" Margin="75,105,75,5"/>
+            <Label Content="Background Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="2" Margin="0,0,0,0" HorizontalAlignment="Center"/>
 
-
-
-        <Label MouseUp="RectOriginalButton_MouseUp"  Name="LabelOriginalButton" Content="Original" HorizontalAlignment="Left" Margin="260,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label MouseUp="RectOriginalBackground_MouseUp"  Name="LabelOriginalBackground" Content="Original" HorizontalAlignment="Left" Margin="260,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-        <Label MouseUp="RectRotButton_MouseUp"  Name="LabelRotButton" Content="Rot" HorizontalAlignment="Left" Margin="710,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label MouseUp="RectGrünBackground_MouseUp"  Name="LabelGrünBackground" Content="Grün" HorizontalAlignment="Left" Margin="690,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-
-        <Label MouseUp="RectGoldButton_MouseUp"  Name="LabelGoldButton" Content="Gold" HorizontalAlignment="Left" Margin="1090,262,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label MouseUp="RectSilberBackground_MouseUp" Name="LabelSilberBackground" Content="Silber" HorizontalAlignment="Left" Margin="1090,612,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-
-        <Label Name="Price1" Content="20 Coins" HorizontalAlignment="Left" Margin="650,392,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="Price2" Content="30 Coins" HorizontalAlignment="Left" Margin="650,742,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
 
         <Label Name="Price3" Content="100 Coins" HorizontalAlignment="Left" Margin="1040,392,0,0" VerticalAlignment="Top" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
         <Label Name="Price4" Content="100 Coins" HorizontalAlignment="Left" Margin="1040,742,0,0" VerticalAlignment="Top" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
@@ -73,4 +89,6 @@
             L46,8 
             Z"/>
     </Grid>
+        </Grid>
+    </Viewbox>
 </Page>
