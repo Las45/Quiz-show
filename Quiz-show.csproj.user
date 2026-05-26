@@ -2,55 +2,55 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="src\Frames\OTP_PIN_F_Reset.xaml.cs">
+    <Compile Update="Frames\OTP_PIN_F_Reset.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Register_1.xaml.cs">
+    <Compile Update="Frames\Register_1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Register_2.xaml.cs">
+    <Compile Update="Frames\Register_2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Reset_password.xaml.cs">
+    <Compile Update="Frames\Reset_password.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Achievementspage.xaml.cs">
+    <Compile Update="Frames\Achievementspage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\QuizAuswahl.xaml.cs">
+    <Compile Update="Frames\QuizAuswahl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Shoppage.xaml.cs">
+    <Compile Update="Frames\Shoppage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Icons\Achievements.xaml.cs">
+    <Compile Update="usercontrols\Icons\Achievements.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Icons\Exit.xaml.cs">
+    <Compile Update="usercontrols\Icons\Exit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Icons\Fortschritt.xaml.cs">
+    <Compile Update="usercontrols\Icons\Fortschritt.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Icons\Quiz.xaml.cs">
+    <Compile Update="usercontrols\Icons\Quiz.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\forgotten_password.xaml.cs">
+    <Compile Update="Frames\forgotten_password.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Homepage.xaml.cs">
+    <Compile Update="Frames\Homepage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Frames\Login.xaml.cs">
+    <Compile Update="Frames\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Frage.xaml.cs">
+    <Compile Update="usercontrols\Frage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\usercontrols\Icons\Shop.xaml.cs">
+    <Compile Update="usercontrols\Icons\Shop.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="src\Windows\Register.xaml.cs">
+    <Compile Update="Windows\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
