@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Quiz_show.src.usercontrols.True_False"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Quiz_show.src.usercontrols"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="400">
+    <Canvas>
+        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="117" Height="54" Width="380"/>
+        <Button x:Name="Yes_uc" Content="Ja" Canvas.Left="100" Canvas.Top="175" Height="25" Width="60"/>
+        <Button x:Name="No_uc" Content="Nein" Canvas.Left="210" Canvas.Top="175" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+    </Canvas>
+</UserControl>
