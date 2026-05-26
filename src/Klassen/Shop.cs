@@ -68,6 +68,8 @@ public static class Shop
                 break;
         }
 
+        ShopUpdated?.Invoke();
+
         Console.WriteLine(item + " ausgewählt!");
     }
 

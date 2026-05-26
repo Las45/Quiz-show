@@ -1,5 +1,9 @@
 ﻿using Quiz_show.Frames;
+using Quiz_show.Klassen;
+using Quiz_show.src.Klassen;
 using Quiz_show.usercontrols;
+using Quiz_show.usercontrols.Icons;
+using Supabase;
 using System.Text;
 using System.Text.Json;
 using System.Windows;
@@ -11,9 +15,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Supabase;
-using Quiz_show.src.Klassen;
-using Quiz_show.Klassen;
 
 namespace Quiz_show
 {
@@ -38,6 +39,8 @@ namespace Quiz_show
             Frames.Add("Achievements", new Achievementspage());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
+            Shop.ShopUpdated += UpdateUI;
+            UpdateUI();
             Logging.logger.Information("Window wurde geladen");
             Main_frames.Content = Frames["Login"];
         }
@@ -62,6 +65,11 @@ namespace Quiz_show
         public void Change_Frame(Page frame)
         {
             Main_frames.Content = frame;
+        }
+
+        private void UpdateUI()
+        {
+            Main_frames.Background = new SolidColorBrush(Shop.GetBackgroundColor());
         }
     }
 }
