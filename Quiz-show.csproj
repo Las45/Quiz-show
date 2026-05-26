@@ -1,31 +1,65 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>Quiz_show</RootNamespace>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RootNamespace>Quiz_show</RootNamespace>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Images\Icon.png" />
-    <None Remove="Images\Powertoys.png" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="src\Images\Icon.png" />
+		<None Remove="src\Images\Powertoys.png" />
+		<None Remove="src\JSON\POS_Fragen.json" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Serilog" Version="4.3.1" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
-    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
-    <PackageReference Include="Supabase" Version="1.1.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="src\JSON\POS_Fragen.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 
-  <ItemGroup>
-    <Resource Include="Images\Icon.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Powertoys.png" />
-  </ItemGroup>
+		<Content Include="src\JSON\CABS_Fragen.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<Content Include="src\JSON\NSCS_Fragen.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<Content Include="src\JSON\Geschichte_Fragen.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<Content Include="src\JSON\Englisch_Fragen.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Serilog" Version="4.3.1" />
+		<PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+		<PackageReference Include="Supabase" Version="1.1.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="src\Images\Icon.png">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Resource>
+
+		<Resource Include="src\Images\Powertoys.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ApplicationDefinition Include="src\App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Page Update="src\MainWindow.xaml">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</Page>
+	</ItemGroup>
 
 </Project>
