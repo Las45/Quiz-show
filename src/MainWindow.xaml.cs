@@ -24,18 +24,21 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
-        
+
+        private Progress progress = new Progress();
+
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
         Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
         {
             Logging.init();
+            Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
-            Frames.Add("Stats", new Checker_Menue());
+            Frames.Add("Checker", checkerMenu);
             Frames.Add("Passwort_forgotten", new forgotten_password(client, this));
             Frames.Add("Shop", new Shoppage());
-            Frames.Add("Quiz", new QuizAuswahl());
+            Frames.Add("Quiz", new QuizAuswahl(checkerMenu, progress));
             Frames.Add("Achievements", new Achievementspage());
             Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
@@ -56,7 +59,7 @@ namespace Quiz_show
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            ((Checker_Menue)Frames["Stats"]).Save();
+            //((Checker_Menue)Frames["Stats"]).Save();
         }
         public void Change_Frame_by_name(string frame)
         {

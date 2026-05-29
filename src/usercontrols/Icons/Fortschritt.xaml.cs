@@ -47,7 +47,12 @@ namespace Quiz_show.usercontrols.Icons
 
         private void Vokabel_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            MainWindow main = Window.GetWindow(this) as MainWindow;
 
+            if (main != null)
+            {
+                main.Change_Frame_by_name("Checker");
+            }
         }
     }
 }

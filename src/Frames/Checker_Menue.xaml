@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Quiz_show.Frames"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="1000" d:DesignWidth="1500"
       Title="Statistic">
 
     <Grid>
-        <Canvas>
+        <Canvas Margin="358,262,-358,-262">
             <ProgressBar x:Name="Pos_progressbar" Height="20" Canvas.Left="90" Canvas.Top="70" Width="610"/>
             <ProgressBar x:Name="NSCS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="126" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <ProgressBar x:Name="CABS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="182" Width="610" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -22,7 +22,33 @@
             <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Path Name="PathExit"
+      Width="150"
+      Height="100"
+      Fill="#156082"
+      Stroke="#082430"
+      StrokeThickness="4"
+      Stretch="Fill"
+      HorizontalAlignment="Left"
+      VerticalAlignment="Top"
+      Cursor="Hand"
 
+      MouseEnter="PathExit_MouseEnter"
+      MouseLeave="PathExit_MouseLeave"
+      MouseUp="PathExit_MouseUp"
+
+      Data="M46,8 
+            L46,34 
+            L76,34 
+            L76,8 
+            L108,8 
+            L108,44 
+            C108,62 92,62 76,62 
+            L46,62 
+            L46,82 
+            L8,45 
+            L46,8 
+            Z" Canvas.Left="280" Canvas.Top="450"/>
         </Canvas>
     </Grid>
 </Page>
