@@ -15,7 +15,7 @@ namespace Quiz_show.Frames
     {
         private Quizclass quiz = new Quizclass();
 
-        private Checker checker = new Checker();
+        private Checker_Menue check;
 
         private Random random = new Random();
 
@@ -23,9 +23,18 @@ namespace Quiz_show.Frames
 
         private List<Frage> quizFragen;
 
-        public QuizAuswahl()
+        // WICHTIG: dieselbe Progress Instanz überall verwenden
+        private Progress progress;
+
+        private int aktuellesFach = 0;
+
+        public QuizAuswahl(Checker_Menue checkerMenu, Progress sharedProgress)
         {
             InitializeComponent();
+
+            check = checkerMenu;
+
+            progress = sharedProgress;
 
             UpdateUI();
 
@@ -35,19 +44,27 @@ namespace Quiz_show.Frames
         private void UpdateUI()
         {
             PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+
             RectQuiz1.Fill = new SolidColorBrush(Shop.GetButtonColor());
             RectQuiz2.Fill = new SolidColorBrush(Shop.GetButtonColor());
             RectQuiz3.Fill = new SolidColorBrush(Shop.GetButtonColor());
             RectQuiz4.Fill = new SolidColorBrush(Shop.GetButtonColor());
             RectQuiz5.Fill = new SolidColorBrush(Shop.GetButtonColor());
+
             RectQuizBackground.Fill = new SolidColorBrush(Shop.GetBackgroundColor());
         }
 
-        private void LadeQuiz(string jsonDatei)
+        private void LadeQuiz(string jsonDatei, int fachIndex)
         {
             try
             {
-                string path = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"src","JSON",jsonDatei);
+                aktuellesFach = fachIndex;
+
+                string path = System.IO.Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "src",
+                    "JSON",
+                    jsonDatei);
 
                 if (!System.IO.File.Exists(path))
                 {
@@ -59,7 +76,8 @@ namespace Quiz_show.Frames
 
                 quiz.Load(path);
 
-                checker.Quizzes_correct = 0;
+                progress.Subjects[fachIndex].Quizzes_correct = 0;
+                progress.Subjects[fachIndex].Quizzes_prozent = 0;
 
                 quizFragen = quiz.Questions
                     .OrderBy(x => random.Next())
@@ -96,23 +114,28 @@ namespace Quiz_show.Frames
         {
             if (richtig)
             {
-                checker.Quizzes_correct++;
+                progress.Subjects[aktuellesFach].AddCorrect();
             }
 
             aktuelleFrage++;
 
             if (aktuelleFrage >= quizFragen.Count)
             {
-                checker.Calculate(quizFragen.Count);
+                progress.Subjects[aktuellesFach]
+                    .Calculate(quizFragen.Count);
 
-                MessageBox.Show(
-                    "Quiz beendet!\n\n" +
-                    "Richtig: " + checker.Quizzes_correct + "\n" +
-                    "Prozent: " + checker.Quizzes_prozent + "%"
-                );
+
+                check.Update();
 
                 QuizContainer.Visibility = Visibility.Hidden;
                 RectQuizBackground.Visibility = Visibility.Hidden;
+
+                MessageBox.Show(
+                    "Quiz beendet!\n" +
+                    "Richtig: " +
+                    progress.Subjects[aktuellesFach].Quizzes_correct +
+                    "/" +
+                    quizFragen.Count);
 
                 return;
             }
@@ -122,27 +145,27 @@ namespace Quiz_show.Frames
 
         private void RectQuiz1_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("POS_Fragen.json");
+            LadeQuiz("POS_Fragen.json", 0);
         }
 
         private void RectQuiz2_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("CABS_Fragen.json");
+            LadeQuiz("CABS_Fragen.json", 1);
         }
 
         private void RectQuiz3_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("Englisch_Fragen.json");
+            LadeQuiz("Englisch_Fragen.json", 2);
         }
 
         private void RectQuiz4_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("CABS_Fragen.json");
+            LadeQuiz("Mathe_Fragen.json", 3);
         }
 
         private void RectQuiz5_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("Geschichte_Fragen.json");
+            LadeQuiz("Geschichte_Fragen.json", 4);
         }
 
         private void PathExit_MouseEnter(object sender, MouseEventArgs e)
@@ -160,6 +183,16 @@ namespace Quiz_show.Frames
             MainWindow main = (MainWindow)Application.Current.MainWindow;
 
             main.Change_Frame_by_name("Home");
+        }
+
+        private void RectQuiz1_MouseEnter(object sender, MouseEventArgs e)
+        {
+            RectQuiz1.Opacity = 0.7;
+        }
+
+        private void RectQuiz1_MouseLeave(object sender, MouseEventArgs e)
+        {
+            RectQuiz1.Opacity = 1;
         }
 
         private void RectQuiz2_MouseEnter(object sender, MouseEventArgs e)
@@ -200,16 +233,6 @@ namespace Quiz_show.Frames
         private void RectQuiz5_MouseLeave(object sender, MouseEventArgs e)
         {
             RectQuiz5.Opacity = 1;
-        }
-
-        private void RectQuiz1_MouseLeave(object sender, MouseEventArgs e)
-        {
-            RectQuiz1.Opacity = 1;
-        }
-
-        private void RectQuiz1_MouseEnter(object sender, MouseEventArgs e)
-        {
-            RectQuiz1.Opacity = 0.7;
         }
     }
 }
