@@ -6,7 +6,7 @@ using System.Windows.Media;
 using System.Windows.Media;
 public static class Shop
 {
-    public static double Money = 200;
+    public static double Money = 0;
 
     public static event Action ShopUpdated;
     public static List<ShopItems> Freigeschaltet = new();

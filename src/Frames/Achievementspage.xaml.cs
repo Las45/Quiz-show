@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz_show.src.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,36 @@ namespace Quiz_show.Frames
         private void UpdateUI()
         {
             PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+
+            if (Achievements.IsUnlocked("Perfektionist"))
+            {
+                RectAchievement1.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement1.Content = "";
+            }
+
+            if (Achievements.IsUnlocked("5er Schüler"))
+            { 
+                RectAchievement2.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement2.Content = "";
+            }
+
+
+            if (Achievements.IsUnlocked("1er Schüler"))
+            { 
+                RectAchievement3.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement3.Content = "";
+            }
+            if (Achievements.IsUnlocked("Mode Designer"))
+            { 
+                RectAchievement4.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement4.Content = "";
+            }
+
+            if (Achievements.IsUnlocked("Absolute Gleichheit"))
+            { 
+                RectAchievement5.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement5.Content = "";
+            }
         }
         private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
         {
