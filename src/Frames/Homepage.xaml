@@ -16,7 +16,7 @@
                            Canvas.Top="300"/>
         <uc:Fortschritt Canvas.Left="550"
                            Canvas.Top="300"/>
-        <uc:Shop Canvas.Left="1000"
+        <uc:ShopUseroCntrol Canvas.Left="1000"
                            Canvas.Top="300"/>
         <uc:Achievements Canvas.Left="325"
                            Canvas.Top="550"/>

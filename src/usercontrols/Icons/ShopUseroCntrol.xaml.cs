@@ -18,11 +18,21 @@ namespace Quiz_show.usercontrols.Icons
     /// <summary>
     /// Interaktionslogik für Shop.xaml
     /// </summary>
-    public partial class Shop : UserControl
+    public partial class ShopUseroCntrol : UserControl
     {
-        public Shop()
+
+        public ShopUseroCntrol()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            Shop_rect1.Fill = new SolidColorBrush(Shop.GetButtonColor());
         }
 
         private void Shop_rect_MouseUp(object sender, MouseButtonEventArgs e)

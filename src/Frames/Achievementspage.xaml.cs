@@ -23,6 +23,32 @@ namespace Quiz_show.Frames
         public Achievementspage()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+        }
+        private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MainWindow main = (MainWindow)Application.Current.MainWindow;
+            UpdateUI();
+            main.Change_Frame_by_name("Home");
+
+        }
+
+        private void PathExit_MouseLeave(object sender, MouseEventArgs e)
+        {
+            PathExit.Opacity = 1;
+        }
+
+        private void PathExit_MouseEnter(object sender, MouseEventArgs e)
+        {
+            PathExit.Opacity = 0.7;
         }
     }
 }

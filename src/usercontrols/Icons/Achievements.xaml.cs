@@ -23,6 +23,15 @@ namespace Quiz_show.usercontrols.Icons
         public Achievements()
         {
             InitializeComponent();
+
+            UpdateUI();
+
+            Shop.ShopUpdated += UpdateUI;
+        }
+
+        private void UpdateUI()
+        {
+            Achievements_rect1.Fill = new SolidColorBrush(Shop.GetButtonColor());
         }
         private void Achievements_rect_MouseEnter(object sender, MouseEventArgs e)
         {
