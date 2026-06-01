@@ -52,15 +52,7 @@
             <Label Content="Button Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="0" Margin="75,105,75,5"/>
             <Label Content="Background Design:" Height="76" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="2" Margin="0,0,0,0" HorizontalAlignment="Center"/>
 
-
-        <Label Name="Price3" Content="100 Coins" HorizontalAlignment="Left" Margin="1040,392,0,0" VerticalAlignment="Top" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="Price4" Content="100 Coins" HorizontalAlignment="Left" Margin="1040,742,0,0" VerticalAlignment="Top" Height="76" Width="230" FontSize="48" Foreground="#FF450000"/>
-
-
-        <Label Content="Button Design:" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Height="76" Width="460" FontSize="48" Foreground="#FF450000"/>
-        <Label Content="Background Design:" HorizontalAlignment="Left" Margin="530,450,0,0" VerticalAlignment="Top" Height="76" Width="473" FontSize="48" Foreground="#FF450000"/>
-
-        <Path Name="PathExit"
+            <Path Name="PathExit"
       Width="150"
       Height="100"
       Fill="#156082"
@@ -88,7 +80,6 @@
             L8,45 
             L46,8 
             Z"/>
-    </Grid>
         </Grid>
     </Viewbox>
 </Page>
