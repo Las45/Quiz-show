@@ -25,5 +25,9 @@ namespace Quiz_show.src.usercontrols
             InitializeComponent();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@
 		<None Remove="src\Images\Icon.png" />
 		<None Remove="src\Images\Powertoys.png" />
 		<None Remove="src\JSON\POS_Fragen.json" />
+		<None Remove="src\JSON\test.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -34,6 +35,10 @@
 
 		<Content Include="src\JSON\Englisch_Fragen.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+
+		<Content Include="src\JSON\test.json">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
 

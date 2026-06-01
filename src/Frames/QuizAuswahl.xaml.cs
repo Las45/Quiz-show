@@ -1,5 +1,6 @@
 ﻿using Quiz_show.Klassen;
 using Quiz_show.src.Klassen;
+using Quiz_show.src.usercontrols;
 using Quiz_show.usercontrols;
 using System;
 using System.Collections.Generic;
@@ -69,11 +70,18 @@ namespace Quiz_show.Frames
 
             Frage f = quizFragen[aktuelleFrage];
 
-            FrageUserControl frageControl = new FrageUserControl(f);
-
-            frageControl.FrageBeendet += AntwortGegeben;
-
-            QuizContainer.Children.Add(frageControl);
+            if (f.antworten.Count == 4)
+            {
+                FrageUserControl frageControl = new FrageUserControl(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
+            else if (f.antworten.Count == 2)
+            {
+                True_False frageControl = new True_False(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
         }
 
         private void AntwortGegeben(bool richtig)
@@ -106,7 +114,7 @@ namespace Quiz_show.Frames
 
         private void RectQuiz1_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("POS_Fragen.json");
+            LadeQuiz("test.json");// Muss auf Pos geändert werden
         }
 
         private void RectQuiz2_MouseUp(object sender, MouseButtonEventArgs e)

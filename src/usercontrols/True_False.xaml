@@ -7,9 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
     <Canvas>
-        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="117" Height="54" Width="380"/>
-        <Button x:Name="Yes_uc" Content="Ja" Canvas.Left="100" Canvas.Top="175" Height="25" Width="60"/>
-        <Button x:Name="No_uc" Content="Nein" Canvas.Left="210" Canvas.Top="175" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Frage_true_false" Canvas.Left="10" TextWrapping="Wrap" Text="" TextAlignment="Center" Canvas.Top="117" Height="54" Width="380"/>
+        <Button x:Name="Yes_uc" Content="Ja" Canvas.Left="100" Canvas.Top="175" Height="25" Width="60" Click="Yes_uc_Click"/>
+        <Button x:Name="No_uc" Content="Nein" Canvas.Left="210" Canvas.Top="175" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Click="No_uc_Click"/>
 
     </Canvas>
 </UserControl>
