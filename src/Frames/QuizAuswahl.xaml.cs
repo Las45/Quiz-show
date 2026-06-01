@@ -23,7 +23,8 @@ namespace Quiz_show.Frames
 
         private List<Frage> quizFragen;
 
-        // WICHTIG: dieselbe Progress Instanz überall verwenden
+        private static bool fünferschüler = false;
+        private static bool perfekt = false;
         private Progress progress;
 
         private int aktuellesFach = 0;
@@ -123,6 +124,28 @@ namespace Quiz_show.Frames
             {
                 progress.Subjects[aktuellesFach]
                     .Calculate(quizFragen.Count);
+
+                int anzahlRichtige = progress.Subjects[aktuellesFach].Quizzes_correct;
+                if (anzahlRichtige == 1)
+                {
+                    if (!fünferschüler)
+                    {
+                        Shop.Money += 25;
+                        fünferschüler = true;
+                    }
+
+                    Achievements.Unlock("5er Schüler");
+                }
+                if (anzahlRichtige == quizFragen.Count)
+                {
+                    if (!perfekt)
+                    {
+                        Shop.Money += 40;
+                        perfekt = true;
+                    }
+
+                    Achievements.Unlock("Perfektionist");
+                }
 
 
                 check.Update();

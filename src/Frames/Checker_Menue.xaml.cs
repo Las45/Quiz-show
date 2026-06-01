@@ -11,6 +11,8 @@ namespace Quiz_show.Frames
     {
         private Progress progress;
 
+        private static bool gleichheit = false;
+        private static bool einserschüller = false;
         public Checker_Menue(Progress p)
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace Quiz_show.Frames
             UpdateUI();
 
             Shop.ShopUpdated += UpdateUI;
+
+
         }
 
         private void UpdateUI()
@@ -54,6 +58,31 @@ namespace Quiz_show.Frames
             CABS_progressbar.Value = progress.Subjects[2].Quizzes_prozent;
             English_progressbar.Value = progress.Subjects[3].Quizzes_prozent;
             Geschichte_progressbar.Value = progress.Subjects[4].Quizzes_prozent;
+
+
+
+            if (Pos_progressbar.Value == 50 && NSCS_progressbar.Value == 50 && CABS_progressbar.Value == 50 && Geschichte_progressbar.Value == 50 && English_progressbar.Value == 50)
+            {
+                if (!gleichheit)
+                {
+                    Shop.Money += 60;
+                    gleichheit = true;
+                }
+
+                Achievements.Unlock("Absolute Gleichheit");
+            }
+
+
+            if (Pos_progressbar.Value == 100 && NSCS_progressbar.Value == 100 && CABS_progressbar.Value == 100 && Geschichte_progressbar.Value == 100 && English_progressbar.Value == 100)
+            {
+                if (!einserschüller)
+                {
+                    Shop.Money += 25;
+                    einserschüller = true;
+                }
+
+                Achievements.Unlock("1er Schüler");
+            }
         }
     }
 }
