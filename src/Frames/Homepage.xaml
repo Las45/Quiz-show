@@ -10,18 +10,23 @@
       d:DesignWidth="1500"
       Title="Homepage"
       Loaded="Page_Loaded">
-
-    <Canvas>
-        <uc:Quiz    Canvas.Left="100"
-                           Canvas.Top="300"/>
-        <uc:Fortschritt Canvas.Left="550"
-                           Canvas.Top="300"/>
-        <uc:ShopUseroCntrol Canvas.Left="1000"
-                           Canvas.Top="300"/>
-        <uc:Achievements Canvas.Left="325"
-                           Canvas.Top="550"/>
-        <uc:Exit Canvas.Left="775"
-                           Canvas.Top="550"/>
-    </Canvas>
-
+    <Viewbox>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <uc:Quiz Width="400" Height="200" Grid.Row="1" Grid.Column="0" Margin="20,20,20,20"/>
+            <uc:Fortschritt Width="400" Height="200" Grid.Row="1" Grid.Column="1" Margin="20,20,20,20"/>
+            <uc:ShopUseroCntrol Width="400" Height="200" Grid.Row="1" Grid.Column="2" Margin="20,20,20,20"/>
+            <uc:Achievements Width="400" Height="200" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="20,20,20,20"/>
+            <uc:Exit Width="400" Height="200" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" Margin="20,20,20,20"/>
+        </Grid>
+    </Viewbox>
 </Page>
