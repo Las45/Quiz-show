@@ -49,6 +49,11 @@
             L8,45 
             L46,8 
             Z" Canvas.Left="280" Canvas.Top="450"/>
+            <Label Name="Pos_Prz" Content="0%" Canvas.Left="376" Canvas.Top="67"/>
+            <Label Name="NSCS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="123"/>
+            <Label Name="CABS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="179"/>
+            <Label Name="Eng_Prz" Content="0%" Canvas.Left="376" Canvas.Top="235"/>
+            <Label Name="Geschichte_Prz" Content="0%" Canvas.Left="376" Canvas.Top="291"/>
         </Canvas>
     </Grid>
 </Page>
