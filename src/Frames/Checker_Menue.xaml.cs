@@ -58,9 +58,11 @@ namespace Quiz_show.Frames
             English_progressbar.Value = progress.Subjects[2].Quizzes_prozent;
             NSCS_progressbar.Value = progress.Subjects[3].Quizzes_prozent;
             Geschichte_progressbar.Value = progress.Subjects[4].Quizzes_prozent;
-
-
-
+            Pos_Prz.Content = progress.Subjects[0].Quizzes_prozent + "%";
+            CABS_Prz.Content = progress.Subjects[1].Quizzes_prozent + "%";
+            Eng_Prz.Content = progress.Subjects[2].Quizzes_prozent + "%";
+            NSCS_Prz.Content = progress.Subjects[3].Quizzes_prozent + "%";
+            Geschichte_Prz.Content = progress.Subjects[4].Quizzes_prozent + "%";
 
             if (English_progressbar.Value == 50 && NSCS_progressbar.Value == 50 && CABS_progressbar.Value == 50 && Geschichte_progressbar.Value == 50 && Pos_progressbar.Value == 50)
             {
