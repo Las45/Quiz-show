@@ -140,11 +140,11 @@ namespace Quiz_show.Frames
                 {
                     if (!perfekt)
                     {
-                        Shop.Money += 40;
+                        Shop.Money += 25;
                         perfekt = true;
                     }
 
-                    Achievements.Unlock("Perfektionist");
+                    Achievements.Unlock("1er Schüler");
                 }
 
 
@@ -156,7 +156,7 @@ namespace Quiz_show.Frames
                 MessageBox.Show(
                     "Quiz beendet!\n" +
                     "Richtig: " +
-                    progress.Subjects[aktuellesFach].Quizzes_correct +
+                    progress.Subjects[aktuellesFach].Quizzes_correct +      
                     "/" +
                     quizFragen.Count);
 
@@ -184,7 +184,7 @@ namespace Quiz_show.Frames
         private void RectQuiz4_MouseUp(object sender, MouseButtonEventArgs e)
         {
             LadeQuiz("Mathe_Fragen.json", 3);
-        }
+        }   
 
         private void RectQuiz5_MouseUp(object sender, MouseButtonEventArgs e)
         {
