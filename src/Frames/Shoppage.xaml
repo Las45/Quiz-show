@@ -72,5 +72,8 @@
             L8,45 
             L46,8 
             Z"/>
+        <Label Name="MoneyLabel" Content="0 Coins" HorizontalAlignment="Left" Margin="1262,62,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+
+
     </Grid>
 </Page>
