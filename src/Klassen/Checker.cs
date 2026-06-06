@@ -8,8 +8,8 @@ namespace Quiz_show.src.Klassen
 {
     public class Checker
     {
-        public int Quizzes_correct;
-        public int Quizzes_prozent;
+        public int Quizzes_correct { get; set; }
+        public int Quizzes_prozent { get; set; }
 
         public void AddCorrect()
         {

@@ -78,7 +78,7 @@ namespace Quiz_show.Frames
                 quiz.Load(path);
 
                 progress.Subjects[fachIndex].Quizzes_correct = 0;
-                progress.Subjects[fachIndex].Quizzes_prozent = 0;
+
 
                 quizFragen = quiz.Questions
                     .OrderBy(x => random.Next())
@@ -122,8 +122,9 @@ namespace Quiz_show.Frames
 
             if (aktuelleFrage >= quizFragen.Count)
             {
-                progress.Subjects[aktuellesFach]
-                    .Calculate(quizFragen.Count);
+                progress.Subjects[aktuellesFach].Calculate(quizFragen.Count);
+
+                progress.Save();
 
                 int anzahlRichtige = progress.Subjects[aktuellesFach].Quizzes_correct;
                 if (anzahlRichtige == 1)

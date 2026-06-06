@@ -27,11 +27,14 @@ namespace Quiz_show
 
         private Progress progress = new Progress();
 
+
+
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
         Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
         {
             Logging.init();
+            progress.Load();
             Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
