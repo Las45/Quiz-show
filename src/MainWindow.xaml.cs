@@ -34,7 +34,7 @@ namespace Quiz_show
         public MainWindow()
         {
             Logging.init();
-            progress.Load();
+            Shop.Load();
             Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
