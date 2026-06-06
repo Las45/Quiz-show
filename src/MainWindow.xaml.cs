@@ -24,7 +24,7 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
-
+         
         private Progress progress = new Progress();
 
 
@@ -34,7 +34,9 @@ namespace Quiz_show
         public MainWindow()
         {
             Logging.init();
+            progress.Load();
             Shop.Load();
+            src.Klassen.Achievements.Load();
             Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
