@@ -9,7 +9,27 @@
       Loaded="Page_Loaded"
       Title="Login">
     <Grid>
-        <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue">
+
+        <Border x:Name="BlackoutOverlay"
+                Background="White"
+                Opacity="0"
+                Panel.ZIndex="99"
+                IsHitTestVisible="False"/>
+
+        <!--         
+        // KI: Claude
+        // Prompt: How can i make a zoom out and zoom in animation for my login / home frame:
+        // Anfang: KI 
+        -->
+        <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue"
+                x:Name="LoginCard"
+                RenderTransformOrigin="0.5,0.5">
+            <Canvas.RenderTransform>
+                <ScaleTransform x:Name="CardScale" ScaleX="1" ScaleY="1"/>
+            </Canvas.RenderTransform>
+            <!--         
+        // Ende KI:
+        -->
             <TextBox x:Name="email_login" FontSize="10" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <PasswordBox x:Name="password_login" FontSize="10" Canvas.Left="58" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
             <Label Content="E-Mail" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="43"/>
@@ -17,7 +37,7 @@
             <Button x:Name="Weiter_login" Content="Weiter" Canvas.Left="176" Canvas.Top="96" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Weiter_login_Click" Height="20" Width="74"/>
             <Button x:Name="Password_fg_login" Content="Forgotten Password" Canvas.Left="64" Canvas.Top="96" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Password_fg_login_Click"/>
             <Button x:Name="New_user_loin" Content="New User" Canvas.Left="4" Canvas.Top="96" HorizontalAlignment="Center" VerticalAlignment="Top" Click="New_user_loin_Click"/>
-
         </Canvas>
+
     </Grid>
 </Page>
