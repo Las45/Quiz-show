@@ -55,7 +55,7 @@
             <Path Name="PathExit"
       Width="150"
       Height="100"
-      Fill="#156082"
+      Fill="SkyBlue"
       Stroke="#082430"
       StrokeThickness="4"
       Stretch="Fill"
@@ -80,6 +80,9 @@
             L8,45 
             L46,8 
             Z"/>
-        </Grid>
+        <Label Name="MoneyLabel" Content="0 Coins" HorizontalAlignment="Left" Margin="1262,62,0,0" VerticalAlignment="Top" Height="76" Width="190" FontSize="48" Foreground="#FF450000"/>
+
+
+      </Grid>
     </Viewbox>
 </Page>

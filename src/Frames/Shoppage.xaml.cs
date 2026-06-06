@@ -27,6 +27,7 @@ namespace Quiz_show.Frames
         public Shoppage()
         {
             InitializeComponent();
+            UpdateUI();
         }
 
         private void UpdateUI()
@@ -40,6 +41,8 @@ namespace Quiz_show.Frames
             RectSilberBackground.Fill = new SolidColorBrush(Shop.GetButtonColor());
 
             PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+
+            MoneyLabel.Content = Shop.Money + " Coins";
         }
 
 

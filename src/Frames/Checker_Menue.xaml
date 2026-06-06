@@ -25,7 +25,7 @@
             <Path Name="PathExit"
       Width="150"
       Height="100"
-      Fill="#156082"
+      Fill="SkyBlue"
       Stroke="#082430"
       StrokeThickness="4"
       Stretch="Fill"

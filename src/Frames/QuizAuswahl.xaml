@@ -38,6 +38,9 @@
 
 
 
+
+        <Path x:Name="PathExit" Width="150" Height="100" Fill="SkyBlue" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand"
+
             <Path x:Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand"
 
   MouseEnter="PathExit_MouseEnter"
