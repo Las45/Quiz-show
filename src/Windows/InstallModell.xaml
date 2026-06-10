@@ -1,0 +1,19 @@
+﻿<Window x:Class="Quiz_show.src.Windows.InstallModell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quiz_show.src.Windows"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        Title="InstallModell" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Center" Margin="40">
+        <TextBlock Text="KI-Modell wird installiert" FontSize="18" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="status_install_textblock" Text="Bitte warten..." HorizontalAlignment="Center" Margin="0,20,0,10"/>
+
+        <ProgressBar x:Name="Progress_bar_install" Minimum="0" Maximum="100" Height="22" Margin="0,5"/>
+
+        <TextBlock x:Name="prozent_text_install" Text="0%" HorizontalAlignment="Center" Margin="0,8"/>
+    </StackPanel>
+</Window>
