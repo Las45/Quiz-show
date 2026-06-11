@@ -8,47 +8,49 @@
       d:DesignHeight="1000" d:DesignWidth="1500"
       Title="Statistic">
 
-    <Grid>
-        <Canvas Margin="358,262,-358,-262">
-            <ProgressBar x:Name="Pos_progressbar" Height="20" Canvas.Left="90" Canvas.Top="70" Width="610"/>
-            <ProgressBar x:Name="NSCS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="126" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <ProgressBar x:Name="CABS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="182" Width="610" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <ProgressBar x:Name="English_progressbar" Height="20" Canvas.Left="90" Canvas.Top="238" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <ProgressBar x:Name="Geschichte_progressbar" Height="20" Canvas.Left="90" Canvas.Top="294" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Pos" Canvas.Left="90" Canvas.Top="95" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Label Content="NSCS" Canvas.Left="90" Canvas.Top="151" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="CABS" Canvas.Left="90" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <Label Content="Englisch" Canvas.Left="90" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <Path Name="PathExit"
-      Width="150"
-      Height="100"
-      Fill="#156082"
-      Stroke="#082430"
-      StrokeThickness="4"
-      Stretch="Fill"
-      HorizontalAlignment="Left"
-      VerticalAlignment="Top"
-      Cursor="Hand"
+    <Viewbox>
+        <Grid>
+            <Canvas Width="800" Height="600">
+                <ProgressBar x:Name="Pos_progressbar" Height="20" Canvas.Left="90" Canvas.Top="70" Width="610"/>
+                <ProgressBar x:Name="NSCS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="126" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <ProgressBar x:Name="CABS_progressbar" Height="20" Canvas.Left="90" Canvas.Top="182" Width="610" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <ProgressBar x:Name="English_progressbar" Height="20" Canvas.Left="90" Canvas.Top="238" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <ProgressBar x:Name="Geschichte_progressbar" Height="20" Canvas.Left="90" Canvas.Top="294" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Pos" Canvas.Left="90" Canvas.Top="95" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Label Content="NSCS" Canvas.Left="90" Canvas.Top="151" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="CABS" Canvas.Left="90" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Label Content="Englisch" Canvas.Left="90" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Path Name="PathExit"
+                 Width="150"
+                 Height="100"
+                 Fill="#156082"
+                Stroke="#082430"
+                StrokeThickness="4"
+                Stretch="Fill"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Cursor="Hand"
 
-      MouseEnter="PathExit_MouseEnter"
-      MouseLeave="PathExit_MouseLeave"
-      MouseUp="PathExit_MouseUp"
+                MouseEnter="PathExit_MouseEnter"
+                MouseLeave="PathExit_MouseLeave"
+                MouseUp="PathExit_MouseUp"
 
-      Data="M46,8 
-            L46,34 
-            L76,34 
-            L76,8 
-            L108,8 
-            L108,44 
-            C108,62 92,62 76,62 
-            L46,62 
-            L46,82 
-            L8,45 
-            L46,8 
-            Z" Canvas.Left="280" Canvas.Top="450"/>
-        </Canvas>
-    </Grid>
+                Data="M46,8 
+                L46,34 
+                L76,34 
+                L76,8 
+                L108,8 
+                L108,44 
+                C108,62 92,62 76,62 
+                L46,62 
+                L46,82 
+                L8,45 
+                L46,8 
+                Z" Canvas.Left="280" Canvas.Top="450"/>
+            </Canvas>
+        </Grid>
+    </Viewbox>
 </Page>

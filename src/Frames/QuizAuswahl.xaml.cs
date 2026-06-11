@@ -182,7 +182,7 @@ namespace Quiz_show.Frames
 
         private void RectQuiz1_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("test.json", 0);
+            LadeQuiz("POS_Fragen.json", 0);
         }
 
         private void RectQuiz2_MouseUp(object sender, MouseButtonEventArgs e)

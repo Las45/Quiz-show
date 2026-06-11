@@ -29,7 +29,7 @@ namespace Quiz_show.src.Windows
         }
         private async Task PullModel()
         {
-            await foreach(var status in client.PullModelAsync("llama3.2:1b"))
+            await foreach(PullModelResponse status in client.PullModelAsync("llama3.2:1b"))
             {
                 int prozent = (int)((double)status.Completed / (double)status.Total * 100);
                 if (status.Total > 0){

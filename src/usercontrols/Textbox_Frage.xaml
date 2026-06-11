@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="400">
     <Canvas>
-        <TextBlock x:Name="Frage_Ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="123" Height="77" Width="380"/>
+        <TextBlock x:Name="Frage_Ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="123" Height="77" Width="380" TextAlignment="Center"/>
         <TextBox x:Name="Antwort_textbox_ki" Canvas.Left="140" TextWrapping="Wrap" Text="" Canvas.Top="205" Width="120"/>
         <TextBlock x:Name="Response_ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="228" Height="137" Width="380" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button Content="Check" Canvas.Left="265" Canvas.Top="202" Height="23" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click"/>
