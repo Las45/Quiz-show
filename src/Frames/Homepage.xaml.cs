@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OllamaSharp;
+using Quiz_show.src.usercontrols.Icons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,11 +24,13 @@ namespace Quiz_show.Frames
     /// </summary>
     public partial class Homepage : Page
     {
+        private OllamaApiClient _client;
         private bool ersterAufruf = true;
 
         public Homepage()
         {
             InitializeComponent();
+            Install_AI install_AI = new Install_AI();
         }
 
         

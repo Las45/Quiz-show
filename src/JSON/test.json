@@ -71,32 +71,32 @@
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": [ "true"],
     "richtig": 3
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": [ "true"],
     "richtig": 3
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": [ "true"],
     "richtig": 3
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": ["false"],
     "richtig": 3
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": ["false"],
     "richtig": 3
   },
   {
     "frage": "asdf",
-    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "antworten": [ "true"],
     "richtig": 3
   }
 

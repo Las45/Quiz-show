@@ -117,6 +117,12 @@ namespace Quiz_show.Frames
                 frageControl.FrageBeendet += AntwortGegeben;
                 QuizContainer.Children.Add(frageControl);
             }
+            else if (f.antworten.Count == 1) 
+            {
+                Textbox_Frage frageControl = new Textbox_Frage(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
         }
 
         private void AntwortGegeben(bool richtig)

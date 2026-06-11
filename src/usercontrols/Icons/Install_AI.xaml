@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="Quiz_show.src.usercontrols.Icons.Install_AI"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Quiz_show.src.usercontrols.Icons"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+    <Canvas>
+        <Rectangle MouseUp="UC_AI_rect_MouseUp" MouseEnter="UC_AI_rect_MouseEnter" MouseLeave="UC_AI_rect_MouseLeave" x:Name="UC_AI_rect" Height="200" Stroke="Transparent" Fill="LightBlue" Width="400" RadiusX="10" RadiusY="10"/>
+        <Label MouseUp="UC_AI_rect_MouseUp" MouseEnter="UC_AI_rect_MouseEnter" MouseLeave="UC_AI_rect_MouseLeave" x:Name="UC_AI_lab" Content="Install AI" Canvas.Left="100" Canvas.Top="63" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" Width="200" Height="74"/>
+    </Canvas>
+</UserControl>

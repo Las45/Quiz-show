@@ -1,20 +1,15 @@
-﻿using Quiz_show.Frames;
+﻿using OllamaSharp;
+using OllamaSharp.Models;
+using Quiz_show.Frames;
 using Quiz_show.Klassen;
 using Quiz_show.src.Klassen;
-using Quiz_show.usercontrols;
-using Quiz_show.usercontrols.Icons;
+using Quiz_show.src.Windows;
 using Supabase;
-using System.Text;
-using System.Text.Json;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO;
 
 namespace Quiz_show
 {
@@ -24,11 +19,10 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
-         
         private Progress progress = new Progress();
-
-
-
+        private Process? _ollamaProcess;
+        public bool IsOllamaInstalled = false;
+        public OllamaApiClient OllamaClient = new OllamaApiClient(new Uri("http://localhost:11434"));
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
         Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
@@ -50,6 +44,10 @@ namespace Quiz_show
             Shop.ShopUpdated += UpdateUI;
             UpdateUI();
             Logging.logger.Information("Window wurde geladen");
+            StartOllamaServer();
+            OllamaClient.SelectedModel = "llama3.2:1b";
+            Logging.logger.Information("Ollama wurde gesetzt");
+            _ = CheckOllamaAsync();
             Main_frames.Content = Frames["Login"];
 
             src.Klassen.Achievements.AchievementList.Add(new Achievement("Perfektionist"));
@@ -71,6 +69,8 @@ namespace Quiz_show
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //((Checker_Menue)Frames["Stats"]).Save();
+            _ollamaProcess?.Kill();
+            _ollamaProcess?.Dispose(); // Lässt alle resurcen los
         }
         public void Change_Frame_by_name(string frame)
         {
@@ -85,5 +85,60 @@ namespace Quiz_show
         {
             Main_frames.Background = new SolidColorBrush(Shop.GetBackgroundColor());
         }
+        private async Task CheckOllamaAsync() // Das mit Task kam vom Claude sowie nur IEnumerable<Model>, der restliche code kam von mir
+        {
+            try
+            {
+                IEnumerable<Model> models = await OllamaClient.ListLocalModelsAsync();
+                bool modellVorhanden = models.Any(m => m.Name.Contains("llama3.2")); // Und diese Line hat claude verkürzt
+
+                if (!modellVorhanden)
+                {
+                    IsOllamaInstalled = false;
+                }
+                else
+                {
+                    IsOllamaInstalled = true;
+                }
+            }
+            catch
+            {
+                IsOllamaInstalled = false;
+            }
+        }
+        // Folgender Code kommt von claude:
+        // Promt: Wie kann man die Ollama.exe starten?
+        private void StartOllamaServer()
+        {
+            // Pfad zur gebündelten ollama.exe
+            string ollamaPath = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "src", "AI", "ollama.exe"
+            );
+
+            // Prüfen ob Ollama schon läuft (z.B. vom User manuell gestartet)
+            if (Process.GetProcessesByName("ollama").Length > 0)
+            {
+                Logging.logger.Information("Ollama läuft bereits");
+                return;
+            }
+
+            _ollamaProcess = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = ollamaPath,
+                    Arguments = "serve",
+                    UseShellExecute = false,
+                    CreateNoWindow = true,   // kein schwarzes Fenster
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true
+                }
+            };
+
+            _ollamaProcess.Start();
+            Logging.logger.Information("Ollama Server gestartet");
+        }
+        // Claude ende
     }
 }
