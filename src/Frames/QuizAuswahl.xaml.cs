@@ -79,7 +79,7 @@ namespace Quiz_show.Frames
                 quiz.Load(path);
 
                 progress.Subjects[fachIndex].Quizzes_correct = 0;
-                progress.Subjects[fachIndex].Quizzes_prozent = 0;
+
 
                 quizFragen = quiz.Questions
                     .OrderBy(x => random.Next())
@@ -136,8 +136,9 @@ namespace Quiz_show.Frames
 
             if (aktuelleFrage >= quizFragen.Count)
             {
-                progress.Subjects[aktuellesFach]
-                    .Calculate(quizFragen.Count);
+                progress.Subjects[aktuellesFach].Calculate(quizFragen.Count);
+
+                progress.Save();
 
                 int anzahlRichtige = progress.Subjects[aktuellesFach].Quizzes_correct;
                 if (anzahlRichtige == 1)
@@ -154,11 +155,11 @@ namespace Quiz_show.Frames
                 {
                     if (!perfekt)
                     {
-                        Shop.Money += 40;
+                        Shop.Money += 25;
                         perfekt = true;
                     }
 
-                    Achievements.Unlock("Perfektionist");
+                    Achievements.Unlock("1er Schüler");
                 }
 
 
@@ -170,7 +171,7 @@ namespace Quiz_show.Frames
                 MessageBox.Show(
                     "Quiz beendet!\n" +
                     "Richtig: " +
-                    progress.Subjects[aktuellesFach].Quizzes_correct +
+                    progress.Subjects[aktuellesFach].Quizzes_correct +      
                     "/" +
                     quizFragen.Count);
 
@@ -198,7 +199,7 @@ namespace Quiz_show.Frames
         private void RectQuiz4_MouseUp(object sender, MouseButtonEventArgs e)
         {
             LadeQuiz("Mathe_Fragen.json", 3);
-        }
+        }   
 
         private void RectQuiz5_MouseUp(object sender, MouseButtonEventArgs e)
         {

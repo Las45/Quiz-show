@@ -10,7 +10,40 @@
       d:DesignHeight="1000"
       d:DesignWidth="1500"
       Title="Homepage"
+      Background="White"
       Loaded="Page_Loaded">
+
+    <Grid>
+
+        <!--         
+        // KI: Claude
+        // Prompt: How can i make a zoom out and zoom in animation for my login / home frame:
+        // Anfang: KI 
+        -->
+
+        <Border x:Name="BlackoutOverlay"
+                Background="White"
+                Opacity="1"
+                Panel.ZIndex="99"
+                IsHitTestVisible="True"/>
+
+        <Canvas x:Name="ContentCanvas"
+                RenderTransformOrigin="0.5,0.5"
+                Opacity="0">
+            <Canvas.RenderTransform>
+                <ScaleTransform x:Name="ContentScale" ScaleX="0.3" ScaleY="0.3"/>
+            </Canvas.RenderTransform>
+            <!--         
+        // Ende KI:
+        -->
+            <uc:Quiz         Canvas.Left="100"  Canvas.Top="300"/>
+            <uc:Fortschritt  Canvas.Left="550"  Canvas.Top="300"/>
+            <uc:ShopUseroCntrol Canvas.Left="1000" Canvas.Top="300"/>
+            <uc:Achievements Canvas.Left="325"  Canvas.Top="550"/>
+            <uc:Exit         Canvas.Left="775"  Canvas.Top="550"/>
+        </Canvas>
+    </Grid>
+</Page>
     <Viewbox>
         <Grid>
             <Grid.ColumnDefinitions>
