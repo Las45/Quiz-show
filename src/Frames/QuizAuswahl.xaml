@@ -36,29 +36,24 @@
 
             <Grid Name="QuizContainer" Width="800" Height="400" Background="Transparent" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-
-
-
-        <Path x:Name="PathExit" Width="150" Height="100" Fill="SkyBlue" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand"
-
             <Path x:Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,563,0,0" Cursor="Hand"
 
-  MouseEnter="PathExit_MouseEnter"
-  MouseLeave="PathExit_MouseLeave"
-  MouseUp="PathExit_MouseUp"
+      MouseEnter="PathExit_MouseEnter"
+      MouseLeave="PathExit_MouseLeave"
+      MouseUp="PathExit_MouseUp"
 
-  Data="M46,8 
-        L46,34 
-        L76,34 
-        L76,8 
-        L108,8 
-        L108,44 
-        C108,62 92,62 76,62 
-        L46,62 
-        L46,82 
-        L8,45 
-        L46,8 
-        Z"/>
+      Data="M46,8 
+            L46,34 
+            L76,34 
+            L76,8 
+            L108,8 
+            L108,44 
+            C108,62 92,62 76,62 
+            L46,62 
+            L46,82 
+            L8,45 
+            L46,8 
+            Z"/>
 
 
         </Grid>

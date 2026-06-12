@@ -23,6 +23,11 @@
                 <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label Name="Pos_Prz" Content="0%" Canvas.Left="376" Canvas.Top="67"/>
+                <Label Name="NSCS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="123"/>
+                <Label Name="CABS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="179"/>
+                <Label Name="Eng_Prz" Content="0%" Canvas.Left="376" Canvas.Top="235"/>
+                <Label Name="Geschichte_Prz" Content="0%" Canvas.Left="376" Canvas.Top="291"/>
                 <Path Name="PathExit"
                  Width="150"
                  Height="100"
