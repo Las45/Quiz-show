@@ -38,12 +38,9 @@ public static class Shop
 
             Select(item);
 
-            Console.WriteLine(item + " gekauft!");
+            
         }
-        else
-        {
-            Console.WriteLine("Nicht genug Geld!");
-        }
+
 
         ShopUpdated?.Invoke();
     }
@@ -70,7 +67,6 @@ public static class Shop
 
         ShopUpdated?.Invoke();
 
-        Console.WriteLine(item + " ausgewählt!");
     }
 
     // Preis

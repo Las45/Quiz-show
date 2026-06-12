@@ -40,6 +40,7 @@ namespace Quiz_show.Frames
             RectSilberBackground.Fill = new SolidColorBrush(Shop.GetButtonColor());
 
             PathExit.Fill = new SolidColorBrush(Shop.GetButtonColor());
+            MoneyLabel.Content = Shop.Money + " Coins";
         }
 
 
@@ -99,16 +100,11 @@ namespace Quiz_show.Frames
             UpdateUI();
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
 
+            UpdateUI();
 
-
-
-
-
-
-
-
-
-
+        }
     }
 }

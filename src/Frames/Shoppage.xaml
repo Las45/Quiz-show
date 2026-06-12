@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="1000"
       d:DesignWidth="1500"
-      Title="Shop" Foreground="#FF5C1003">
+      Title="Shop" Foreground="#FF5C1003"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Rectangle MouseUp="RectOriginalButton_MouseUp" Name="RectOriginalButton" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
@@ -72,5 +73,6 @@
             L8,45 
             L46,8 
             Z"/>
+        <Label Name="MoneyLabel" Content="0 Coins" HorizontalAlignment="Left" VerticalAlignment="Top" Height="127" Width="394" FontSize="48" Foreground="#FF450000" Margin="1185,35,0,0"/>
     </Grid>
 </Page>

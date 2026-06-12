@@ -63,6 +63,12 @@ namespace Quiz_show.Frames
                 RectAchievement5.Fill = new SolidColorBrush(Colors.LightGreen);
                 LabelAchievement5.Content = "";
             }
+
+            if (Achievements.IsUnlocked("Discord"))
+            {
+                RectAchievement6.Fill = new SolidColorBrush(Colors.LightGreen);
+                LabelAchievement6.Content = "";
+            }
         }
         private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
         {
@@ -80,6 +86,11 @@ namespace Quiz_show.Frames
         private void PathExit_MouseEnter(object sender, MouseEventArgs e)
         {
             PathExit.Opacity = 0.7;
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateUI();
         }
     }
 }

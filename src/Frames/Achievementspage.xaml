@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="1000"
       d:DesignWidth="1500"
-      Title="Achievements" Foreground="#FF5C1003">
+      Title="Achievements" Foreground="#FF5C1003"
+      Loaded="Page_Loaded">
 
     <Grid>
         <Rectangle Name="RectAchievement1" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
@@ -15,8 +16,8 @@
         <Rectangle Name="RectAchievement3" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
-        <Rectangle Name="RectAchievement4" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="450,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
-        <Rectangle Name="RectAchievement5" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="850,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle Name="RectAchievement4" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle Name="RectAchievement5" HorizontalAlignment="Center" Fill="SkyBlue" Height="200" Margin="0,488,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
 
 
         <Label Content="Achievements" HorizontalAlignment="Left" VerticalAlignment="Top" Height="127" Width="715" FontSize="80" Foreground="#FF450000" Margin="505,0,0,0"/>
@@ -24,20 +25,20 @@
 
 
         <Label Name="LabelAchievement1" Content="?" HorizontalAlignment="Left" Margin="333,262,0,0" VerticalAlignment="Top" Height="76" Width="34" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelAchievement2" Content="?" HorizontalAlignment="Left" Margin="533,550,0,0" VerticalAlignment="Top" Height="76" Width="34" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="LabelAchievement4" Content="?" HorizontalAlignment="Left" Margin="333,550,0,0" VerticalAlignment="Top" Height="76" Width="34" FontSize="48" Foreground="#FF450000"/>
 
-        <Label Name="LabelAchievement3" Content="?" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Height="76" Width="35" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="LabelAchievement4" Content="?" HorizontalAlignment="Left" Margin="932,550,0,0" VerticalAlignment="Top" Height="76" Width="36" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="LabelAchievement2" Content="?" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Height="76" Width="35" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="LabelAchievement5" Content="?" HorizontalAlignment="Left" Margin="736,550,0,0" VerticalAlignment="Top" Height="76" Width="36" FontSize="48" Foreground="#FF450000"/>
 
 
-        <Label Name="LabelAchievement5" Content="?" HorizontalAlignment="Left" Margin="1139,262,0,0" VerticalAlignment="Top" Height="76" Width="32" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="LabelAchievement3" Content="?" HorizontalAlignment="Left" Margin="1139,262,0,0" VerticalAlignment="Top" Height="76" Width="32" FontSize="48" Foreground="#FF450000"/>
 
         <Label Name="Achievement1" Content="Perfektionist" HorizontalAlignment="Left" Margin="214,392,0,0" VerticalAlignment="Top" Height="76" Width="367" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="Achievement4" Content="Mode Designer" HorizontalAlignment="Left" Margin="368,685,0,0" VerticalAlignment="Top" Height="76" Width="364" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="Achievement4" Content="Mode Designer" HorizontalAlignment="Left" Margin="168,685,0,0" VerticalAlignment="Top" Height="76" Width="364" FontSize="48" Foreground="#FF450000"/>
 
         <Label Name="Achievement2" Content="5er Schüler" HorizontalAlignment="Left" Margin="620,392,0,0" VerticalAlignment="Top" Height="76" Width="305" FontSize="48" Foreground="#FF450000"/>
         <Label Name="Achievement3" Content="1er Schüler" HorizontalAlignment="Left" Margin="1024,392,0,0" VerticalAlignment="Top" Height="76" Width="295" FontSize="48" Foreground="#FF450000"/>
-        <Label Name="Achievement5" Content="Erlange absolute &#xD;&#xA;    Gleichheit" HorizontalAlignment="Left" Margin="772,685,0,0" VerticalAlignment="Top" Height="221" Width="840" FontSize="48" Foreground="#FF450000"/>
+        <Label Name="Achievement5" Content="Erlange absolute &#xD;&#xA;    Gleichheit" HorizontalAlignment="Left" Margin="581,685,0,0" VerticalAlignment="Top" Height="221" Width="383" FontSize="48" Foreground="#FF450000"/>
 
         <Path Name="PathExit"
       Width="150"
@@ -48,7 +49,7 @@
       Stretch="Fill"
       HorizontalAlignment="Left"
       VerticalAlignment="Top"
-      Margin="136,538,0,0"
+      Margin="59,430,0,0"
       Cursor="Hand"
 
       MouseEnter="PathExit_MouseEnter"
@@ -67,5 +68,8 @@
             L8,45 
             L46,8 
             Z"/>
+        <Rectangle x:Name="RectAchievement6" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1055,500,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Label x:Name="LabelAchievement6" Content="?" HorizontalAlignment="Left" Margin="1139,550,0,0" VerticalAlignment="Top" Height="76" Width="36" FontSize="48" Foreground="#FF450000"/>
+        <Label x:Name="Achievement6" Content="Discord" HorizontalAlignment="Left" Margin="1062,700,0,0" VerticalAlignment="Top" Height="76" Width="186" FontSize="48" Foreground="#FF450000"/>
     </Grid>
 </Page>
