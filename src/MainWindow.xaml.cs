@@ -24,7 +24,7 @@ namespace Quiz_show
         public bool IsOllamaInstalled = false;
         public OllamaApiClient OllamaClient = new OllamaApiClient(new Uri("http://localhost:11434"));
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
-        Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
+        public Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
         {
             Logging.init();

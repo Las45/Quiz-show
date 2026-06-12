@@ -1,49 +1,56 @@
-﻿using System.IO;
+﻿using Supabase.Gotrue;
+using Supabase.Interfaces;
+using System.IO;
 using System.Text.Json;
+using System.Windows;
 
 namespace Quiz_show.src.Klassen
 {
     public class Progress
     {
         public List<Checker> Subjects { get; set; }
-
+        MainWindow mainWindow;
         public Progress()
         {
             Subjects = new List<Checker>();
 
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-        }
-
-        public void Save()
-        {
-            string json = JsonSerializer.Serialize(this, new JsonSerializerOptions
+            for (int i=0; i<6; i++)
             {
-             
-                
-                WriteIndented = true
-            });
-            File.WriteAllText("progress.json", json);
+                Subjects.Add(new Checker());
+            }
+            mainWindow = (MainWindow)Application.Current.MainWindow;
         }
 
-        public void Load()
+        public async Task Save()
         {
-            if (!File.Exists("progress.json"))
-                return;
+            string json = JsonSerializer.Serialize(this);
+            //File.WriteAllText("progress.json", json);
+        }
 
-            string json = File.ReadAllText("progress.json");
+        public async Task Load()
+        {
+            Progress? geladen;
+            try
+            {
+                // Ki Anfang:
+                // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
+                Supabase.Postgrest.Responses.ModeledResponse<UserProgressModel> result = await mainWindow.client
+                    .From<UserProgressModel>()
+                    .Where(x => x.UserId == $"{mainWindow.client.Auth.CurrentUser}")
+                    .Get();
 
+                UserProgressModel row = result.Models.FirstOrDefault();
+                if (row?.ProgressData == null) return;
 
-
-            Progress geladen = JsonSerializer.Deserialize<Progress>(json);
-
-
-
-
+                geladen = JsonSerializer.Deserialize<Progress>(row.ProgressData);
+                if (geladen != null)
+                    Subjects = geladen.Subjects;
+                // Ki ende
+            }
+            catch 
+            {
+                Logging.logger.Error("Es konnte nicht von Superbase geladen werden");
+            }
 
             if (geladen != null)
             {
