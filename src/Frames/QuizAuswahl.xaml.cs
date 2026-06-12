@@ -1,5 +1,6 @@
 ﻿using Quiz_show.Klassen;
 using Quiz_show.src.Klassen;
+using Quiz_show.src.usercontrols;
 using Quiz_show.usercontrols;
 using System;
 using System.Collections.Generic;
@@ -78,7 +79,7 @@ namespace Quiz_show.Frames
                 quiz.Load(path);
 
                 progress.Subjects[fachIndex].Quizzes_correct = 0;
-                progress.Subjects[fachIndex].Quizzes_prozent = 0;
+
 
                 quizFragen = quiz.Questions
                     .OrderBy(x => random.Next())
@@ -104,11 +105,24 @@ namespace Quiz_show.Frames
 
             Frage f = quizFragen[aktuelleFrage];
 
-            FrageUserControl frageControl = new FrageUserControl(f);
-
-            frageControl.FrageBeendet += AntwortGegeben;
-
-            QuizContainer.Children.Add(frageControl);
+            if (f.antworten.Count == 4)
+            {
+                FrageUserControl frageControl = new FrageUserControl(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
+            else if (f.antworten.Count == 2)
+            {
+                True_False frageControl = new True_False(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
+            else if (f.antworten.Count == 1) 
+            {
+                Textbox_Frage frageControl = new Textbox_Frage(f);
+                frageControl.FrageBeendet += AntwortGegeben;
+                QuizContainer.Children.Add(frageControl);
+            }
         }
 
         private void AntwortGegeben(bool richtig)
@@ -122,8 +136,9 @@ namespace Quiz_show.Frames
 
             if (aktuelleFrage >= quizFragen.Count)
             {
-                progress.Subjects[aktuellesFach]
-                    .Calculate(quizFragen.Count);
+                progress.Subjects[aktuellesFach].Calculate(quizFragen.Count);
+
+                progress.Save();
 
                 int anzahlRichtige = progress.Subjects[aktuellesFach].Quizzes_correct;
                 if (anzahlRichtige == 1)

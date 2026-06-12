@@ -13,6 +13,7 @@
 		<None Remove="src\Images\Icon.png" />
 		<None Remove="src\Images\Powertoys.png" />
 		<None Remove="src\JSON\POS_Fragen.json" />
+		<None Remove="src\JSON\test.json" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -35,9 +36,14 @@
 		<Content Include="src\JSON\Englisch_Fragen.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+
+		<Content Include="src\JSON\test.json">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="OllamaSharp" Version="5.4.25" />
 		<PackageReference Include="Serilog" Version="4.3.1" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
 		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
@@ -60,6 +66,10 @@
 		<Page Update="src\MainWindow.xaml">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Page>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="src\AI\Models\" />
 	</ItemGroup>
 
 </Project>

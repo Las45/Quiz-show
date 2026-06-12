@@ -88,6 +88,8 @@ namespace Quiz_show.Frames
 
                 Achievements.Unlock("Perfektionist");
             }
+
+            progress.Save();
         }
     }
 }

@@ -1,0 +1,103 @@
+﻿[
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false" ],
+    "richtig": 0
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true", "false", "asdf", "asdff" ],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true"],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true"],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true"],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": ["false"],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": ["false"],
+    "richtig": 3
+  },
+  {
+    "frage": "asdf",
+    "antworten": [ "true"],
+    "richtig": 3
+  }
+
+]
