@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:ucai ="clr-namespace:Quiz_show.src.usercontrols.Icons"
       xmlns:uc="clr-namespace:Quiz_show.usercontrols.Icons"
-      xmlns:uc_ ="clr-namespace:Quiz_show.src.usercontrols.Icons"
       xmlns:local="clr-namespace:Quiz_show.Frames"
       mc:Ignorable="d"
       d:DesignHeight="1000"
@@ -13,37 +13,6 @@
       Background="White"
       Loaded="Page_Loaded">
 
-    <Grid>
-
-        <!--         
-        // KI: Claude
-        // Prompt: How can i make a zoom out and zoom in animation for my login / home frame:
-        // Anfang: KI 
-        -->
-
-        <Border x:Name="BlackoutOverlay"
-                Background="White"
-                Opacity="1"
-                Panel.ZIndex="99"
-                IsHitTestVisible="True"/>
-
-        <Canvas x:Name="ContentCanvas"
-                RenderTransformOrigin="0.5,0.5"
-                Opacity="0">
-            <Canvas.RenderTransform>
-                <ScaleTransform x:Name="ContentScale" ScaleX="0.3" ScaleY="0.3"/>
-            </Canvas.RenderTransform>
-            <!--         
-        // Ende KI:
-        -->
-            <uc:Quiz         Canvas.Left="100"  Canvas.Top="300"/>
-            <uc:Fortschritt  Canvas.Left="550"  Canvas.Top="300"/>
-            <uc:ShopUseroCntrol Canvas.Left="1000" Canvas.Top="300"/>
-            <uc:Achievements Canvas.Left="325"  Canvas.Top="550"/>
-            <uc:Exit         Canvas.Left="775"  Canvas.Top="550"/>
-        </Canvas>
-    </Grid>
-</Page>
     <Viewbox>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -60,7 +29,7 @@
             <uc:Fortschritt Width="400" Height="200" Grid.Row="1" Grid.Column="1" Margin="20,20,20,20"/>
             <uc:ShopUseroCntrol Width="400" Height="200" Grid.Row="1" Grid.Column="2" Margin="20,20,20,20"/>
             <uc:Achievements Width="400" Height="200" Grid.Row="2" Grid.Column="0" VerticalAlignment="Top" Margin="20,20,20,20"/>
-            <uc_:Install_AI Grid.Row="2" Grid.Column="1" Margin="20,20,20,20"/>
+            <ucai:Install_AI Grid.Row="2" Grid.Column="1" Margin="20,20,20,20"/>
             <uc:Exit Width="400" Height="200" Grid.Row="2" Grid.Column="2" VerticalAlignment="Top" Margin="20,20,20,20"/>
         </Grid>
     </Viewbox>
