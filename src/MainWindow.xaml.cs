@@ -54,12 +54,15 @@ namespace Quiz_show
             Logging.logger.Information("Ollama wurde gesetzt");
             _ = CheckOllamaAsync();
             Main_frames.Content = Frames["Login"];
+            Logging.logger.Information("Login wurde geladen");
 
+            Logging.logger.Information("Achievemenets start");
             src.Klassen.Achievements.AchievementList.Add(new Achievement("Perfektionist"));
             src.Klassen.Achievements.AchievementList.Add(new Achievement("5er Schüler"));
             src.Klassen.Achievements.AchievementList.Add(new Achievement("1er Schüler"));
             src.Klassen.Achievements.AchievementList.Add(new Achievement("Mode Designer"));
             src.Klassen.Achievements.AchievementList.Add(new Achievement("Absolute Gleichheit"));
+            Logging.logger.Information("Achievemenets ende");
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
