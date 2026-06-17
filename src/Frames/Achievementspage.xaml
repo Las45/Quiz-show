@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="1000"
       d:DesignWidth="1500"
-      Title="Achievements" Foreground="#FF5C1003">
+      Title="Achievements" Foreground="#FF5C1003"
+      Loaded="Page_Loaded">
 
     <Viewbox>
         <Grid>

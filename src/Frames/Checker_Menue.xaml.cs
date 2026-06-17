@@ -68,7 +68,7 @@ namespace Quiz_show.Frames
             {
                 if (!gleichheit)
                 {
-                    Shop.Money += 60;
+                    Shop.Money += 50;
                     gleichheit = true;
                 }
 
@@ -82,7 +82,7 @@ namespace Quiz_show.Frames
             {
                 if (!einserschüller)
                 {
-                    Shop.Money += 40;
+                    Shop.Money += 50;
                     einserschüller = true;
                 }
 

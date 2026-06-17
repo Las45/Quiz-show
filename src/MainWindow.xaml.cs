@@ -9,6 +9,10 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.IO;
 
 namespace Quiz_show
@@ -18,6 +22,7 @@ namespace Quiz_show
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool discord = false;
         Quizclass steuerung = new Quizclass();
         private Progress progress = new Progress();
         private Process? _ollamaProcess;
@@ -84,6 +89,26 @@ namespace Quiz_show
         private void UpdateUI()
         {
             Main_frames.Background = new SolidColorBrush(Shop.GetBackgroundColor());
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Das Achievements ist eine Reference zu dem längsten Discord Call in dem Klassen Discord Server, welcher 18 Stunden ging.
+            DispatcherTimer timer = new DispatcherTimer();
+
+            timer.Interval = TimeSpan.FromHours(18);
+
+            timer.Tick += (sender, e) =>
+            {
+                if (!discord)
+                {
+                    Shop.Money += 100;
+                    discord = true;
+                }
+                src.Klassen.Achievements.Unlock("Discord");
+                timer.Stop();
+            };
+            timer.Start();
         }
         private async Task CheckOllamaAsync() // Das mit Task kam vom Claude sowie nur IEnumerable<Model>, der restliche code kam von mir
         {

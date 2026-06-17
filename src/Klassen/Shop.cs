@@ -48,8 +48,11 @@ public static class Shop
             Freigeschaltet.Add(item);
 
             Select(item);
+
+            
             Save();
         }
+
 
         ShopUpdated?.Invoke();
     }
@@ -73,6 +76,7 @@ public static class Shop
         }
 
         ShopUpdated?.Invoke();
+
     }
 
     public static int GetPrice(ShopItems item)

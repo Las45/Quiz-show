@@ -12,7 +12,8 @@ namespace Quiz_show.src.Klassen
             new Achievement("5er Schüler"),
             new Achievement("1er Schüler"),
             new Achievement("Mode Designer"),
-            new Achievement("Absolute Gleichheit")
+            new Achievement("Absolute Gleichheit"),
+            new Achievement("Discord")
         };
 
         public static List<Achievement> AchievementList
