@@ -109,7 +109,7 @@ public static class Shop
 
         string json = JsonSerializer.Serialize(daten, new JsonSerializerOptions
         {
-            WriteIndented = true
+            WriteIndented = false
         });
 
         File.WriteAllText("shop.json", json);
