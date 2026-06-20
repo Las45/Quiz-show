@@ -23,38 +23,59 @@ namespace Quiz_show.src.Klassen
 
         public async Task Save()
         {
-            string json = JsonSerializer.Serialize(this);
-            //File.WriteAllText("progress.json", json);
-        }
+            string userId = mainWindow.client.Auth.CurrentUser?.Id;
+            if (string.IsNullOrEmpty(userId)) 
+                return;
 
-        public async Task Load()
-        {
-            Progress? geladen;
+            string json = JsonSerializer.Serialize(this);
+
             try
             {
                 // Ki Anfang:
                 // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
-                Supabase.Postgrest.Responses.ModeledResponse<UserProgressModel> result = await mainWindow.client
-                    .From<UserProgressModel>()
-                    .Where(x => x.UserId == $"{mainWindow.client.Auth.CurrentUser}")
-                    .Get();
+                UserProgressModel model = new UserProgressModel
+                {
+                    UserId = userId,
+                    ProgressData = json
+                };
 
-                UserProgressModel row = result.Models.FirstOrDefault();
+                await mainWindow.client
+                    .From<UserProgressModel>()
+                    .Upsert(model);
+                // Ki Ende
+                Logging.logger.Debug("Progress wurde in der Cloude gesaved");
+            }
+            catch
+            {
+                Logging.logger.Error("Es konnte nicht auf Superbase gespeichert werden");
+            }
+        }
+
+        public async Task Load()
+        {
+            string userId = mainWindow.client.Auth.CurrentUser?.Id;
+            if (string.IsNullOrEmpty(userId)) 
+                return;
+            try
+            {
+                // Ki Anfang:
+                // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
+                UserProgressModel? row = await mainWindow.client
+            .From<UserProgressModel>()
+            .Where(x => x.UserId == userId)
+            .Single();
+
                 if (row?.ProgressData == null) return;
 
-                geladen = JsonSerializer.Deserialize<Progress>(row.ProgressData);
+                Progress? geladen = JsonSerializer.Deserialize<Progress>(row.ProgressData);
                 if (geladen != null)
                     Subjects = geladen.Subjects;
                 // Ki ende
+                Logging.logger.Debug("Progress wurde geloaded von der Cloude");
             }
             catch 
             {
                 Logging.logger.Error("Es konnte nicht von Superbase geladen werden");
-            }
-
-            if (geladen != null)
-            {
-                Subjects = geladen.Subjects;
             }
         }
     }

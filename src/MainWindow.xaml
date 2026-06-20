@@ -9,6 +9,7 @@
         Icon="Images/Icon.png"
         Title="Lernix" 
         Closing="Window_Closing"
+        Loaded="Window_Loaded"
         Height="450" Width="800">
     <Grid x:Name="window">
         <Frame x:Name="Main_frames" NavigationUIVisibility="Hidden"></Frame>

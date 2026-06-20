@@ -25,8 +25,6 @@ namespace Quiz_show.Frames
             UpdateUI();
 
             Shop.ShopUpdated += UpdateUI;
-
-
         }
 
         private void UpdateUI()
@@ -75,8 +73,6 @@ namespace Quiz_show.Frames
 
                 Achievements.Unlock("Absolute Gleichheit");
             }
-
-
 
             if (English_progressbar.Value == 100 && NSCS_progressbar.Value == 100 && CABS_progressbar.Value == 100 && Geschichte_progressbar.Value == 100 && Pos_progressbar.Value == 100)
             {

@@ -114,7 +114,7 @@ public static class Shop
 
         File.WriteAllText("shop.json", json);
 
-        Console.WriteLine("SAVE OK");
+        Logging.logger.Debug("Shop wurde gesaved");
     }
 
     public static void Load()
@@ -133,7 +133,7 @@ public static class Shop
         if (daten == null)
             return;
 
-        Money = daten.Money;
+        Money = 1000; // muss auf daten.Money geändert werden.
 
         Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
 
@@ -143,6 +143,7 @@ public static class Shop
         ShopUpdated?.Invoke();
 
         Console.WriteLine("LOAD OK");
+        Logging.logger.Debug("Shop wurde geladen");
     }
 
     // =========================
