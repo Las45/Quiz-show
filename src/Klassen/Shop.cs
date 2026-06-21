@@ -1,4 +1,5 @@
-﻿using Quiz_show.Frames;
+﻿using Quiz_show;
+using Quiz_show.Frames;
 using Quiz_show.src.Klassen;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ public static class Shop
 
     public static ShopItems AktiverButton = ShopItems.OriginalButton;
     public static ShopItems AktiverBackground = ShopItems.OriginalBackground;
+    private static MainWindow GetMainWindow() => (MainWindow)Application.Current.MainWindow;
 
     public static void Purchase(ShopItems item)
     {
@@ -97,8 +99,15 @@ public static class Shop
     }
 
 
-    public static void Save()
+    public static async void Save()
     {
+        if (GetMainWindow() == null)
+        {
+            return;
+        }
+        string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+        if (string.IsNullOrEmpty(userId)) 
+            return;
         ShopSaveData daten = new ShopSaveData
         {
             Money = Money,
@@ -112,38 +121,62 @@ public static class Shop
             WriteIndented = false
         });
 
-        File.WriteAllText("shop.json", json);
+        try
+        {
+            // Der Code für das Speichern wurde teilweise von dem progress speichern übernommen, welcher teils von Ki stammt.
+            ShopSaveDataModel model = new ShopSaveDataModel
+            {
+                UserId = userId,
+                ShopData = json
+            };
 
-        Logging.logger.Debug("Shop wurde gesaved");
+            await GetMainWindow().client.From<ShopSaveDataModel>().Upsert(model);
+            Logging.logger.Debug("Shop wurde gesaved");
+
+        }
+        catch (Exception ex)
+        {
+            Logging.logger.Error("Es konnte nicht auf Supabase gespeichert werden: " + ex.Message);
+        }
+
     }
 
-    public static void Load()
+    public static async void Load()
     {
-
-
-        if (!File.Exists("shop.json"))
+        if (GetMainWindow() == null) 
             return;
 
-        string json = File.ReadAllText("shop.json");
-
-        ShopSaveData daten = JsonSerializer.Deserialize<ShopSaveData>(json);
-        MessageBox.Show("LOAD START");
-        MessageBox.Show("Money geladen: " + daten.Money);
-        MessageBox.Show("Items geladen: " + (daten.Freigeschaltet?.Count ?? -1));
-        if (daten == null)
+        string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+        if (string.IsNullOrEmpty(userId)) 
             return;
 
-        Money = 1000; // muss auf daten.Money geändert werden.
+        try
+        {
+            // Code wurde teilweise von Progress übernommen welcher teils von Ki stammt.
+            ShopSaveDataModel? row = await GetMainWindow().client
+                .From<ShopSaveDataModel>()
+                .Where(x => x.UserId == userId)
+                .Single();
 
-        Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
+            if (row?.ShopData == null) 
+                return;
 
-        AktiverButton = daten.AktiverButton;
-        AktiverBackground = daten.AktiverBackground;
+            ShopSaveData daten = JsonSerializer.Deserialize<ShopSaveData>(row.ShopData);
+            if (daten == null) 
+                return;
 
-        ShopUpdated?.Invoke();
+            Money = daten.Money;
+            Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
+            AktiverButton = daten.AktiverButton;
+            AktiverBackground = daten.AktiverBackground;
 
-        Console.WriteLine("LOAD OK");
-        Logging.logger.Debug("Shop wurde geladen");
+            ShopUpdated?.Invoke();
+            Logging.logger.Debug("Shop wurde geladen");
+        }
+        catch (Exception ex)
+        {
+            Logging.logger.Error("Es konnte nicht geladen werden: " + ex.Message);
+        }
     }
 
     // =========================

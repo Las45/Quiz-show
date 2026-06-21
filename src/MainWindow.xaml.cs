@@ -19,7 +19,7 @@ namespace Quiz_show
     public partial class MainWindow : Window
     {
         Quizclass steuerung = new Quizclass();
-        private Progress progress = new Progress();
+        public Progress progress = new Progress();
         private Process? _ollamaProcess;
         public bool IsOllamaInstalled = false;
         public OllamaApiClient OllamaClient = new OllamaApiClient(new Uri("http://localhost:11434"));
@@ -28,9 +28,6 @@ namespace Quiz_show
         public MainWindow()
         {
             Logging.init();
-            progress.Load();
-            Shop.Load();
-            src.Klassen.Achievements.Load();
             Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
@@ -75,6 +72,8 @@ namespace Quiz_show
             //((Checker_Menue)Frames["Stats"]).Save();
             _ollamaProcess?.Kill();
             _ollamaProcess?.Dispose(); // Lässt alle resurcen los
+            Shop.Save();
+            progress.Save();
         }
         public void Change_Frame_by_name(string frame)
         {

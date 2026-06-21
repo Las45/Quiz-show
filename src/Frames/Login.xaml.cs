@@ -1,5 +1,6 @@
 ﻿using Quiz_show.src.Klassen;
 using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -96,6 +97,9 @@ namespace Quiz_show.Frames
 
         private void Phase3_Navigate()
         {
+            Shop.Load();
+            mw.progress.Load();
+            src.Klassen.Achievements.Load();
             this.mw.Change_Frame_by_name("Home");
         }
 

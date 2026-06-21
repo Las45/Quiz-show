@@ -9,7 +9,6 @@ namespace Quiz_show.src.Klassen
     public class Progress
     {
         public List<Checker> Subjects { get; set; }
-        MainWindow mainWindow;
         public Progress()
         {
             Subjects = new List<Checker>();
@@ -18,12 +17,13 @@ namespace Quiz_show.src.Klassen
             {
                 Subjects.Add(new Checker());
             }
-            mainWindow = (MainWindow)Application.Current.MainWindow;
+            
         }
+        private MainWindow GetMainWindow() => (MainWindow)Application.Current.MainWindow;
 
         public async Task Save()
         {
-            string userId = mainWindow.client.Auth.CurrentUser?.Id;
+            string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
             if (string.IsNullOrEmpty(userId)) 
                 return;
 
@@ -39,7 +39,7 @@ namespace Quiz_show.src.Klassen
                     ProgressData = json
                 };
 
-                await mainWindow.client
+                await GetMainWindow().client
                     .From<UserProgressModel>()
                     .Upsert(model);
                 // Ki Ende
@@ -53,14 +53,14 @@ namespace Quiz_show.src.Klassen
 
         public async Task Load()
         {
-            string userId = mainWindow.client.Auth.CurrentUser?.Id;
+            string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
             if (string.IsNullOrEmpty(userId)) 
                 return;
             try
             {
                 // Ki Anfang:
                 // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
-                UserProgressModel? row = await mainWindow.client
+                UserProgressModel? row = await GetMainWindow().client
             .From<UserProgressModel>()
             .Where(x => x.UserId == userId)
             .Single();
