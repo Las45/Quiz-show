@@ -24,16 +24,31 @@ namespace Quiz_show.usercontrols
             if (frage == null)
                 throw new ArgumentException();
 
-
             daten = frage;
 
             Question.Content = daten.frage;
 
             a.Content = daten.antworten[0];
             b.Content = daten.antworten[1];
-            c.Content = daten.antworten[2];
-            d.Content = daten.antworten[3];
+
+
+
+            if (daten.antworten.Count >= 4)
+            {
+                d.Content = daten.antworten[3];
+                c.Content = daten.antworten[2];
+                c_rect.Visibility = Visibility.Visible;
+                d_rect.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                d_rect.Visibility = Visibility.Collapsed;
+                c_rect.Visibility = Visibility.Collapsed;
+                d_label.Visibility = Visibility.Collapsed;
+                c_label.Visibility = Visibility.Collapsed;
+            }
         }
+        
         private void CheckAnswer(int index)
         {
             bool richtig = daten.Check(index);
@@ -58,12 +73,14 @@ namespace Quiz_show.usercontrols
 
         private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            CheckAnswer(2);
+            if (daten.antworten.Count >= 3)
+                CheckAnswer(2);
         }
 
         private void d_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            CheckAnswer(3);
+            if (daten.antworten.Count >= 4)
+                CheckAnswer(3);
         }
 
         private void a_rect_MouseEnter(object sender, MouseEventArgs e)

@@ -1,252 +1,252 @@
 [
   {
     "frage": "Wann fiel die Berliner Mauer?",
-    "antworten": ["1961", "1989", "1991", "1975"],
+    "antworten": [ "1961", "1989", "1991", "1975" ],
     "richtig": 1
   },
   {
     "frage": "Was war der Feudalismus?",
-    "antworten": ["Kapitalismus", "Demokratie", "Lehenssystem", "Industrie"],
+    "antworten": [ "Kapitalismus", "Demokratie", "Lehenssystem", "Industrie" ],
     "richtig": 2
   },
   {
     "frage": "Wer war Julius Caesar?",
-    "antworten": ["General Frankreich", "König", "Pharao", "Römischer Feldherr"],
+    "antworten": [ "General Frankreich", "König", "Pharao", "Römischer Feldherr" ],
     "richtig": 3
   },
   {
     "frage": "Was war Athen bekannt für?",
-    "antworten": ["Krieg Rom", "Pyramiden", "Demokratie", "Industrie"],
+    "antworten": [ "Krieg Rom", "Pyramiden", "Demokratie", "Industrie" ],
     "richtig": 2
   },
   {
     "frage": "Was war die Magna Carta?",
-    "antworten": ["Kaiserkrone", "1215 Freiheitsdokument", "Stadt", "Krieg"],
+    "antworten": [ "Kaiserkrone", "1215 Freiheitsdokument", "Stadt", "Krieg" ],
     "richtig": 1
   },
   {
     "frage": "Wann begann der Zweite Weltkrieg?",
-    "antworten": ["1941", "1914", "1945", "1939"],
+    "antworten": [ "1941", "1914", "1945", "1939" ],
     "richtig": 3
   },
   {
     "frage": "Was ist die NATO?",
-    "antworten": ["Gerichtshof", "Militärbündnis", "Parlament", "Handelszone"],
+    "antworten": [ "Gerichtshof", "Militärbündnis", "Parlament", "Handelszone" ],
     "richtig": 1
   },
   {
     "frage": "Wer war Martin Luther?",
-    "antworten": ["Kaiser", "König", "General", "Reformator"],
+    "antworten": [ "Kaiser", "König", "General", "Reformator" ],
     "richtig": 3
   },
   {
     "frage": "Was war Tutanchamun?",
-    "antworten": ["Priester", "Pharao", "König von Rom", "General"],
+    "antworten": [ "Priester", "Pharao", "König von Rom", "General" ],
     "richtig": 1
   },
   {
     "frage": "Wann endete der Kalte Krieg?",
-    "antworten": ["1991", "2001", "1975", "1980"],
+    "antworten": [ "1991", "2001", "1975", "1980" ],
     "richtig": 0
   },
   {
     "frage": "Was war der Marshallplan?",
-    "antworten": ["Revolution", "Kolonialismus", "Krieg", "Wiederaufbau Europas"],
+    "antworten": [ "Revolution", "Kolonialismus", "Krieg", "Wiederaufbau Europas" ],
     "richtig": 3
   },
   {
     "frage": "Wann begann die Reformation?",
-    "antworten": ["1492", "1400", "1517", "1600"],
+    "antworten": [ "1492", "1400", "1517", "1600" ],
     "richtig": 2
   },
   {
     "frage": "Was ist Kolonialismus?",
-    "antworten": ["Frieden", "Handel", "Demokratie", "Beherrschung fremder Gebiete"],
+    "antworten": [ "Frieden", "Handel", "Demokratie", "Beherrschung fremder Gebiete" ],
     "richtig": 3
   },
   {
     "frage": "Wann fiel Konstantinopel?",
-    "antworten": ["1600", "1410", "1453", "1500"],
+    "antworten": [ "1600", "1410", "1453", "1500" ],
     "richtig": 2
   },
   {
     "frage": "Was war die Weimarer Republik?",
-    "antworten": ["Kaiserreich", "Diktatur", "Erste deutsche Demokratie", "Kolonie"],
+    "antworten": [ "Kaiserreich", "Diktatur", "Erste deutsche Demokratie", "Kolonie" ],
     "richtig": 2
   },
   {
     "frage": "Wann wurde die Berliner Mauer gebaut?",
-    "antworten": ["1989", "1945", "1970", "1961"],
+    "antworten": [ "1989", "1945", "1970", "1961" ],
     "richtig": 3
   },
   {
     "frage": "Was war Sparta?",
-    "antworten": ["Handelsstadt", "Militärstaat Griechenland", "Kolonie", "Imperium"],
+    "antworten": [ "Handelsstadt", "Militärstaat Griechenland", "Kolonie", "Imperium" ],
     "richtig": 1
   },
   {
     "frage": "Wann begann der Erste Weltkrieg?",
-    "antworten": ["1918", "1914", "1939", "1912"],
+    "antworten": [ "1918", "1914", "1939", "1912" ],
     "richtig": 1
   },
   {
     "frage": "Was waren die Kreuzzüge?",
-    "antworten": ["Wahlen", "Naturkatastrophen", "Religionskriege", "Handel"],
+    "antworten": [ "Wahlen", "Naturkatastrophen", "Religionskriege", "Handel" ],
     "richtig": 2
   },
   {
     "frage": "Wer erfand den Buchdruck?",
-    "antworten": ["Newton", "Tesla", "Gutenberg", "Einstein"],
+    "antworten": [ "Newton", "Tesla", "Gutenberg", "Einstein" ],
     "richtig": 2
   },
   {
     "frage": "Was war der Holocaust?",
-    "antworten": ["Wirtschaftskrise", "Völkermord", "Frieden", "Reform"],
+    "antworten": [ "Wirtschaftskrise", "Völkermord", "Frieden", "Reform" ],
     "richtig": 1
   },
   {
     "frage": "Wann endete der Erste Weltkrieg?",
-    "antworten": ["1914", "1930", "1918", "1920"],
+    "antworten": [ "1914", "1930", "1918", "1920" ],
     "richtig": 2
   },
   {
     "frage": "Was ist die UNO?",
-    "antworten": ["WTO", "Militärbündnis", "EU", "Vereinte Nationen"],
+    "antworten": [ "WTO", "Militärbündnis", "EU", "Vereinte Nationen" ],
     "richtig": 3
   },
   {
     "frage": "Wann begann die Französische Revolution?",
-    "antworten": ["1914", "1492", "1789", "1815"],
+    "antworten": [ "1914", "1492", "1789", "1815" ],
     "richtig": 2
   },
   {
     "frage": "Was war die Berliner Luftbrücke?",
-    "antworten": ["Angriff", "Mauerbau", "Versorgung West-Berlin", "Revolution"],
+    "antworten": [ "Angriff", "Mauerbau", "Versorgung West-Berlin", "Revolution" ],
     "richtig": 2
   },
   {
-    "frage": "Wer war Napoleon Bonaparte?",
-    "antworten": ["Preußen König", "Rom Kaiser", "England König", "Frankreich Kaiser"],
-    "richtig": 3
+    "frage": "War Napoleon Bonaparte Kaiser von Frankreich?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Was war ein Ergebnis der Französischen Revolution?",
-    "antworten": ["Beginn Römisches Reich", "EU Gründung", "Industrialisierung Asien", "Ende absoluter Monarchie"],
-    "richtig": 3
+    "frage": "Beendete die Französische Revolution die absolute Monarchie?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Welche Epoche folgt auf das Mittelalter?",
-    "antworten": ["Industrialisierung", "Renaissance", "Antike", "Steinzeit"],
+    "frage": "Folgt die Industrialisierung direkt auf das Mittelalter?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Was war der Dreißigjährige Krieg?",
-    "antworten": ["Bürgerkrieg USA", "Handelskrieg", "Religionskrieg", "Kolonialkrieg"],
-    "richtig": 2
+    "frage": "War der Dreißigjährige Krieg ein Religionskrieg?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wann war die deutsche Wiedervereinigung?",
-    "antworten": ["2000", "1945", "1990", "1980"],
-    "richtig": 2
+    "frage": "War die deutsche Wiedervereinigung im Jahr 1990?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Was ist eine historische Quelle?",
-    "antworten": ["Mathe", "Vergangenheit Informationen", "Naturgesetz", "Zukunft"],
+    "frage": "Ist eine historische Quelle eine Information über die Vergangenheit?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Verwendeten die Römer hauptsächlich Griechisch?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Welche Sprache verwendeten die Römer hauptsächlich?",
-    "antworten": ["Arabisch", "Griechisch", "Deutsch", "Latein"],
-    "richtig": 3
+    "frage": "Bedeutet Industrialisierung Maschinenproduktion?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Was bedeutet Industrialisierung?",
-    "antworten": ["Mittelalter", "Krieg", "Maschinenproduktion", "Renaissance Kunst"],
-    "richtig": 2
+    "frage": "Fiel das Weströmische Reich im Jahr 476 n.Chr.?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wann fiel das Weströmische Reich?",
-    "antworten": ["313 n.Chr", "1453 n.Chr", "476 n.Chr", "800 n.Chr"],
-    "richtig": 2
+    "frage": "War Konrad Adenauer der erste Bundeskanzler der BRD?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wer war der erste Bundeskanzler der BRD?",
-    "antworten": ["Helmut Kohl", "Willy Brandt", "Merkel", "Konrad Adenauer"],
-    "richtig": 3
-  },
-  {
-    "frage": "Was ist die industrielle Revolution?",
-    "antworten": ["Rückkehr Landwirtschaft", "Religion", "Antike", "Maschinenproduktion"],
-    "richtig": 3
-  },
-  {
-    "frage": "Welche Stadt war Zentrum des Heiligen Römischen Reiches?",
-    "antworten": ["Berlin", "Aachen", "Rom", "Paris"],
+    "frage": "War die industrielle Revolution eine Rückkehr zur Landwirtschaft?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Wann wurde Karl der Große Kaiser?",
-    "antworten": ["700 n.Chr", "1000 n.Chr", "900 n.Chr", "800 n.Chr"],
-    "richtig": 3
+    "frage": "War Aachen Zentrum des Heiligen Römischen Reiches?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wer entdeckte Amerika im Jahr 1492?",
-    "antworten": ["James Cook", "Vasco da Gama", "Kolumbus", "Marco Polo"],
-    "richtig": 2
+    "frage": "Wurde Karl der Große im Jahr 800 n.Chr. Kaiser?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Was war die Hauptstadt des Römischen Reiches?",
-    "antworten": ["London", "Paris", "Athen", "Rom"],
-    "richtig": 3
+    "frage": "Entdeckte Kolumbus Amerika im Jahr 1492?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wann begann die Renaissance ungefähr?",
-    "antworten": ["5. Jahrhundert", "1. Jahrhundert", "20. Jahrhundert", "14.-17. Jahrhundert"],
-    "richtig": 3
-  },
-  {
-    "frage": "Welche Seite kämpfte im Zweiten Weltkrieg gegen Deutschland?",
-    "antworten": ["EU", "NATO", "Alliierte", "Achsenmächte"],
-    "richtig": 2
-  },
-  {
-    "frage": "Wer war Adolf Hitler?",
-    "antworten": ["Kaiser Frankreich", "US Präsident", "Diktator Deutschland", "Papst"],
-    "richtig": 2
-  },
-  {
-    "frage": "Welches Reich eroberte Alexander der Große?",
-    "antworten": ["Makedonien", "Persisches Reich", "Ägypten", "Römisches Reich"],
+    "frage": "War Athen die Hauptstadt des Römischen Reiches?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Wann endete der Zweite Weltkrieg?",
-    "antworten": ["1918", "1950", "1939", "1945"],
-    "richtig": 3
+    "frage": "Begann die Renaissance etwa im 14.-17. Jahrhundert?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Woraus entstand die Europäische Union?",
-    "antworten": ["NATO", "Warschauer Pakt", "Europäische Gemeinschaft", "UNO"],
-    "richtig": 2
+    "frage": "Kämpften die Alliierten im Zweiten Weltkrieg gegen Deutschland?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Welche Stadt war Zentrum der griechischen Demokratie?",
-    "antworten": ["Theben", "Sparta", "Rom", "Athen"],
-    "richtig": 3
+    "frage": "War Adolf Hitler Diktator Deutschlands?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "Wer war der erste römische Kaiser?",
-    "antworten": ["Nero", "Caligula", "Augustus", "Trajan"],
-    "richtig": 2
-  },
-  {
-    "frage": "In welchem Land wurden die Pyramiden gebaut?",
-    "antworten": ["Griechenland", "Ägypten", "Mexiko", "Italien"],
+    "frage": "Eroberte Alexander der Große das Römische Reich?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Zwischen welchen Staaten war der Kalte Krieg?",
-    "antworten": ["China und Japan", "Frankreich und Deutschland", "UK und USA", "USA und UdSSR"],
-    "richtig": 3
+    "frage": "Endete der Zweite Weltkrieg 1945?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Entstand die Europäische Union aus der Europäischen Gemeinschaft?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "War Athen Zentrum der griechischen Demokratie?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "War Nero der erste römische Kaiser?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Wurden die Pyramiden in Ägypten gebaut?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "War der Kalte Krieg zwischen den USA und der UdSSR?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   }
 ]
