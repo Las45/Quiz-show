@@ -1,252 +1,252 @@
 [
   {
     "frage": "What command lists files in a directory?",
-    "antworten": ["ls", "cd", "pwd", "rm"],
-    "richtig": 2
+    "antworten": [ "ls", "cd", "pwd", "rm" ],
+    "richtig": 0
   },
   {
     "frage": "What command shows the current directory?",
-    "antworten": ["ls", "pwd", "cd", "mkdir"],
+    "antworten": [ "ls", "pwd", "cd", "mkdir" ],
     "richtig": 1
   },
   {
     "frage": "What command creates a new directory?",
-    "antworten": ["touch", "rm", "mkdir", "cp"],
+    "antworten": [ "touch", "rm", "mkdir", "cp" ],
     "richtig": 2
   },
   {
     "frage": "What command removes a file?",
-    "antworten": ["rm", "del", "erase", "remove"],
+    "antworten": [ "rm", "del", "erase", "remove" ],
     "richtig": 0
   },
   {
     "frage": "What command copies a file?",
-    "antworten": ["mv", "cp", "copy", "ln"],
+    "antworten": [ "mv", "cp", "copy", "ln" ],
     "richtig": 1
   },
   {
     "frage": "What command moves or renames a file?",
-    "antworten": ["cp", "rm", "mv", "rn"],
+    "antworten": [ "cp", "rm", "mv", "rn" ],
     "richtig": 2
   },
   {
     "frage": "What command displays file contents?",
-    "antworten": ["show", "cat", "read", "open"],
+    "antworten": [ "show", "cat", "read", "open" ],
     "richtig": 1
   },
   {
     "frage": "What command searches text in files?",
-    "antworten": ["find", "search", "grep", "locate"],
+    "antworten": [ "find", "search", "grep", "locate" ],
     "richtig": 2
   },
   {
     "frage": "What command shows running processes?",
-    "antworten": ["ps", "proc", "run", "list"],
+    "antworten": [ "ps", "proc", "run", "list" ],
     "richtig": 0
   },
   {
     "frage": "What command kills a process by PID?",
-    "antworten": ["stop", "end", "kill", "exit"],
+    "antworten": [ "stop", "end", "kill", "exit" ],
     "richtig": 2
   },
   {
     "frage": "What command shows disk usage?",
-    "antworten": ["du", "df", "disk", "size"],
+    "antworten": [ "du", "df", "disk", "size" ],
     "richtig": 0
   },
   {
     "frage": "What command shows free disk space?",
-    "antworten": ["du", "space", "free", "df"],
+    "antworten": [ "du", "space", "free", "df" ],
     "richtig": 3
   },
   {
     "frage": "What command changes file permissions?",
-    "antworten": ["chown", "chmod", "chperm", "perm"],
+    "antworten": [ "chown", "chmod", "chperm", "perm" ],
     "richtig": 1
   },
   {
     "frage": "What command changes file ownership?",
-    "antworten": ["chmod", "chown", "own", "chuser"],
+    "antworten": [ "chmod", "chown", "own", "chuser" ],
     "richtig": 1
   },
   {
     "frage": "What symbol represents the root directory?",
-    "antworten": ["~", "#", "/", "\\"],
+    "antworten": [ "~", "#", "/", "\\" ],
     "richtig": 2
   },
   {
     "frage": "What symbol represents the home directory?",
-    "antworten": ["/", "#", "$", "~"],
+    "antworten": [ "/", "#", "$", "~" ],
     "richtig": 3
   },
   {
     "frage": "What command shows the manual of a command?",
-    "antworten": ["help", "info", "man", "doc"],
+    "antworten": [ "help", "info", "man", "doc" ],
     "richtig": 2
   },
   {
     "frage": "What command creates an empty file?",
-    "antworten": ["new", "create", "touch", "make"],
+    "antworten": [ "new", "create", "touch", "make" ],
     "richtig": 2
   },
   {
     "frage": "What command shows the last lines of a file?",
-    "antworten": ["head", "end", "tail", "last"],
+    "antworten": [ "head", "end", "tail", "last" ],
     "richtig": 2
   },
   {
     "frage": "What command shows the first lines of a file?",
-    "antworten": ["head", "top", "first", "start"],
+    "antworten": [ "head", "top", "first", "start" ],
     "richtig": 0
   },
   {
     "frage": "What command displays memory usage?",
-    "antworten": ["mem", "ram", "free", "top"],
+    "antworten": [ "mem", "ram", "free", "top" ],
     "richtig": 2
   },
   {
     "frage": "What command shows network interfaces?",
-    "antworten": ["netstat", "ipconfig", "ifconfig", "network"],
+    "antworten": [ "netstat", "ipconfig", "ifconfig", "network" ],
     "richtig": 2
   },
   {
     "frage": "What command tests network connectivity?",
-    "antworten": ["tracert", "ping", "nettest", "curl"],
+    "antworten": [ "tracert", "ping", "nettest", "curl" ],
     "richtig": 1
   },
   {
     "frage": "What permission number means read, write, execute for owner?",
-    "antworten": ["644", "777", "700", "755"],
+    "antworten": [ "644", "777", "700", "755" ],
     "richtig": 2
   },
   {
     "frage": "What permission number means read+write for owner, read for others?",
-    "antworten": ["755", "777", "600", "644"],
+    "antworten": [ "755", "777", "600", "644" ],
     "richtig": 3
   },
   {
-    "frage": "What command downloads files from the internet?",
-    "antworten": ["fetch", "get", "wget", "download"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command compresses files into a .tar.gz archive?",
-    "antworten": ["zip -r file.tar.gz", "tar -czvf file.tar.gz", "compress file.tar.gz", "gzip -r file.tar.gz"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command extracts a .tar.gz archive?",
-    "antworten": ["tar -czvf", "unzip", "tar -xzvf", "extract"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows currently logged-in users?",
-    "antworten": ["users", "who", "loggedin", "whoami"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command shows your own username?",
-    "antworten": ["who", "me", "whoami", "user"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command runs a command as superuser?",
-    "antworten": ["su", "root", "sudo", "admin"],
-    "richtig": 2
-  },
-  {
-    "frage": "What file contains user account information?",
-    "antworten": ["/etc/users", "/etc/passwd", "/etc/accounts", "/var/users"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command adds a new user?",
-    "antworten": ["newuser", "adduser", "useradd", "mkuser"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command changes a user's password?",
-    "antworten": ["chpass", "setpass", "passwd", "password"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows the shell's command history?",
-    "antworten": ["log", "history", "past", "cmds"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command clears the terminal screen?",
-    "antworten": ["cls", "reset", "clear", "wipe"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command finds files by name?",
-    "antworten": ["grep", "search", "locate", "find"],
-    "richtig": 3
-  },
-  {
-    "frage": "What command shows the routing table?",
-    "antworten": ["route", "netstat -r", "ip route", "routeprint"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command counts lines, words, characters in a file?",
-    "antworten": ["count", "wc", "lc", "size"],
-    "richtig": 1
-  },
-  {
-    "frage": "What command sorts lines in a file?",
-    "antworten": ["order", "arrange", "sort", "rank"],
-    "richtig": 2
-  },
-  {
-    "frage": "What character is used to pipe output between commands?",
-    "antworten": [">", "&", "|", ">>"],
-    "richtig": 2
-  },
-  {
-    "frage": "What character redirects output to a file (overwrite)?",
-    "antworten": [">>", "|", "<", ">"],
-    "richtig": 3
-  },
-  {
-    "frage": "What character appends output to a file?",
-    "antworten": [">", "<<", ">>", "|"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows active network connections?",
-    "antworten": ["connections", "ifconfig", "netstat", "ipstat"],
-    "richtig": 2
-  },
-  {
-    "frage": "What command makes a script executable?",
-    "antworten": ["chmod +x", "exec +x", "chperm +x", "run +x"],
+    "frage": "Does 'wget' download files from the internet?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "What is the default shell in most Linux systems?",
-    "antworten": ["zsh", "fish", "bash", "sh"],
-    "richtig": 2
-  },
-  {
-    "frage": "What directory contains system configuration files?",
-    "antworten": ["/var", "/usr", "/sys", "/etc"],
-    "richtig": 3
-  },
-  {
-    "frage": "What directory contains log files?",
-    "antworten": ["/etc/logs", "/var/log", "/log", "/sys/log"],
+    "frage": "Does 'unzip' compress files into a .tar.gz archive?",
+    "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "What command shows CPU and memory usage in real time?",
-    "antworten": ["ps", "stat", "top", "htop"],
-    "richtig": 2
+    "frage": "Does 'tar -xzvf' extract a .tar.gz archive?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   },
   {
-    "frage": "What command displays the Linux kernel version?",
-    "antworten": ["version", "sysinfo", "uname -r", "kernel"],
-    "richtig": 2
+    "frage": "Does 'who' show currently logged-in users?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'whoami' show your own username?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'sudo' run a command as superuser?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does '/etc/passwd' contain user account information?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'useradd' add a new user?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'passwd' change a user's password?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'history' show the shell's command history?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'clear' clear the terminal screen?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'grep' find files by name?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Does 'find' find files by name?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'netstat -r' show the routing table?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'wc' count lines, words, and characters in a file?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'sort' sort lines in a file?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Is '|' used to pipe output between commands?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does '>>' overwrite a file when redirecting output?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Does '>' redirect output to a file, overwriting it?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'netstat' show active network connections?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'chmod +x' make a script executable?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Is 'bash' the default shell in most Linux systems?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does '/etc' contain system configuration files?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does '/var/log' contain log files?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Does 'top' show CPU and memory usage in real time?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   }
 ]

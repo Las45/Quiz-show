@@ -49,7 +49,6 @@
     "antworten": [ "Ein einzelner Wert", "Eine Sammlung gleicher Typen", "Eine Klasse", "Eine Methode" ],
     "richtig": 1
   },
-
   {
     "frage": "Was ist List<T>?",
     "antworten": [ "Feste Größe", "Dynamische Liste", "Datentyp", "Schleife" ],
@@ -100,7 +99,6 @@
     "antworten": [ "Kopie", "Referenzübergabe", "Rückgabe", "Schleife" ],
     "richtig": 1
   },
-
   {
     "frage": "Was bedeutet 'out'?",
     "antworten": [ "Nur Input", "Nur Output", "Rückgabeparameter", "Variable" ],
@@ -151,7 +149,6 @@
     "antworten": [ "CPU vs GPU", "Value vs Reference Speicher", "Schleife vs Variable", "Klasse vs Objekt" ],
     "richtig": 1
   },
-
   {
     "frage": "Was ist ein Parameter?",
     "antworten": [ "Eingabewert einer Methode", "Variable", "Klasse", "Schleife" ],
@@ -202,7 +199,6 @@
     "antworten": [ "Feldzugriff kontrollieren", "Schleife", "Variable", "Klasse" ],
     "richtig": 0
   },
-
   {
     "frage": "Was ist Enum?",
     "antworten": [ "Aufzählung von Werten", "Schleife", "Variable", "Klasse" ],
@@ -227,5 +223,156 @@
     "frage": "Was ist eine Klasse in OOP?",
     "antworten": [ "Datentyp", "Bauplan für Objekte", "Schleife", "Variable" ],
     "richtig": 1
+  },
+
+  {
+    "frage": "Ist eine Klasse ein Bauplan für Objekte?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Wird beim Instanziieren ein neues Objekt erzeugt?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Bedeutet Encapsulation, alles öffentlich zu machen?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Erlaubt Polymorphie viele Formen von Verhalten?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist ein Konstruktor eine Schleife?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist ein Interface ein Vertrag für Klassen?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Gilt 'static' nur innerhalb eines Objekts?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist ein Namespace eine Code-Organisationseinheit?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Speichert ein Array eine Sammlung gleicher Typen?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Hat List<T> eine feste Größe?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist List<T> dynamischer als ein Array?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Speichert ein Dictionary Daten als Key-Value-Paare?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Dient try-catch der Fehlerbehandlung?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist eine Exception ein normaler Programmablauf?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ermöglicht async/await asynchrone Programmierung?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Erlaubt Multithreading mehrere parallele Threads?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Verwaltet Garbage Collection den Speicher manuell?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Übergibt 'ref' eine Referenz statt einer Kopie?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist 'out' nur ein Eingabeparameter?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist Boxing die Umwandlung von ValueType nach Object?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist Unboxing die Umwandlung von Object nach ValueType?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist ein Delegate eine Methodenreferenz?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Blockieren sich Threads bei einem Deadlock gegenseitig?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Analysiert Reflection Code zur Laufzeit?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist Vererbung das Erweitern von Klassen durch andere Klassen?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Dient 'using' zum Einbinden von Namespaces?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist Main() der Startpunkt eines C#-Programms?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist eine for-Schleife zählergesteuert?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist eine while-Schleife zählergesteuert?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist Enum eine Aufzählung von Werten?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
   }
 ]
