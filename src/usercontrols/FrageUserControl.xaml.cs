@@ -54,10 +54,10 @@ namespace Quiz_show.usercontrols
         {
             bool richtig = daten.Check(index);
 
-            if (richtig)
-                MessageBox.Show("Richtig!");
-            else
-                MessageBox.Show("Falsch!");
+            //if (richtig)
+            //    MessageBox.Show("Richtig!");
+            //else
+            //    MessageBox.Show("Falsch!");
 
             FrageBeendet?.Invoke(richtig);
         }
