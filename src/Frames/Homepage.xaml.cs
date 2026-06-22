@@ -1,4 +1,5 @@
 ﻿using OllamaSharp;
+using Quiz_show.src.Klassen;
 using Quiz_show.src.usercontrols.Icons;
 using System;
 using System.Collections.Generic;
@@ -11,10 +12,10 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
 using System.Windows.Threading;
 
 namespace Quiz_show.Frames
@@ -27,9 +28,10 @@ namespace Quiz_show.Frames
         private OllamaApiClient _client;
         private bool ersterAufruf = true;
 
-        public Homepage()
+        public Homepage()   
         {
             InitializeComponent();
+            Logging.logger.Debug("Homepage opened");
             Install_AI install_AI = new Install_AI();
         }
 
@@ -38,6 +40,7 @@ namespace Quiz_show.Frames
             Window window = Window.GetWindow(this);
             window.Height = 1000;
             window.Width = 2000;
+            Logging.logger.Debug("Homepage loaded");
 
             if (ersterAufruf)
             {
@@ -56,6 +59,7 @@ namespace Quiz_show.Frames
             DispatcherTimer timer = (DispatcherTimer)sender;
             timer.Stop();
             ersterAufruf = false;
+            Logging.logger.Debug("Homepage initialization done");
         }
 
     }

@@ -14,24 +14,28 @@ namespace Quiz_show.Klassen
         {
             if (!File.Exists(path))
             {
-                MessageBox.Show("Datei nicht gefunden: " + path);
+                Logging.logger.Debug($"Quiz file not found");
                 Questions = new List<Frage>();
                 return;
             }
 
             string json = File.ReadAllText(path);
-
             Questions = JsonSerializer.Deserialize<List<Frage>>(json);
 
             if (Questions == null)
             {
                 Questions = new List<Frage>();
+                Logging.logger.Debug("Quiz load failed (null)");
+                return;
             }
+
+            Logging.logger.Debug($"Quiz loaded");
         }
 
         public void Add(Frage frage)
         {
             Questions.Add(frage);
+            Logging.logger.Debug("Question added to Quiz");
         }
     }
 }

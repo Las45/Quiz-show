@@ -1,4 +1,5 @@
-﻿using Quiz_show.Windows;
+﻿using Quiz_show.src.Klassen;
+using Quiz_show.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,10 @@ namespace Quiz_show.Frames
             InitializeComponent();
             this.client = client;
             this.register = register;
+            Logging.logger.Debug("Register_1 opened");
         }
+
+
 
         private async void erstellen_register_Click(object sender, RoutedEventArgs e)
         {
@@ -63,22 +67,15 @@ namespace Quiz_show.Frames
 
         private void abb_register_Click(object sender, RoutedEventArgs e)
         {
-            ok = false;
-            Window.GetWindow(this).Close();
+            Logging.logger.Debug("Register cancelled");
         }
 
         private void password_again_register_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if ((password_again_register.Password != password_register.Password) || (password_again_register.Password.Length < 6))
+            if ((password_again_register.Password != password_register.Password) ||
+                (password_again_register.Password.Length < 6))
             {
-                pass_req.Foreground = Brushes.Red;
-                password_again_register.Background = Brushes.LightCoral;
-            }
-            else
-            {
-                password_again_register.Background = Brushes.LightGreen;
-                pass_req.Foreground = Brushes.LightGreen;
-
+                Logging.logger.Debug("Password invalid");
             }
         }
     }

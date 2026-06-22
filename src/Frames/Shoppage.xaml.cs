@@ -34,6 +34,7 @@
 
             private void UpdateUI()
             {
+                Logging.logger.Debug("Updated Shop UI");
                 RectOriginalButton.Fill = new SolidColorBrush(Shop.GetButtonColor());
                 RectRotButton.Fill = new SolidColorBrush(Shop.GetButtonColor());
                 RectGoldButton.Fill = new SolidColorBrush(Shop.GetButtonColor());
@@ -92,6 +93,11 @@
                 UpdateUI();
             }
 
+            private void Page_Loaded(object sender, RoutedEventArgs e)
+            {
+
+            UpdateUI();
+            }
             private void RectGrünBackground_MouseUp(object sender, MouseButtonEventArgs e)
             {
                 Shop.Purchase(ShopItems.GrünBackground);

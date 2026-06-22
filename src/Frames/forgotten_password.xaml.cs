@@ -30,7 +30,9 @@ namespace Quiz_show.Frames
             InitializeComponent();
             this.client = client;
             this.window = window;
+            Logging.logger.Debug("forgotten password page opened");
         }
+        
 
         private async void reset_reset_Click(object sender, RoutedEventArgs e)
         {
@@ -56,6 +58,7 @@ namespace Quiz_show.Frames
 
         private void abb_reset_Click(object sender, RoutedEventArgs e)
         {
+            Logging.logger.Debug("Return to login page");
             window.Change_Frame_by_name("Login");
         }
     }

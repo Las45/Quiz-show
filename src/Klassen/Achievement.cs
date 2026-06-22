@@ -15,6 +15,7 @@ namespace Quiz_show.src.Klassen
         {
             Name = name;
             IsUnlocked = false;
+            Logging.logger.Debug($"Achievement created: {name}");
         }
     }
 }

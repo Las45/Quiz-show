@@ -20,7 +20,7 @@ namespace Quiz_show.Frames
             progress = p;
 
             Update();
-
+            Logging.logger.Debug("Checkermenu opened");
 
             UpdateUI();
 
@@ -33,8 +33,10 @@ namespace Quiz_show.Frames
         }
         private void PathExit_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            Logging.logger.Debug("Returned to Homepage");
             MainWindow main = (MainWindow)Application.Current.MainWindow;
             UpdateUI();
+
             main.Change_Frame_by_name("Home");
 
         }
@@ -66,8 +68,9 @@ namespace Quiz_show.Frames
             {
                 if (!gleichheit)
                 {
-                    Shop.Money += 60;
+                    Shop.Money += 50;
                     gleichheit = true;
+                    Logging.logger.Debug("Player Unlocked 'Absolute Gleichheit' Achievement");
                 }
 
 
@@ -78,14 +81,16 @@ namespace Quiz_show.Frames
             {
                 if (!einserschüller)
                 {
-                    Shop.Money += 40;
+                    Shop.Money += 50;
                     einserschüller = true;
+                    Logging.logger.Debug("Player Unlocked 'Perfektionist' Achievement");
                 }
 
                 Achievements.Unlock("Perfektionist");
             }
 
             progress.Save();
+            Logging.logger.Debug("Progress saved");
         }
     }
 }

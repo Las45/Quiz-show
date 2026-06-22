@@ -12,7 +12,8 @@ namespace Quiz_show.src.Klassen
             new Achievement("5er Schüler"),
             new Achievement("1er Schüler"),
             new Achievement("Mode Designer"),
-            new Achievement("Absolute Gleichheit")
+            new Achievement("Absolute Gleichheit"),
+            new Achievement("Discord")
         };
 
         public static List<Achievement> AchievementList
@@ -33,6 +34,7 @@ namespace Quiz_show.src.Klassen
                 {
                     achievement.IsUnlocked = true;
                     Save();
+                    Logging.logger.Debug($"Achievement unlocked: {name}");
                     return;
 
 
@@ -58,7 +60,7 @@ namespace Quiz_show.src.Klassen
         {
             string json = JsonSerializer.Serialize(achievements);
 
-
+            Logging.logger.Debug("Achievements saved");
             File.WriteAllText("achievements.json", json);
         }
 
@@ -69,6 +71,7 @@ namespace Quiz_show.src.Klassen
         {
             if (!File.Exists("achievements.json"))
             {
+                Logging.logger.Debug("No achievements file found!");
                 return;
             }
 
@@ -79,10 +82,12 @@ namespace Quiz_show.src.Klassen
 
             if (geladeneAchievements == null)
             {
+                Logging.logger.Debug("Achievements load failed (null)");
                 return;
             }
 
             achievements = geladeneAchievements;
+            Logging.logger.Debug("Achievements loaded");
         }
     }
 }

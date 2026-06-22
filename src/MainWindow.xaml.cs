@@ -9,6 +9,10 @@ using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.IO;
 
 namespace Quiz_show
@@ -18,6 +22,7 @@ namespace Quiz_show
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool discord = false;
         Quizclass steuerung = new Quizclass();
         public Progress progress = new Progress();
         private Process? _ollamaProcess;
@@ -28,6 +33,12 @@ namespace Quiz_show
         public MainWindow()
         {
             Logging.init();
+
+            Logging.logger.Debug("App starting");
+            progress.Load();
+            Shop.Load();
+            src.Klassen.Achievements.Load();
+            Logging.logger.Debug("Data loaded (progress/shop/achievements)");
             Checker_Menue checkerMenu = new Checker_Menue(progress);
             Frames.Add("Home", new Homepage());
             Frames.Add("Login", new Login(this, client));
@@ -36,22 +47,14 @@ namespace Quiz_show
             Frames.Add("Shop", new Shoppage());
             Frames.Add("Quiz", new QuizAuswahl(checkerMenu, progress));
             Frames.Add("Achievements", new Achievementspage());
-            Logging.logger.Information("Pages wurden erstellt");
             InitializeComponent();
-            Shop.ShopUpdated += UpdateUI;
             UpdateUI();
-            Logging.logger.Information("Window wurde geladen");
+            Logging.logger.Debug("UI initialized + frames ready");
             StartOllamaServer();
             OllamaClient.SelectedModel = "llama3.2:1b";
-            Logging.logger.Information("Ollama wurde gesetzt");
-            _ = CheckOllamaAsync();
+            Logging.logger.Debug("Ollama started + model set");
             Main_frames.Content = Frames["Login"];
-
-            src.Klassen.Achievements.AchievementList.Add(new Achievement("Perfektionist"));
-            src.Klassen.Achievements.AchievementList.Add(new Achievement("5er Schüler"));
-            src.Klassen.Achievements.AchievementList.Add(new Achievement("1er Schüler"));
-            src.Klassen.Achievements.AchievementList.Add(new Achievement("Mode Designer"));
-            src.Klassen.Achievements.AchievementList.Add(new Achievement("Absolute Gleichheit"));
+            Logging.logger.Debug("Login screen loaded");
         }
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -88,6 +91,26 @@ namespace Quiz_show
         {
             Main_frames.Background = new SolidColorBrush(Shop.GetBackgroundColor());
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Das Achievements ist eine Reference zu dem längsten Discord Call in dem Klassen Discord Server, welcher 18 Stunden ging.
+            DispatcherTimer timer = new DispatcherTimer();
+
+            timer.Interval = TimeSpan.FromHours(18);
+
+            timer.Tick += (sender, e) =>
+            {
+                if (!discord)
+                {
+                    Shop.Money += 100;
+                    discord = true;
+                }
+                src.Klassen.Achievements.Unlock("Discord");
+                timer.Stop();
+            };
+            timer.Start();
+        }
         private async Task CheckOllamaAsync() // Das mit Task kam vom Claude sowie nur IEnumerable<Model>, der restliche code kam von mir
         {
             try
@@ -114,7 +137,7 @@ namespace Quiz_show
         private void StartOllamaServer()
         {
             // Pfad zur gebündelten ollama.exe
-            string ollamaPath = Path.Combine(
+            string ollamaPath = System.IO.Path.Combine(
                 AppDomain.CurrentDomain.BaseDirectory,
                 "src", "AI", "ollama.exe"
             );
