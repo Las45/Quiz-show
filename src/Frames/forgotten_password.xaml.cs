@@ -29,12 +29,15 @@ namespace Quiz_show.Frames
             InitializeComponent();
             this.client = client;
             this.window = window;
+            Logging.logger.Debug("forgotten password page opened");
         }
+        
 
         private async void reset_reset_Click(object sender, RoutedEventArgs e)
         {
             try{
-                await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text)); 
+                await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text));
+                Logging.logger.Debug("Password reset email sent");
             }
             catch (Exception ex) 
             {
@@ -46,6 +49,7 @@ namespace Quiz_show.Frames
 
         private void abb_reset_Click(object sender, RoutedEventArgs e)
         {
+            Logging.logger.Debug("Return to login page");
             window.Change_Frame_by_name("Login");
         }
     }

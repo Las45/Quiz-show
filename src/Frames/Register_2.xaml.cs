@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quiz_show.src.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,7 @@ namespace Quiz_show.Frames
             catch 
             {
                 MessageBox.Show("PIN ist falsch");
+                Logging.logger.Debug("Password invalid");
             }
         }
     }

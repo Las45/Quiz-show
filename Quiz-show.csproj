@@ -8,8 +8,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
+	
+	
 
 	<ItemGroup>
+		<None Remove="src\AI\ollama.exe" />
 		<None Remove="src\Images\Icon.png" />
 		<None Remove="src\Images\Powertoys.png" />
 		<None Remove="src\JSON\POS_Fragen.json" />
@@ -17,6 +20,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="src\AI\ollama.exe">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
 		<Content Include="src\JSON\POS_Fragen.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>

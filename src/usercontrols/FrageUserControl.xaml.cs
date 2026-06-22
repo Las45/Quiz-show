@@ -25,6 +25,7 @@ namespace Quiz_show.usercontrols
                 throw new ArgumentException();
 
             daten = frage;
+            Logging.logger.Debug($"Frage loaded");
 
             Question.Content = daten.frage;
 

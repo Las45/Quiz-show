@@ -15,10 +15,12 @@ namespace Quiz_show.src.Klassen
             frage = frage;
             antworten = antworten;
             richtig = richtig;
+            Logging.logger.Debug("Frage created");
         }
 
         public bool Check(int ausgewählt)
         {
+            Logging.logger.Debug($"Answer checked");
             return ausgewählt == richtig;
         }
     }

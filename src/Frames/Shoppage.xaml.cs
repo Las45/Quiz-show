@@ -34,6 +34,7 @@
 
             private void UpdateUI()
             {
+                Logging.logger.Debug("Updated Shop UI");
                 RectOriginalButton.Fill = new SolidColorBrush(Shop.GetButtonColor());
                 RectRotButton.Fill = new SolidColorBrush(Shop.GetButtonColor());
                 RectGoldButton.Fill = new SolidColorBrush(Shop.GetButtonColor());

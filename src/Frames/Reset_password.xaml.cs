@@ -33,6 +33,7 @@ namespace Quiz_show.Frames
 
         private void abb_pass_reset_Click(object sender, RoutedEventArgs e)
         {
+            Logging.logger.Debug("Password reset cancelled");
             window.Change_Frame_by_name("Login");
         }
 
