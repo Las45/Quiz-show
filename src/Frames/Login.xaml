@@ -16,20 +16,8 @@
                 Panel.ZIndex="99"
                 IsHitTestVisible="False"/>
 
-        <!--         
-        // KI: Claude
-        // Prompt: How can i make a zoom out and zoom in animation for my login / home frame:
-        // Anfang: KI 
-        -->
         <Canvas Height="126" Width="260" HorizontalAlignment="Center" VerticalAlignment="Center" Background="AliceBlue"
-                x:Name="LoginCard"
-                RenderTransformOrigin="0.5,0.5">
-            <Canvas.RenderTransform>
-                <ScaleTransform x:Name="CardScale" ScaleX="1" ScaleY="1"/>
-            </Canvas.RenderTransform>
-            <!--         
-        // Ende KI:
-        -->
+                x:Name="LoginCard">
             <TextBox x:Name="email_login" FontSize="10" Height="20" Canvas.Left="58" TextWrapping="Wrap" Text="" Canvas.Top="10" Width="160" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <PasswordBox x:Name="password_login" FontSize="10" Canvas.Left="58" Canvas.Top="41" Width="160" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" />
             <Label Content="E-Mail" Canvas.Left="10" Canvas.Top="6" HorizontalAlignment="Center" Height="33" VerticalAlignment="Top" Width="43"/>
