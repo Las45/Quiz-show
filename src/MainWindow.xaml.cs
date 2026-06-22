@@ -65,11 +65,6 @@ namespace Quiz_show
                 page.Width = window.ActualWidth;
             }
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //((Checker_Menue)Frames["Stats"]).Save();

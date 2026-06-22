@@ -26,7 +26,6 @@ namespace Quiz_show.src.Klassen
             string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
             if (string.IsNullOrEmpty(userId)) 
                 return;
-            }
 
             string json = JsonSerializer.Serialize(this);
 
