@@ -60,54 +60,6 @@ public static class Shop
         ShopUpdated?.Invoke();
     }
 
-    public static void Save()
-    {
-        ShopSaveData daten = new ShopSaveData
-        {
-            Money = Money,
-            Freigeschaltet = Freigeschaltet,
-            AktiverButton = AktiverButton,
-            AktiverBackground = AktiverBackground
-        };
-
-        string json = JsonSerializer.Serialize(daten, new JsonSerializerOptions
-        {
-            WriteIndented = true
-        });
-
-        File.WriteAllText("shop.json", json);
-
-        Logging.logger.Debug("Shop saved");
-    }
-
-    public static void Load()
-    {
-        if (!File.Exists("shop.json"))
-        {
-            Logging.logger.Debug("Shop save not found");
-            return;
-        }
-
-        string json = File.ReadAllText("shop.json");
-        ShopSaveData daten = JsonSerializer.Deserialize<ShopSaveData>(json);
-
-        if (daten == null)
-        {
-            Logging.logger.Debug("Shop load failed");
-            return;
-        }
-
-        Money = daten.Money;
-        Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
-        AktiverButton = daten.AktiverButton;
-        AktiverBackground = daten.AktiverBackground;
-
-        Logging.logger.Debug("Shop loaded");
-
-        ShopUpdated?.Invoke();
-    }
-
-
     public static void Select(ShopItems item)
     {
         switch (item)
