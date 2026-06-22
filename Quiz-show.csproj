@@ -10,6 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Remove="src\AI\ollama.exe" />
 		<None Remove="src\Images\Icon.png" />
 		<None Remove="src\Images\Powertoys.png" />
 		<None Remove="src\JSON\POS_Fragen.json" />
@@ -60,6 +61,12 @@
 
 	<ItemGroup>
 		<ApplicationDefinition Include="src\App.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="src\AI\ollama.exe">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
 	</ItemGroup>
 
 	<ItemGroup>

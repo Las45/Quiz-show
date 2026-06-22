@@ -1,4 +1,5 @@
 ﻿using Quiz_show.src.Klassen;
+using Quiz_show.src.usercontrols;
 using Quiz_show.Windows;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,16 @@ namespace Quiz_show.Frames
         private async void reset_reset_Click(object sender, RoutedEventArgs e)
         {
             try{
-                await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text)); 
+                reset_grid.Children.Clear();
+                Loading_Animation animation = new Loading_Animation();
+                animation.Height = 100;
+                animation.Width = 100;
+                animation.HorizontalAlignment = HorizontalAlignment.Center;
+                animation.VerticalAlignment = VerticalAlignment.Center;
+                reset_grid.Children.Add(animation);
+                await client.Auth.SignInWithOtp(new Supabase.Gotrue.SignInWithPasswordlessEmailOptions(e_mail_reset.Text));
+                reset_grid.Children.Clear();
+
             }
             catch (Exception ex) 
             {
