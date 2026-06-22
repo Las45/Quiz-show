@@ -1,4 +1,5 @@
-﻿using Quiz_show.Frames;
+﻿using Quiz_show;
+using Quiz_show.Frames;
 using Quiz_show.src.Klassen;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ public static class Shop
 
     public static ShopItems AktiverButton = ShopItems.OriginalButton;
     public static ShopItems AktiverBackground = ShopItems.OriginalBackground;
+    private static MainWindow GetMainWindow() => (MainWindow)Application.Current.MainWindow;
 
     public static void Purchase(ShopItems item)
     {
@@ -149,7 +151,85 @@ public static class Shop
     }
 
 
-    
+    public static async void Save()
+    {
+        if (GetMainWindow() == null)
+        {
+            return;
+        }
+        string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+        if (string.IsNullOrEmpty(userId)) 
+            return;
+        ShopSaveData daten = new ShopSaveData
+        {
+            Money = Money,
+            Freigeschaltet = Freigeschaltet,
+            AktiverButton = AktiverButton,
+            AktiverBackground = AktiverBackground
+        };
+
+        string json = JsonSerializer.Serialize(daten, new JsonSerializerOptions
+        {
+            WriteIndented = false
+        });
+
+        try
+        {
+            // Der Code für das Speichern wurde teilweise von dem progress speichern übernommen, welcher teils von Ki stammt.
+            ShopSaveDataModel model = new ShopSaveDataModel
+            {
+                UserId = userId,
+                ShopData = json
+            };
+
+            await GetMainWindow().client.From<ShopSaveDataModel>().Upsert(model);
+            Logging.logger.Debug("Shop wurde gesaved");
+
+        }
+        catch (Exception ex)
+        {
+            Logging.logger.Error("Es konnte nicht auf Supabase gespeichert werden: " + ex.Message);
+        }
+
+    }
+
+    public static async void Load()
+    {
+        if (GetMainWindow() == null) 
+            return;
+
+        string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+        if (string.IsNullOrEmpty(userId)) 
+            return;
+
+        try
+        {
+            // Code wurde teilweise von Progress übernommen welcher teils von Ki stammt.
+            ShopSaveDataModel? row = await GetMainWindow().client
+                .From<ShopSaveDataModel>()
+                .Where(x => x.UserId == userId)
+                .Single();
+
+            if (row?.ShopData == null) 
+                return;
+
+            ShopSaveData daten = JsonSerializer.Deserialize<ShopSaveData>(row.ShopData);
+            if (daten == null) 
+                return;
+
+            Money = daten.Money;
+            Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
+            AktiverButton = daten.AktiverButton;
+            AktiverBackground = daten.AktiverBackground;
+
+            ShopUpdated?.Invoke();
+            Logging.logger.Debug("Shop wurde geladen");
+        }
+        catch (Exception ex)
+        {
+            Logging.logger.Error("Es konnte nicht geladen werden: " + ex.Message);
+        }
+    }
 
     public static Color GetButtonColor()
     {

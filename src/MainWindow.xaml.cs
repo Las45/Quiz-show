@@ -24,12 +24,12 @@ namespace Quiz_show
     {
         bool discord = false;
         Quizclass steuerung = new Quizclass();
-        private Progress progress = new Progress();
+        public Progress progress = new Progress();
         private Process? _ollamaProcess;
         public bool IsOllamaInstalled = false;
         public OllamaApiClient OllamaClient = new OllamaApiClient(new Uri("http://localhost:11434"));
         public Dictionary<string, Page> Frames = new Dictionary<string, Page>();
-        Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
+        public Supabase.Client client = new Client("https://qlfhcheflwewcyjhyzfr.supabase.co", "sb_publishable_DeKeXIVOxjyrM5OQSKUtmQ_NBlyc-zp");
         public MainWindow()
         {
             Logging.init();
@@ -66,11 +66,17 @@ namespace Quiz_show
             }
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //((Checker_Menue)Frames["Stats"]).Save();
             _ollamaProcess?.Kill();
             _ollamaProcess?.Dispose(); // Lässt alle resurcen los
+            Shop.Save();
+            progress.Save();
         }
         public void Change_Frame_by_name(string frame)
         {

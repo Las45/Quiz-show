@@ -109,17 +109,5 @@
                 Shop.Purchase(ShopItems.SilberBackground);
                 UpdateUI();
             }
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }

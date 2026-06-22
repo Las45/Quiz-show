@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Quiz_show.src.usercontrols;
+using Serilog.Core;
+using Quiz_show.src.Klassen;
 
 namespace Quiz_show.Frames
 {
@@ -37,15 +40,29 @@ namespace Quiz_show.Frames
 
         private async void erstellen_register_Click(object sender, RoutedEventArgs e)
         {
-            Logging.logger.Debug("Register clicked");
-
-            if (password_again_register.Background == Brushes.LightGreen)
+            try
             {
-                await client.Auth.SignUp(email_register.Text, password_again_register.Password);
-                Logging.logger.Debug("Account created");
+                if (password_again_register.Background == Brushes.LightGreen)
+                {
+                    register_grid.Children.Clear();
+                    Loading_Animation animation = new Loading_Animation();
+                    animation.Height = 100;
+                    animation.Width = 100;
+                    animation.HorizontalAlignment = HorizontalAlignment.Center;
+                    animation.VerticalAlignment = VerticalAlignment.Center;
+                    register_grid.Children.Add(animation);
+                    await client.Auth.SignUp(email_register.Text, password_again_register.Password);
+                    register_grid.Children.Clear();
+                }
+                register.Change_frame(new Register_2(client, email_register.Text));
+                ok = true;
+            }
+            catch(Exception ex)
+            {
+                Logging.logger.Error($"Beim Regestrieren:{ex.ToString()}");
+                MessageBox.Show("Es ist ein Fehler aufgetreten");
             }
 
-            register.Change_frame(new Register_2(client, email_register.Text));
         }
 
         private void abb_register_Click(object sender, RoutedEventArgs e)

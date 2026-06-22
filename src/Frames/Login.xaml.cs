@@ -1,5 +1,6 @@
 ﻿using Quiz_show.src.Klassen;
 using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -41,7 +42,10 @@ namespace Quiz_show.Frames
                 Logging.logger.Debug("Sign In with Password");
                 await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
                 Weiter_login.IsEnabled = false;
-                StartLoginTransition();
+                Shop.Load();
+                mw.progress.Load();
+                src.Klassen.Achievements.Load();
+                this.mw.Change_Frame_by_name("Home");
             }
             catch
             {
@@ -49,60 +53,6 @@ namespace Quiz_show.Frames
                 Logging.logger.Error("Login failed");
             }
         }
-
-        // KI: Claude
-        // Prompt: How can I add a Zoom out and Zoom in Animation for my frames.
-        // Anfang KI:
-        private void StartLoginTransition()
-        {
-            DoubleAnimation shrinkX = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(550))
-            {
-                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn }
-            };
-            DoubleAnimation shrinkY = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(550))
-            {
-                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn }
-            };
-            DoubleAnimation fadeCard = new DoubleAnimation(1, 0, TimeSpan.FromMilliseconds(350))
-            {
-                EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn }
-            };
-
-            shrinkY.Completed += ShrinkY_Completed;
-
-            CardScale.BeginAnimation(ScaleTransform.ScaleXProperty, shrinkX);
-            CardScale.BeginAnimation(ScaleTransform.ScaleYProperty, shrinkY);
-            LoginCard.BeginAnimation(OpacityProperty, fadeCard);
-        }
-
-        private void ShrinkY_Completed(object sender, EventArgs e)
-        {
-            Phase2_Blackout();
-        }
-
-        private void Phase2_Blackout()
-        {
-            BlackoutOverlay.IsHitTestVisible = true;
-
-            DoubleAnimation blackIn = new DoubleAnimation(0, 1, TimeSpan.FromMilliseconds(500))
-            {
-                EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseIn }
-            };
-            blackIn.Completed += BlackIn_Completed;
-            BlackoutOverlay.BeginAnimation(OpacityProperty, blackIn);
-        }
-
-        private void BlackIn_Completed(object sender, EventArgs e)
-        {
-            Phase3_Navigate();
-        }
-
-        private void Phase3_Navigate()
-        {
-            this.mw.Change_Frame_by_name("Home");
-        }
-
-        // Ende KI
 
         private void Password_fg_login_Click(object sender, RoutedEventArgs e)
         {

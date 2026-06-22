@@ -69,6 +69,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Content Include="src\AI\ollama.exe">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
 		<Page Update="src\MainWindow.xaml">
 			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		</Page>

@@ -1,56 +1,82 @@
-﻿using System.IO;
+﻿using Supabase.Gotrue;
+using Supabase.Interfaces;
+using System.IO;
 using System.Text.Json;
+using System.Windows;
 
 namespace Quiz_show.src.Klassen
 {
     public class Progress
     {
         public List<Checker> Subjects { get; set; }
-
         public Progress()
         {
             Subjects = new List<Checker>();
 
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-            Subjects.Add(new Checker());
-        }
-
-        public void Save()
-        {
-            string json = JsonSerializer.Serialize(this, new JsonSerializerOptions
+            for (int i=0; i<6; i++)
             {
-                WriteIndented = true
-            });
-
-            File.WriteAllText("progress.json", json);
-
-            Logging.logger.Debug("Progress saved");
+                Subjects.Add(new Checker());
+            }
+            
         }
+        private MainWindow GetMainWindow() => (MainWindow)Application.Current.MainWindow;
 
-        public void Load()
+        public async Task Save()
         {
-            if (!File.Exists("progress.json"))
-            {
-                Logging.logger.Debug("Progress file not found");
+            string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+            if (string.IsNullOrEmpty(userId)) 
                 return;
             }
 
-            string json = File.ReadAllText("progress.json");
-            Progress geladen = JsonSerializer.Deserialize<Progress>(json);
-            if (geladen != null)
+            string json = JsonSerializer.Serialize(this);
+
+            try
             {
-                Subjects = geladen.Subjects;
-                Logging.logger.Debug("Progress loaded");
+                // Ki Anfang:
+                // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
+                UserProgressModel model = new UserProgressModel
+                {
+                    UserId = userId,
+                    ProgressData = json
+                };
 
-
+                await GetMainWindow().client
+                    .From<UserProgressModel>()
+                    .Upsert(model);
+                // Ki Ende
+                Logging.logger.Debug("Progress wurde in der Cloude gesaved");
             }
-            else
+            catch
             {
-                Logging.logger.Debug("Progress load failed (null)");
+                Logging.logger.Error("Es konnte nicht auf Superbase gespeichert werden");
+            }
+        }
+
+        public async Task Load()
+        {
+            string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+            if (string.IsNullOrEmpty(userId)) 
+                return;
+            try
+            {
+                // Ki Anfang:
+                // Model: Claude, Promt: Wie können wir den progress.json pro user auf superbase free server speichern
+                UserProgressModel? row = await GetMainWindow().client
+            .From<UserProgressModel>()
+            .Where(x => x.UserId == userId)
+            .Single();
+
+                if (row?.ProgressData == null) return;
+
+                Progress? geladen = JsonSerializer.Deserialize<Progress>(row.ProgressData);
+                if (geladen != null)
+                    Subjects = geladen.Subjects;
+                // Ki ende
+                Logging.logger.Debug("Progress wurde geloaded von der Cloude");
+            }
+            catch 
+            {
+                Logging.logger.Error("Es konnte nicht von Superbase geladen werden");
             }
         }
     }
