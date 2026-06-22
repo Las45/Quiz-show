@@ -54,10 +54,6 @@ namespace Quiz_show.usercontrols
         {
             bool richtig = daten.Check(index);
 
-            if (richtig)
-                MessageBox.Show("Richtig!");
-            else
-                MessageBox.Show("Falsch!");
 
             FrageBeendet?.Invoke(richtig);
         }
@@ -74,14 +70,14 @@ namespace Quiz_show.usercontrols
 
         private void c_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (daten.antworten.Count >= 3)
-                CheckAnswer(2);
+
+            CheckAnswer(2);
         }
 
         private void d_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            if (daten.antworten.Count >= 4)
-                CheckAnswer(3);
+
+            CheckAnswer(3);
         }
 
         private void a_rect_MouseEnter(object sender, MouseEventArgs e)

@@ -30,28 +30,50 @@ namespace Quiz_show.src.usercontrols
             InitializeComponent();
             this.frage = frage;
 
-            Frage_true_false.Text = frage.frage;
+            Frage_true_false.Content = frage.frage;
         }
 
         private void check(int index)
         {
             bool richtig = frage.Check(index);
 
-            if (richtig)
-                MessageBox.Show("Richtig!");
-            else
-                MessageBox.Show("Falsch!");
+
 
             FrageBeendet?.Invoke(richtig);
         }
-        private void Yes_uc_Click(object sender, RoutedEventArgs e)
+
+
+        private void a_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
             check(0);
         }
 
-        private void No_uc_Click(object sender, RoutedEventArgs e)
+        private void b_rect_MouseUp(object sender, MouseButtonEventArgs e)
         {
             check(1);
+        }
+
+        private void a_rect_MouseEnter(object sender, MouseEventArgs e)
+        {
+            a_rect.Stroke = Brushes.Blue;
+            a_rect.StrokeThickness = 5;
+        }
+
+        private void b_rect_MouseEnter(object sender, MouseEventArgs e)
+        {
+            b_rect.Stroke = Brushes.Blue;
+            b_rect.StrokeThickness = 5;
+        }
+
+
+        private void a_rect_MouseLeave(object sender, MouseEventArgs e)
+        {
+            a_rect.StrokeThickness = 0;
+        }
+
+        private void b_rect_MouseLeave(object sender, MouseEventArgs e)
+        {
+            b_rect.StrokeThickness = 0;
         }
     }
 }
