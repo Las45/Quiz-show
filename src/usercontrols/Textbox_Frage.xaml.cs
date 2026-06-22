@@ -32,7 +32,7 @@ namespace Quiz_show.src.usercontrols
             _mainWindow = (MainWindow)Application.Current.MainWindow;
             ollama = _mainWindow.OllamaClient;
             this.frage = frage;
-            Frage_Ki.Text = frage.frage;
+            Frage_Ki.Content = frage.frage;
             chat = new OllamaSharp.Chat(ollama);
         }
 
@@ -41,7 +41,7 @@ namespace Quiz_show.src.usercontrols
             if (_mainWindow.IsOllamaInstalled)
             {
                 List<string> answer = new List<string>();
-                await foreach(string answertoken in chat.SendAsync($"Frage: {Frage_Ki.Text}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false"))
+                await foreach(string answertoken in chat.SendAsync($"Frage: {Frage_Ki.Content}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false"))
                 {
                     answer.Add(answertoken);
                 }
@@ -59,7 +59,7 @@ namespace Quiz_show.src.usercontrols
             }
             else if (_mainWindow.IsOllamaInstalled == false)
             {
-                if (frage.antworten[0] == Frage_Ki.Text)
+                if (frage.antworten[0] == Frage_Ki.Content)
                 {
                     FrageBeendet?.Invoke(true);
                 }
@@ -69,5 +69,7 @@ namespace Quiz_show.src.usercontrols
                 }
             }
         }
+
+
     }
 }

@@ -5,12 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Quiz_show.src.usercontrols"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="400">
+             d:DesignHeight="400" d:DesignWidth="800">
     <Canvas>
-        <TextBlock x:Name="Frage_Ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="123" Height="77" Width="380" TextAlignment="Center"/>
-        <TextBox x:Name="Antwort_textbox_ki" Canvas.Left="140" TextWrapping="Wrap" Text="" Canvas.Top="205" Width="120"/>
-        <TextBlock x:Name="Response_ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="228" Height="137" Width="380" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Button Content="Check" Canvas.Left="265" Canvas.Top="202" Height="23" Width="65" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click"/>
+        <TextBlock x:Name="Response_ki" Canvas.Left="10" TextWrapping="Wrap" Text="" Canvas.Top="228" Height="137" Width="776" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Content="Check" Canvas.Left="502" Canvas.Top="140" Height="46" Width="189" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click"/>
+
+
+
+        <Rectangle Height="100" Stroke="Black" Width="780" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" RadiusX="50" RadiusY="50" Fill="DarkBlue"/>
+        <Rectangle x:Name="a_rect" Height="50" Stroke="Black" Width="390" Canvas.Left="10" Canvas.Top="136" HorizontalAlignment="Center" VerticalAlignment="Top" RadiusX="30" RadiusY="25" Fill="DarkBlue"/>
+        <Label x:Name="Frage_Ki" Content="" Canvas.Left="53" Canvas.Top="10" Height="100" Width="692" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
+        <TextBox x:Name="Antwort_textbox_ki" Background="DarkBlue" BorderThickness="0" Canvas.Left="44" TextWrapping="Wrap" Text="" Canvas.Top="140" Width="312" Height="42" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
     </Canvas>
 </UserControl>

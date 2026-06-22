@@ -374,5 +374,27 @@
     "frage": "Ist Enum eine Aufzählung von Werten?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
-  }
+  },
+  
+  { "frage": "Ist die Erde rund?", "antworten": ["Ja"] },
+  { "frage": "Ist Wasser bei 100°C am Sieden?", "antworten": ["Ja"] },
+  { "frage": "Ist 2 + 2 = 5?", "antworten": ["Nein"] },
+  { "frage": "Ist die Sonne ein Stern?", "antworten": ["Ja"] },
+  { "frage": "Hat ein Tag 24 Stunden?", "antworten": ["Ja"] },
+  { "frage": "Ist Berlin die Hauptstadt von Deutschland?", "antworten": ["Ja"] },
+  { "frage": "Kann ein Mensch unter Wasser ohne Hilfsmittel atmen?", "antworten": ["Nein"] },
+  { "frage": "Ist Java eine Programmiersprache?", "antworten": ["Ja"] },
+  { "frage": "Ist der Mond ein Planet?", "antworten": ["Nein"] },
+  { "frage": "Hat ein Jahr immer 365 Tage?", "antworten": ["Nein"] },
+  { "frage": "Ist Eisen ein Metall?", "antworten": ["Ja"] },
+  { "frage": "Ist Python eine Schlange und eine Programmiersprache?", "antworten": ["Ja"] },
+  { "frage": "Dreht sich die Erde um die Sonne?", "antworten": ["Ja"] },
+  { "frage": "Ist Wasserstoff das leichteste Element?", "antworten": ["Ja"] },
+  { "frage": "Ist die Hauptstadt von Frankreich Rom?", "antworten": ["Nein"] },
+  { "frage": "Kann Feuer ohne Sauerstoff brennen?", "antworten": ["Nein"] },
+  { "frage": "Ist ein Computer ein elektronisches Gerät?", "antworten": ["Ja"] },
+  { "frage": "Hat ein Mensch 3 Herzen?", "antworten": ["Nein"] },
+  { "frage": "Ist Gold ein chemisches Element?", "antworten": ["Ja"] },
+  { "frage": "Ist C# eine Programmiersprache?", "antworten": ["Ja"] }
+
 ]
