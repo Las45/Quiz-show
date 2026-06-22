@@ -16,11 +16,13 @@ namespace Quiz_show.Frames
         Supabase.Client client;
         public Windows.Register register;
 
+
         public Login(MainWindow window, Supabase.Client client)
         {
             InitializeComponent();
             this.mw = window;
             this.client = client;
+            Logging.logger.Debug("Login page opened");
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -44,6 +46,7 @@ namespace Quiz_show.Frames
             catch
             {
                 MessageBox.Show("Es gibt diesen User nicht oder das Passwort ist falsch");
+                Logging.logger.Error("Login failed");
             }
         }
 

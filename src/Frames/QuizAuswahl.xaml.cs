@@ -30,16 +30,17 @@ namespace Quiz_show.Frames
 
         private int aktuellesFach = 0;
 
+
         public QuizAuswahl(Checker_Menue checkerMenu, Progress sharedProgress)
         {
             InitializeComponent();
-
+            Logging.logger.Debug("QuizAuswahl opened");
             check = checkerMenu;
 
             progress = sharedProgress;
 
             UpdateUI();
-
+            Logging.logger.Debug("UI initialized");
             Shop.ShopUpdated += UpdateUI;
         }
 
@@ -60,6 +61,7 @@ namespace Quiz_show.Frames
         {
             try
             {
+                Logging.logger.Debug($"Quiz started");
                 aktuellesFach = fachIndex;
 
                 string path = System.IO.Path.Combine(
@@ -67,6 +69,7 @@ namespace Quiz_show.Frames
                     "src",
                     "JSON",
                     jsonDatei);
+                Logging.logger.Debug("Quiz loaded");
 
                 if (!System.IO.File.Exists(path))
                 {
@@ -106,7 +109,7 @@ namespace Quiz_show.Frames
                 {
                     quizFragen.Add(gemischt[i]);
                 }
-
+                Logging.logger.Debug("Taking Questions (max 20)");
                 aktuelleFrage = 0;
 
                 QuizContainer.Visibility = Visibility.Visible;
@@ -148,6 +151,7 @@ namespace Quiz_show.Frames
 
         private void AntwortGegeben(bool richtig)
         {
+            Logging.logger.Debug($"Answer given");
             if (richtig)
             {
                 progress.Subjects[aktuellesFach].AddCorrect();
@@ -162,10 +166,12 @@ namespace Quiz_show.Frames
                 progress.Save();
 
                 int anzahlRichtige = progress.Subjects[aktuellesFach].Quizzes_correct;
+                Logging.logger.Debug($"Quiz ended");
                 if (anzahlRichtige == 1)
                 {
                     if (!fünferschüler)
                     {
+                        Logging.logger.Debug("Unlocked '5er Schüler' Achievement");
                         Shop.Money += 25;
                         fünferschüler = true;
                     }
@@ -173,9 +179,10 @@ namespace Quiz_show.Frames
                     Achievements.Unlock("5er Schüler");
                 }
                 if (anzahlRichtige == quizFragen.Count)
-                {
+                {   
                     if (!perfekt)
                     {
+                        Logging.logger.Debug("Unlocked '1er Schüler' Achievement");
                         Shop.Money += 25;
                         perfekt = true;
                     }
