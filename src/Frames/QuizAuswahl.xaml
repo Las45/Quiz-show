@@ -9,7 +9,7 @@
       d:DesignWidth="1500"
       Title="Achievements" Foreground="#FF5C1003">
     <Viewbox>
-        <Grid>
+        <Grid x:Name="quiz_grid">
             <Rectangle MouseEnter="RectQuiz1_MouseEnter" MouseLeave="RectQuiz1_MouseLeave" MouseUp="RectQuiz1_MouseUp" Name="RectQuiz1" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="250,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
             <Rectangle MouseEnter="RectQuiz2_MouseEnter" MouseLeave="RectQuiz2_MouseLeave" MouseUp="RectQuiz2_MouseUp" Name="RectQuiz2" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="650,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
             <Rectangle MouseEnter="RectQuiz3_MouseEnter" MouseLeave="RectQuiz3_MouseLeave" MouseUp="RectQuiz3_MouseUp" Name="RectQuiz3" HorizontalAlignment="Left" Fill="SkyBlue" Height="200" Margin="1050,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
