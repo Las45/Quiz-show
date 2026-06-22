@@ -47,7 +47,7 @@
             <Label Name="Achievement2" Content="5er Schüler" HorizontalAlignment="Center" VerticalAlignment="Top" Height="76" Width="305" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="1" Margin="0, 200, 0, 0"/>
             <Label Name="Achievement3" Content="1er Schüler" HorizontalAlignment="Center" VerticalAlignment="Top" Height="76" Width="253" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="1" Margin="0, 200, 0, 0"/>
             <Label Name="Achievement5" Content="Erlange absolute &#xD;&#xA;    Gleichheit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="137" Width="388" FontSize="48" Foreground="#FF450000" Grid.Column="1" Grid.Row="2" Margin="0,205,0,0"/>
-            <Path x:Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-275,120,0,0" Cursor="Hand"
+            <Path x:Name="PathExit" Width="150" Height="100" Fill="#156082" Stroke="#082430" StrokeThickness="4" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,17,0,0" Cursor="Hand"
             MouseEnter="PathExit_MouseEnter"
             MouseLeave="PathExit_MouseLeave"
             MouseUp="PathExit_MouseUp"
@@ -63,7 +63,7 @@
                   L46,82 
                   L8,45 
                   L46,8 
-                  Z" Grid.Row="1"/>
+                  Z"/>
             <Label x:Name="Achievement5_Kopieren" Content="Discord" HorizontalAlignment="Center" VerticalAlignment="Top" Height="81" Width="188" FontSize="48" Foreground="#FF450000" Grid.Column="2" Grid.Row="2" Margin="0,215,0,0"/>
 
         </Grid>

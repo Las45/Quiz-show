@@ -1,252 +1,239 @@
 [
   {
-    "frage": "Past Simple & Past Participle of: 'go'",
-    "antworten": [ "goed / goed", "went / gone", "go / gone", "went / went" ],
+    "frage": "Was ist die korrekte Past Form von 'go'?",
+    "antworten": [ "goed", "went", "gone", "goes" ],
     "richtig": 1
   },
   {
-    "frage": "Past Simple & Past Participle of: 'play'",
-    "antworten": [ "play / played", "plaid / plaid", "playd / playd", "played / played" ],
-    "richtig": 3
+    "frage": "Welche Form ist das Past Participle von 'write'?",
+    "antworten": [ "wrote", "written", "writed", "writen" ],
+    "richtig": 1
   },
   {
-    "frage": "Past Simple & Past Participle of: 'see'",
-    "antworten": [ "seen / saw", "sawed / seen", "saw / seen", "seed / seed" ],
+    "frage": "Welche Past Form gehört zu 'see'?",
+    "antworten": [ "saw", "seen", "seed", "seeed" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Was ist das Past Participle von 'eat'?",
+    "antworten": [ "ate", "eated", "eaten", "eat" ],
     "richtig": 2
   },
   {
-    "frage": "Past Simple & Past Participle of: 'walk'",
-    "antworten": [ "walked / walked", "woke / woken", "walkt / walkt", "walk / walked" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'eat'",
-    "antworten": [ "eated / eated", "ate / ate", "eat / eaten", "ate / eaten" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'cook'",
-    "antworten": [ "coked / coked", "cooked / cooked", "cook / cooked", "cookt / cookt" ],
+    "frage": "Welche Form ist korrekt für 'take' (Past)?",
+    "antworten": [ "taked", "took", "taken", "toke" ],
     "richtig": 1
   },
   {
-    "frage": "Past Simple & Past Participle of: 'take'",
-    "antworten": [ "took / took", "taken / took", "taked / taked", "took / taken" ],
-    "richtig": 3
+    "frage": "Was ist die Past Form von 'run'?",
+    "antworten": [ "ran", "runned", "run", "runed" ],
+    "richtig": 0
   },
   {
-    "frage": "Past Simple & Past Participle of: 'jump'",
-    "antworten": [ "jumped / jumpen", "jumpt / jumpt", "jumped / jumped", "jump / jumped" ],
+    "frage": "Was ist das Past Participle von 'break'?",
+    "antworten": [ "broken", "breaked", "broke", "broked" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Welche Past Form gehört zu 'buy'?",
+    "antworten": [ "buyed", "bought", "boughten", "buyt" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Was ist die Past Form von 'come'?",
+    "antworten": [ "came", "comed", "come", "camed" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Was ist das Past Participle von 'drink'?",
+    "antworten": [ "drank", "drunk", "drinked", "drunken" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welche Past Form gehört zu 'find'?",
+    "antworten": [ "found", "finded", "founded", "find" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Was ist die Past Form von 'give'?",
+    "antworten": [ "gave", "gived", "given", "gavee" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Was ist das Past Participle von 'know'?",
+    "antworten": [ "knew", "known", "knowen", "knowed" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welche Past Form gehört zu 'swim'?",
+    "antworten": [ "swam", "swum", "swimmed", "swomen" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Was ist das Past Participle von 'speak'?",
+    "antworten": [ "spoke", "spoken", "speaked", "speeken" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welche Past Form gehört zu 'write'?",
+    "antworten": [ "written", "writed", "wrote", "writen" ],
     "richtig": 2
   },
   {
-    "frage": "Past Simple & Past Participle of: 'know'",
-    "antworten": [ "knew / known", "knowed / knowed", "known / knew", "knew / knew" ],
+    "frage": "Was ist die Past Form von 'begin'?",
+    "antworten": [ "began", "begun", "beginned", "beginned" ],
     "richtig": 0
   },
   {
-    "frage": "Past Simple & Past Participle of: 'clean'",
-    "antworten": [ "cleant / cleant", "cleaned / cleaned", "claned / claned", "clean / cleaned" ],
+    "frage": "Was ist das Past Participle von 'choose'?",
+    "antworten": [ "chose", "chosen", "choosed", "choosen" ],
     "richtig": 1
   },
   {
-    "frage": "Past Simple & Past Participle of: 'give'",
-    "antworten": [ "gave / gave", "given / gave", "gave / given", "gived / gived" ],
-    "richtig": 2
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'listen'",
-    "antworten": [ "listenned / listenned", "listened / listened", "listen / listened", "listend / listend" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'come'",
-    "antworten": [ "come / came", "comed / comed", "came / came", "came / come" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'talk'",
-    "antworten": [ "talkt / talkt", "talked / talken", "talk / talked", "talked / talked" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'run'",
-    "antworten": [ "run / run", "ran / ran", "runned / runned", "ran / run" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'open'",
-    "antworten": [ "open / opened", "openned / openned", "opened / opened", "opend / opend" ],
-    "richtig": 2
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'write'",
-    "antworten": [ "written / wrote", "writed / writed", "wrote / wrote", "wrote / written" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'start'",
-    "antworten": [ "start / started", "started / starten", "startet / startet", "started / started" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'speak'",
-    "antworten": [ "spoken / spoke", "spoke / spoke", "spoke / spoken", "speaked / speaked" ],
-    "richtig": 2
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'work'",
-    "antworten": [ "worked / worken", "work / worked", "workt / workt", "worked / worked" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'swim'",
-    "antworten": [ "swum / swam", "swam / swam", "swimmed / swimmed", "swam / swum" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'stop'",
-    "antworten": [ "stop / stopped", "stoppt / stoppt", "stopped / stopped", "stoped / stoped" ],
-    "richtig": 2
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'drink'",
-    "antworten": [ "drank / drank", "drank / drunk", "drunk / drank", "drinked / drinked" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Past Simple & Past Participle of: 'visit'",
-    "antworten": [ "visited / visited", "visitet / visitet", "visit / visited", "visited / visiten" ],
+    "frage": "Welche Past Form gehört zu 'drive'?",
+    "antworten": [ "drove", "drived", "driven", "drive" ],
     "richtig": 0
   },
   {
-    "frage": "Past Simple & Past Participle of: 'fly'",
-    "antworten": [ "flown / flew", "flew / flew", "flied / flied", "flew / flown" ],
-    "richtig": 3
+    "frage": "Was ist das Past Participle von 'fall'?",
+    "antworten": [ "fell", "fallen", "falled", "fall" ],
+    "richtig": 1
   },
+
   {
-    "frage": "Is the past simple and past participle of 'help': helped / helped?",
+    "frage": "Ist 'went' die Past Form von 'go'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'break': breaked / breaked?",
+    "frage": "Ist 'eated' korrekt?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Is the past simple and past participle of 'use': used / used?",
+    "frage": "Ist 'seen' das Past Participle von 'see'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'sit': sat / sat?",
+    "frage": "Ist 'ran' die Past Form von 'run'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'carry': carried / carried?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is the past simple and past participle of 'think': thinking / thought?",
+    "frage": "Ist 'taked' korrekt?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Is the past simple and past participle of 'answer': answered / answered?",
+    "frage": "Ist 'drunk' ein Past Participle?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'choose': chose / chosen?",
+    "frage": "Ist 'bought' die Past Form von 'buy'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'need': needed / needed?",
+    "frage": "Ist 'came' die Past Form von 'come'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'tell': telled / telled?",
+    "frage": "Ist 'known' das Past Participle von 'know'?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Ist 'swum' die Past Form von 'swim'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Is the past simple and past participle of 'watch': watched / watched?",
+    "frage": "Ist 'spoken' das Past Participle von 'speak'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'find': found / found?",
+    "frage": "Ist 'began' die Past Form von 'begin'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'enjoy': enjoyed / enjoyed?",
+    "frage": "Ist 'chosen' das Past Participle von 'choose'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'buy': buy / bought?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Is the past simple and past participle of 'ask': asked / asked?",
+    "frage": "Ist 'drove' die Past Form von 'drive'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is the past simple and past participle of 'get': got / gotten?",
+    "frage": "Ist 'fallen' das Past Participle von 'fall'?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
+
   {
-    "frage": "Is the past simple and past participle of 'show': showed / shown?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'go'.",
+    "antworten": [ "go – went – gone" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'lose': lose / lost?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
+    "frage": "Nenne die drei Formen von 'write'.",
+    "antworten": [ "write – wrote – written" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'try': tried / tried?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'eat'.",
+    "antworten": [ "eat – ate – eaten" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'leave': left / left?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'run'.",
+    "antworten": [ "run – ran – run" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'dance': danced / danced?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'break'.",
+    "antworten": [ "break – broke – broken" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'feel': feel / felt?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
+    "frage": "Nenne die drei Formen von 'see'.",
+    "antworten": [ "see – saw – seen" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'love': loved / loved?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'take'.",
+    "antworten": [ "take – took – taken" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'wake': woke / woken?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'drink'.",
+    "antworten": [ "drink – drank – drunk" ]
   },
   {
-    "frage": "Is the past simple and past participle of 'smile': smiled / smiled?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Nenne die drei Formen von 'find'.",
+    "antworten": [ "find – found – found" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'give'.",
+    "antworten": [ "give – gave – given" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'know'.",
+    "antworten": [ "know – knew – known" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'swim'.",
+    "antworten": [ "swim – swam – swum" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'speak'.",
+    "antworten": [ "speak – spoke – spoken" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'drive'.",
+    "antworten": [ "drive – drove – driven" ]
+  },
+  {
+    "frage": "Nenne die drei Formen von 'fall'.",
+    "antworten": [ "fall – fell – fallen" ]
   }
 ]

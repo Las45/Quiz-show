@@ -1,252 +1,239 @@
 [
   {
-    "frage": "What command lists files in a directory?",
-    "antworten": [ "ls", "cd", "pwd", "rm" ],
+    "frage": "Was ist Linux?",
+    "antworten": [ "Browser", "Betriebssystemkern", "Compiler", "Texteditor" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welche Distribution basiert auf Debian?",
+    "antworten": [ "Arch Linux", "Gentoo", "Ubuntu", "Fedora" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Welcher Befehl zeigt den aktuellen Ordner?",
+    "antworten": [ "cd", "pwd", "dir", "ls" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welcher Befehl listet Dateien auf?",
+    "antworten": [ "show", "files", "ls", "list" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Was macht 'cd ..'?",
+    "antworten": [ "Geht ein Verzeichnis nach oben", "Installiert Programme", "Löscht Ordner", "Zeigt Dateien an" ],
     "richtig": 0
   },
   {
-    "frage": "What command shows the current directory?",
-    "antworten": [ "ls", "pwd", "cd", "mkdir" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What command creates a new directory?",
-    "antworten": [ "touch", "rm", "mkdir", "cp" ],
+    "frage": "Welcher Befehl installiert Software unter Debian/Ubuntu?",
+    "antworten": [ "pacman -S", "yum install", "apt install", "rpm -i" ],
     "richtig": 2
   },
   {
-    "frage": "What command removes a file?",
-    "antworten": [ "rm", "del", "erase", "remove" ],
+    "frage": "Was macht der Befehl 'chmod'?",
+    "antworten": [ "Rechte ändern", "Benutzer löschen", "System starten", "Dateien kopieren" ],
     "richtig": 0
   },
   {
-    "frage": "What command copies a file?",
-    "antworten": [ "mv", "cp", "copy", "ln" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What command moves or renames a file?",
-    "antworten": [ "cp", "rm", "mv", "rn" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command displays file contents?",
-    "antworten": [ "show", "cat", "read", "open" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What command searches text in files?",
-    "antworten": [ "find", "search", "grep", "locate" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows running processes?",
-    "antworten": [ "ps", "proc", "run", "list" ],
+    "frage": "Was zeigt 'top' an?",
+    "antworten": [ "Prozesse", "Netzwerke", "Benutzer", "Dateien" ],
     "richtig": 0
   },
   {
-    "frage": "What command kills a process by PID?",
-    "antworten": [ "stop", "end", "kill", "exit" ],
+    "frage": "Was ist ein Shell-Skript?",
+    "antworten": [ "Ein Bild", "Ein Kernelmodul", "Ein ausführbares Textskript", "Ein Treiber" ],
     "richtig": 2
   },
   {
-    "frage": "What command shows disk usage?",
-    "antworten": [ "du", "df", "disk", "size" ],
+    "frage": "Welche Datei enthält Benutzerinformationen?",
+    "antworten": [ "/etc/user", "/etc/passwd", "/usr/bin/passwd", "/home/passwd" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Welcher Befehl zeigt den Inhalt einer Datei?",
+    "antworten": [ "pwd", "cat", "rm", "ls" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Was macht 'sudo'?",
+    "antworten": [ "Führt Befehle als Admin aus", "Beendet Prozesse", "Installiert Treiber", "Startet Programme schneller" ],
     "richtig": 0
   },
   {
-    "frage": "What command shows free disk space?",
-    "antworten": [ "du", "space", "free", "df" ],
-    "richtig": 3
+    "frage": "Was ist ein Paketmanager?",
+    "antworten": [ "Ein Bootloader", "Ein Editor", "Softwareverwaltung", "Ein Kernel" ],
+    "richtig": 2
   },
   {
-    "frage": "What command changes file permissions?",
-    "antworten": [ "chown", "chmod", "chperm", "perm" ],
+    "frage": "Welche Distribution nutzt pacman?",
+    "antworten": [ "Ubuntu", "Mint", "Arch Linux", "Fedora" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Was macht 'rm -r'?",
+    "antworten": [ "Zeigt Rechte an", "Startet Rechner neu", "Löscht Ordner rekursiv", "Installiert Software" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Was ist der Kernel?",
+    "antworten": [ "Texteditor", "Herz des Betriebssystems", "Benutzeroberfläche", "Treiberpaket" ],
     "richtig": 1
   },
   {
-    "frage": "What command changes file ownership?",
-    "antworten": [ "chmod", "chown", "own", "chuser" ],
+    "frage": "Was macht 'grep'?",
+    "antworten": [ "Zeigt Prozesse", "Installiert Programme", "Sucht Text", "Löscht Dateien" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Welche Datei enthält Systemlogs?",
+    "antworten": [ "/usr/log", "/var/log/syslog", "/etc/logs", "/home/logs" ],
     "richtig": 1
   },
   {
-    "frage": "What symbol represents the root directory?",
-    "antworten": [ "~", "#", "/", "\\" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What symbol represents the home directory?",
-    "antworten": [ "/", "#", "$", "~" ],
-    "richtig": 3
-  },
-  {
-    "frage": "What command shows the manual of a command?",
-    "antworten": [ "help", "info", "man", "doc" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command creates an empty file?",
-    "antworten": [ "new", "create", "touch", "make" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows the last lines of a file?",
-    "antworten": [ "head", "end", "tail", "last" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows the first lines of a file?",
-    "antworten": [ "head", "top", "first", "start" ],
+    "frage": "Was macht 'ps'?",
+    "antworten": [ "Zeigt Prozesse", "Zeigt Kernelversion", "Zeigt Benutzer", "Zeigt Speicher" ],
     "richtig": 0
   },
   {
-    "frage": "What command displays memory usage?",
-    "antworten": [ "mem", "ram", "free", "top" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command shows network interfaces?",
-    "antworten": [ "netstat", "ipconfig", "ifconfig", "network" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What command tests network connectivity?",
-    "antworten": [ "tracert", "ping", "nettest", "curl" ],
+    "frage": "Was zeigt 'uname -r'?",
+    "antworten": [ "Benutzername", "Kernelversion", "Hostname", "IP-Adresse" ],
     "richtig": 1
   },
+
   {
-    "frage": "What permission number means read, write, execute for owner?",
-    "antworten": [ "644", "777", "700", "755" ],
-    "richtig": 2
-  },
-  {
-    "frage": "What permission number means read+write for owner, read for others?",
-    "antworten": [ "755", "777", "600", "644" ],
-    "richtig": 3
-  },
-  {
-    "frage": "Does 'wget' download files from the internet?",
+    "frage": "Ist Linux ein Open-Source-Kernel?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'unzip' compress files into a .tar.gz archive?",
+    "frage": "Ist Ubuntu eine Linux-Distribution?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Zeigt 'ls' Prozesse an?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Does 'tar -xzvf' extract a .tar.gz archive?",
+    "frage": "Kann man mit 'sudo' Adminrechte erhalten?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'who' show currently logged-in users?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'whoami' show your own username?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'sudo' run a command as superuser?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does '/etc/passwd' contain user account information?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'useradd' add a new user?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'passwd' change a user's password?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'history' show the shell's command history?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'clear' clear the terminal screen?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'grep' find files by name?",
+    "frage": "Ist 'rm' reversibel?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Does 'find' find files by name?",
+    "frage": "Ist Bash eine Shell?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'netstat -r' show the routing table?",
+    "frage": "Kann Linux ohne GUI betrieben werden?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'wc' count lines, words, and characters in a file?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'sort' sort lines in a file?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is '|' used to pipe output between commands?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does '>>' overwrite a file when redirecting output?",
+    "frage": "Ist 'apt' ein Paketmanager für Fedora?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Does '>' redirect output to a file, overwriting it?",
+    "frage": "Ist 'root' der Administrator?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'netstat' show active network connections?",
+    "frage": "Kann man Shell-Skripte ausführbar machen?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'chmod +x' make a script executable?",
+    "frage": "Ist 'systemctl' für Systemdienste zuständig?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Is 'bash' the default shell in most Linux systems?",
+    "frage": "Zeigt 'pwd' den aktuellen Benutzer?",
+    "antworten": [ "Ja", "Nein" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Kann man mit 'cp' Dateien kopieren?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does '/etc' contain system configuration files?",
+    "frage": "Ist 'cron' für geplante Aufgaben zuständig?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does '/var/log' contain log files?",
+    "frage": "Ist Linux proprietär?",
     "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "richtig": 1
+  },
+
+  {
+    "frage": "Was ist der Linux-Kernel?",
+    "antworten": [ "Zentrale Komponente des Betriebssystems" ]
   },
   {
-    "frage": "Does 'top' show CPU and memory usage in real time?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Was ist eine Distribution?",
+    "antworten": [ "Ein Paket aus Kernel, Tools und Software" ]
+  },
+  {
+    "frage": "Erkläre den Zweck von Bash.",
+    "antworten": [ "Eine Shell zur Befehlsausführung" ]
+  },
+  {
+    "frage": "Was macht ein Paketmanager?",
+    "antworten": [ "Installiert, aktualisiert und entfernt Software" ]
+  },
+  {
+    "frage": "Was ist ein Prozess?",
+    "antworten": [ "Ein laufendes Programm" ]
+  },
+  {
+    "frage": "Erkläre Dateirechte in Linux.",
+    "antworten": [ "Regeln, wer lesen, schreiben oder ausführen darf" ]
+  },
+  {
+    "frage": "Was ist ein Shell-Skript?",
+    "antworten": [ "Automatisierter Befehlscode in einer Datei" ]
+  },
+  {
+    "frage": "Was ist ein Daemon?",
+    "antworten": [ "Ein Hintergrunddienst" ]
+  },
+  {
+    "frage": "Erkläre den Unterschied zwischen sudo und su.",
+    "antworten": [ "sudo = einzelner Befehl, su = Benutzerwechsel" ]
+  },
+  {
+    "frage": "Was ist ein Mountpoint?",
+    "antworten": [ "Ein Einhängepunkt für Dateisysteme" ]
+  },
+  {
+    "frage": "Was ist ein Dateisystem?",
+    "antworten": [ "Struktur zur Speicherung von Daten" ]
+  },
+  {
+    "frage": "Erkläre den Zweck von cron.",
+    "antworten": [ "Zeitgesteuerte Aufgaben ausführen" ]
+  },
+  {
+    "frage": "Was ist SSH?",
+    "antworten": [ "Sicheres Remote-Verbindungsprotokoll" ]
+  },
+  {
+    "frage": "Was bedeutet 'open source'?",
+    "antworten": [ "Quellcode ist öffentlich einsehbar" ]
+  },
+  {
+    "frage": "Was ist systemd?",
+    "antworten": [ "Init-System und Dienstverwaltung" ]
   }
 ]
