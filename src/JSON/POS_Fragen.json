@@ -1,85 +1,102 @@
 [
   {
+
     "frage": "Was ist der Hauptzweck einer Klasse in C#?",
     "antworten": [ "Datenbankstruktur", "Bauplan für Objekte", "Schleifensteuerung", "Speicherverwaltung" ],
     "richtig": 1
   },
   {
+
     "frage": "Was passiert beim Instanziieren eines Objekts?",
     "antworten": [ "Eine Klasse wird gelöscht", "Eine Methode wird erstellt", "Ein Objekt wird erzeugt", "Eine Variable wird gelöscht" ],
     "richtig": 2
   },
   {
-    "frage": "Was bedeutet der Begriff 'Encapsulation'?",
+
+    "frage": "Was bedeutet Encapsulation?",
     "antworten": [ "Alles öffentlich machen", "Daten und Methoden verstecken", "Code löschen", "Schleifen optimieren" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist Polymorphie?",
     "antworten": [ "Viele Schleifen", "Viele Variablen", "Viele Formen von Verhalten", "Viele Klassen löschen" ],
     "richtig": 2
   },
   {
+
     "frage": "Was ist eine Methode?",
     "antworten": [ "Ein Datentyp", "Ein Codeblock mit Funktion", "Eine Variable", "Ein Objekt" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist ein Konstruktor?",
     "antworten": [ "Eine Schleife", "Initialisiert ein Objekt", "Löscht eine Klasse", "Ein Datentyp" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist ein Interface?",
     "antworten": [ "Eine Schleife", "Ein Vertrag für Klassen", "Eine Variable", "Ein Objekt" ],
     "richtig": 1
   },
   {
-    "frage": "Was bedeutet 'static'?",
+
+    "frage": "Was bedeutet static?",
     "antworten": [ "Nur im Objekt gültig", "Klassenbezogen", "Nur in Schleifen", "Nur in Methoden" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist ein Namespace?",
     "antworten": [ "Speicher", "Code-Organisationseinheit", "Variable", "Schleife" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist ein Array?",
     "antworten": [ "Ein einzelner Wert", "Eine Sammlung gleicher Typen", "Eine Klasse", "Eine Methode" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist List<T>?",
     "antworten": [ "Feste Größe", "Dynamische Liste", "Datentyp", "Schleife" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist der Unterschied zwischen Array und List?",
     "antworten": [ "Kein Unterschied", "Array ist dynamisch", "List ist dynamisch", "Beides gleich" ],
     "richtig": 2
   },
   {
+
     "frage": "Was ist ein Dictionary?",
     "antworten": [ "Key-Value Speicher", "Nur Liste", "Schleife", "Datentyp" ],
     "richtig": 0
   },
   {
+
     "frage": "Was ist LINQ?",
     "antworten": [ "Datenbank", "Datenabfragen in C#", "Schleife", "Variable" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist try-catch?",
     "antworten": [ "Schleife", "Fehlerbehandlung", "Variable", "Klasse" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist eine Exception?",
     "antworten": [ "Normaler Ablauf", "Fehler im Programm", "Variable", "Schleife" ],
     "richtig": 1
   },
   {
+
     "frage": "Was ist async/await?",
     "antworten": [ "Synchrones Warten", "Asynchrone Programmierung", "Schleife", "Variable" ],
     "richtig": 1
@@ -95,133 +112,8 @@
     "richtig": 1
   },
   {
-    "frage": "Was bedeutet 'ref' in C#?",
+    "frage": "Was bedeutet ref in C#?",
     "antworten": [ "Kopie", "Referenzübergabe", "Rückgabe", "Schleife" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was bedeutet 'out'?",
-    "antworten": [ "Nur Input", "Nur Output", "Rückgabeparameter", "Variable" ],
-    "richtig": 2
-  },
-  {
-    "frage": "Was ist Boxing?",
-    "antworten": [ "Object → ValueType", "ValueType → Object", "Schleife", "Variable" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Unboxing?",
-    "antworten": [ "Object → ValueType", "ValueType → Object", "Schleife", "Klasse" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist ein Delegate?",
-    "antworten": [ "Variable", "Methodenreferenz", "Schleife", "Klasse" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist ein Event?",
-    "antworten": [ "Fehler", "Benachrichtigungssystem", "Variable", "Schleife" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Dependency Injection?",
-    "antworten": [ "Klasse erstellen", "Abhängigkeiten von außen geben", "Schleife", "Variable" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Reflection?",
-    "antworten": [ "Code zur Laufzeit analysieren", "Schleife", "Variable", "Compiler" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist ein Deadlock?",
-    "antworten": [ "Fehler ohne Bedeutung", "Threads blockieren sich gegenseitig", "Variable", "Array" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Pattern Matching?",
-    "antworten": [ "Vergleich von Strukturen", "Schleife", "Variable", "Klasse" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist Stack vs Heap?",
-    "antworten": [ "CPU vs GPU", "Value vs Reference Speicher", "Schleife vs Variable", "Klasse vs Objekt" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist ein Parameter?",
-    "antworten": [ "Eingabewert einer Methode", "Variable", "Klasse", "Schleife" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist return?",
-    "antworten": [ "Schleife", "Wert zurückgeben", "Variable", "Klasse" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Main()?",
-    "antworten": [ "Startpunkt des Programms", "Variable", "Schleife", "Klasse" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist Console.WriteLine?",
-    "antworten": [ "Eingabe", "Ausgabe", "Variable", "Schleife" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist eine Bedingung (if)?",
-    "antworten": [ "Schleife", "Entscheidung im Code", "Variable", "Klasse" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist eine for-Schleife?",
-    "antworten": [ "Wiederholung mit Zähler", "Variable", "Klasse", "Objekt" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist eine while-Schleife?",
-    "antworten": [ "Zählergesteuert", "Bedingungsgesteuert", "Variable", "Klasse" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Encapsulation praktisch?",
-    "antworten": [ "Alles öffentlich", "Daten schützen durch Zugriffskontrolle", "Schleife", "Variable" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist Vererbung?",
-    "antworten": [ "Klassen erweitern andere Klassen", "Schleife", "Variable", "Objekt" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist eine Property?",
-    "antworten": [ "Feldzugriff kontrollieren", "Schleife", "Variable", "Klasse" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist Enum?",
-    "antworten": [ "Aufzählung von Werten", "Schleife", "Variable", "Klasse" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist static Method?",
-    "antworten": [ "Nur Objekt Methoden", "Klassenmethode", "Schleife", "Variable" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Was ist ein Interface Vorteil?",
-    "antworten": [ "Mehrere Implementierungen möglich", "Keine Klassen", "Keine Methoden", "Nur Variablen" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist der Zweck von using?",
-    "antworten": [ "Namespace einbinden", "Variable löschen", "Schleife", "Klasse erstellen" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was ist eine Klasse in OOP?",
-    "antworten": [ "Datentyp", "Bauplan für Objekte", "Schleife", "Variable" ],
     "richtig": 1
   },
 
@@ -231,12 +123,12 @@
     "richtig": 0
   },
   {
-    "frage": "Wird beim Instanziieren ein neues Objekt erzeugt?",
+    "frage": "Wird beim Instanziieren ein Objekt erzeugt?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Bedeutet Encapsulation, alles öffentlich zu machen?",
+    "frage": "Bedeutet Encapsulation alles öffentlich zu machen?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
@@ -256,17 +148,17 @@
     "richtig": 0
   },
   {
-    "frage": "Gilt 'static' nur innerhalb eines Objekts?",
+    "frage": "Gilt static nur innerhalb eines Objekts?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Ist ein Namespace eine Code-Organisationseinheit?",
+    "frage": "Ist ein Namespace eine Organisationseinheit?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Speichert ein Array eine Sammlung gleicher Typen?",
+    "frage": "Speichert ein Array gleiche Typen?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
@@ -276,12 +168,7 @@
     "richtig": 1
   },
   {
-    "frage": "Ist List<T> dynamischer als ein Array?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Speichert ein Dictionary Daten als Key-Value-Paare?",
+    "frage": "Ist Dictionary Key-Value basiert?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
@@ -291,88 +178,81 @@
     "richtig": 0
   },
   {
-    "frage": "Ist eine Exception ein normaler Programmablauf?",
+    "frage": "Ist eine Exception ein normaler Ablauf?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Ermöglicht async/await asynchrone Programmierung?",
+    "frage": "Ist async/await für asynchrone Programmierung?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Erlaubt Multithreading mehrere parallele Threads?",
+    "frage": "Ist Main() der Startpunkt eines Programms?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
-  {
-    "frage": "Verwaltet Garbage Collection den Speicher manuell?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Übergibt 'ref' eine Referenz statt einer Kopie?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist 'out' nur ein Eingabeparameter?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Ist Boxing die Umwandlung von ValueType nach Object?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist Unboxing die Umwandlung von Object nach ValueType?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist ein Delegate eine Methodenreferenz?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Blockieren sich Threads bei einem Deadlock gegenseitig?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Analysiert Reflection Code zur Laufzeit?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist Vererbung das Erweitern von Klassen durch andere Klassen?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Dient 'using' zum Einbinden von Namespaces?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist Main() der Startpunkt eines C#-Programms?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist eine for-Schleife zählergesteuert?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Ist eine while-Schleife zählergesteuert?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 1
-  },
-  {
-    "frage": "Ist Enum eine Aufzählung von Werten?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  }
-]
+
+  
+    
+    {
+      "frage": "Erkläre, was eine Klasse in C# ist.",
+      "antworten": [ "Bauplan für Objekte" ]
+    },
+    {
+      "frage": "Was ist der Unterschied zwischen Klasse und Objekt?",
+      "antworten": [ "Klasse ist der Bauplan, Objekt die Instanz" ]
+    },
+    {
+      "frage": "Erkläre Vererbung in der OOP.",
+      "antworten": [ "Klassen können andere Klassen erweitern" ]
+    },
+    {
+      "frage": "Was ist der Vorteil von Interfaces?",
+      "antworten": [ "Mehrere Implementierungen sind möglich" ]
+    },
+    {
+      "frage": "Erkläre Stack und Heap.",
+      "antworten": [ "Stack = Value Types, Heap = Reference Types Speicher" ]
+    },
+    {
+      "frage": "Was ist ein Delegate?",
+      "antworten": [ "Referenz auf eine Methode" ]
+    },
+    {
+      "frage": "Was ist ein Event in C#?",
+      "antworten": [ "Benachrichtigungssystem basierend auf Delegates" ]
+    },
+    {
+      "frage": "Erkläre LINQ kurz.",
+      "antworten": [ "Abfragesprache für Daten in C#" ]
+    },
+    {
+      "frage": "Was ist async/await?",
+      "antworten": [ "Asynchrone Programmierung" ]
+    },
+    {
+      "frage": "Wie funktioniert try-catch?",
+      "antworten": [ "Fehler werden abgefangen und behandelt" ]
+    },
+    {
+      "frage": "Was macht Garbage Collection?",
+      "antworten": [ "Automatische Speicherbereinigung" ]
+    },
+    {
+      "frage": "Erkläre Polymorphie.",
+      "antworten": [ "Ein Objekt kann verschiedene Formen annehmen" ]
+    },
+    {
+      "frage": "Was bedeutet Encapsulation?",
+      "antworten": [ "Daten werden geschützt und gekapselt" ]
+    },
+    {
+      "frage": "Unterschied Array vs List?",
+      "antworten": [ "Array hat feste Größe, List ist dynamisch" ]
+    },
+    {
+      "frage": "Was ist die Main()-Methode?",
+      "antworten": [ "Startpunkt eines C# Programms" ]
+    }
+  ]

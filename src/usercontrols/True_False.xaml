@@ -5,11 +5,17 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Quiz_show.src.usercontrols"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="400">
+             d:DesignHeight="400" d:DesignWidth="800">
     <Canvas>
-        <TextBlock x:Name="Frage_true_false" Canvas.Left="10" TextWrapping="Wrap" Text="" TextAlignment="Center" Canvas.Top="117" Height="54" Width="380"/>
-        <Button x:Name="Yes_uc" Content="Ja" Canvas.Left="100" Canvas.Top="175" Height="25" Width="60" Click="Yes_uc_Click"/>
-        <Button x:Name="No_uc" Content="Nein" Canvas.Left="210" Canvas.Top="175" Height="25" Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Click="No_uc_Click"/>
+
+        <Rectangle Height="100" Stroke="Black" Width="780" Canvas.Left="10" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" RadiusX="50" RadiusY="50" Fill="DarkBlue"/>
+        <Rectangle MouseUp="a_rect_MouseUp" MouseLeave="a_rect_MouseLeave" MouseEnter="a_rect_MouseEnter" x:Name="a_rect" Height="50" Stroke="Black" Width="390" Canvas.Left="10" Canvas.Top="136" HorizontalAlignment="Center" VerticalAlignment="Top" RadiusX="30" RadiusY="25" Fill="DarkBlue"/>
+        <Rectangle MouseUp="b_rect_MouseUp" MouseLeave="b_rect_MouseLeave" MouseEnter="b_rect_MouseEnter" x:Name="b_rect" Height="50" Stroke="Black" Width="390" Canvas.Left="405" Canvas.Top="136" HorizontalAlignment="Center" VerticalAlignment="Top" RadiusX="30" RadiusY="25" Fill="DarkBlue"/>
+        <Label MouseUp="a_rect_MouseUp" MouseLeave="a_rect_MouseLeave" MouseEnter="a_rect_MouseEnter" x:Name="a_label" Content="A:" Canvas.Left="30" Canvas.Top="136" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="36" Foreground="Yellow" FontSize="25"/>
+        <Label MouseUp="b_rect_MouseUp" MouseLeave="b_rect_MouseLeave" MouseEnter="b_rect_MouseEnter" x:Name="b_label" Content="B:" Canvas.Left="427" Canvas.Top="136" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Yellow" FontSize="25" Height="50" Width="34"/>
+        <Label MouseUp="a_rect_MouseUp" MouseLeave="a_rect_MouseLeave" MouseEnter="a_rect_MouseEnter" x:Name="a" Content="Ja" Canvas.Left="71" Canvas.Top="136" Height="46" Width="291" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" VerticalContentAlignment="Center" FontSize="22"/>
+        <Label MouseUp="b_rect_MouseUp" MouseLeave="b_rect_MouseLeave" MouseEnter="b_rect_MouseEnter" x:Name="b" Content="Nein" Canvas.Left="467" Canvas.Top="136" Height="42" Width="291" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" VerticalContentAlignment="Center" FontSize="22"/>
+        <Label x:Name="Frage_true_false" Content="" Canvas.Left="53" Canvas.Top="10" Height="100" Width="692" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
 
     </Canvas>
 </UserControl>
