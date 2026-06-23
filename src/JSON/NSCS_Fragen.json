@@ -1,252 +1,231 @@
 [
   {
-    "frage": "What is Cisco Packet Tracer mainly used for?",
-    "antworten": [ "Video editing", "Network simulation", "Photo editing", "Word processing" ],
+    "frage": "Was ist der Hauptunterschied zwischen Router und Switch?",
+    "antworten": [ "Router", "Verbindet Netzwerke", "Speichert Daten", "Erhöht WLAN" ],
     "richtig": 1
   },
   {
-    "frage": "Which company developed Packet Tracer?",
-    "antworten": [ "Microsoft", "Cisco", "Google", "IBM" ],
+    "frage": "Auf welcher OSI-Schicht arbeitet ein Switch hauptsächlich?",
+    "antworten": [ "Layer 7", "Layer 2", "Layer 4", "Layer 1" ],
     "richtig": 1
   },
   {
-    "frage": "What type of cable connects a PC to a switch?",
-    "antworten": [ "Crossover", "Straight-through", "Console", "Coaxial" ],
+    "frage": "Was macht ein DHCP-Server?",
+    "antworten": [ "Erstellt Webseiten", "Vergibt IP-Adressen", "Löscht Dateien", "Blockiert Internet" ],
     "richtig": 1
   },
   {
-    "frage": "What type of cable connects two switches together?",
-    "antworten": [ "Straight-through", "Console", "Crossover", "Serial" ],
+    "frage": "Was ist die Funktion von DNS?",
+    "antworten": [ "IP löschen", "Namen in IP umwandeln", "CPU steuern", "Kabel verwalten" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Was ist eine MAC-Adresse?",
+    "antworten": [ "Domain", "IP-Adresse", "Hardware-Adresse", "Port" ],
     "richtig": 2
   },
   {
-    "frage": "What mode lets you watch packets travel step by step?",
-    "antworten": [ "Realtime Mode", "Simulation Mode", "Config Mode", "CLI Mode" ],
+    "frage": "Welches Protokoll wird für Ping verwendet?",
+    "antworten": [ "HTTP", "ICMP", "FTP", "SMTP" ],
     "richtig": 1
   },
   {
-    "frage": "What command enters privileged EXEC mode?",
-    "antworten": [ "configure terminal", "enable", "show running-config", "exit" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What command enters global configuration mode?",
-    "antworten": [ "enable", "configure terminal", "interface", "exit" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What command displays the running configuration?",
-    "antworten": [ "show running-config", "show ip route", "show version", "show interfaces" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What command assigns an IP address to an interface?",
-    "antworten": [ "ip address", "set ip", "config ip", "ip route" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What device connects multiple devices in the same network and uses MAC addresses to forward frames?",
-    "antworten": [ "Router", "Switch", "Hub", "Modem" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What device connects different networks together and routes packets based on IP addresses?",
-    "antworten": [ "Switch", "Hub", "Router", "Repeater" ],
+    "frage": "Was ist VLAN?",
+    "antworten": [ "Firewall", "Virus", "Virtuelles LAN", "Routertyp" ],
     "richtig": 2
   },
   {
-    "frage": "What is a PDU in Packet Tracer?",
-    "antworten": [ "Protocol Data Unit", "Packet Display Utility", "Private Data Unit", "Personal Device Unit" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What command shows the IP routing table?",
-    "antworten": [ "show ip route", "show running-config", "show interfaces", "show version" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Which protocol is used to test connectivity between two devices?",
-    "antworten": [ "FTP", "ICMP (ping)", "HTTP", "SMTP" ],
-    "richtig": 1
-  },
-  {
-    "frage": "What does VLAN stand for?",
-    "antworten": [ "Virtual Local Area Network", "Virtual Link Access Node", "Very Large Area Network", "Virtual LAN Node" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What command creates a VLAN on a switch?",
-    "antworten": [ "vlan <number>", "create vlan", "new vlan", "set vlan" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Which device operates at Layer 1 and simply repeats signals to all ports?",
-    "antworten": [ "Switch", "Router", "Hub", "Firewall" ],
+    "frage": "Was macht NAT?",
+    "antworten": [ "DNS ersetzen", "Daten löschen", "IP-Übersetzung", "WLAN verstärken" ],
     "richtig": 2
   },
   {
-    "frage": "What is the default subnet mask for a Class C network?",
-    "antworten": [ "255.0.0.0", "255.255.0.0", "255.255.255.0", "255.255.255.255" ],
+    "frage": "Welche ist eine IPv4-Adresse?",
+    "antworten": [ "www.test.de", "FTP://server", "GG:HH:II", "192.168.1.1" ],
+    "richtig": 3
+  },
+  {
+    "frage": "Was ist ein Router?",
+    "antworten": [ "Speichert Dateien", "Ist Kabel", "Verbindet Netzwerke", "Erstellt WLAN Namen" ],
+    "richtig": 2
+  },
+
+  {
+    "frage": "Was ist TCP?",
+    "antworten": [ "DNS ersetzen", "Schnelles Broadcast", "IP löschen", "Zuverlässige Übertragung" ],
+    "richtig": 3
+  },
+  {
+    "frage": "Was ist UDP?",
+    "antworten": [ "Firewall", "Router Protokoll", "Schnell aber unzuverlässig", "Nur sicher" ],
     "richtig": 2
   },
   {
-    "frage": "What command saves the running configuration to startup configuration?",
-    "antworten": [ "copy running-config startup-config", "save config", "write memory only", "backup config" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What console cable connects a PC to a router or switch for configuration?",
-    "antworten": [ "Crossover cable", "Straight-through cable", "Console cable", "Fiber cable" ],
+    "frage": "Was ist ein Access Point?",
+    "antworten": [ "Switch", "Router", "WLAN Zugangspunkt", "Kabel" ],
     "richtig": 2
   },
   {
-    "frage": "Which routing protocol is a classic distance-vector protocol commonly used in Packet Tracer labs?",
-    "antworten": [ "OSPF", "RIP", "BGP", "IS-IS" ],
+    "frage": "Was ist Subnetting?",
+    "antworten": [ "CPU erhöhen", "IP löschen", "Netzwerk aufteilen", "WLAN erstellen" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Was ist ein Default Gateway?",
+    "antworten": [ "Monitor", "Verbindung zu anderen Netzen", "Drucker", "Switch" ],
     "richtig": 1
   },
   {
-    "frage": "What does DHCP automatically assign to devices?",
-    "antworten": [ "MAC addresses", "IP addresses", "VLAN IDs", "Passwords" ],
+    "frage": "Was ist ein Switch?",
+    "antworten": [ "Router", "IP Adresse", "Server", "Verbindet Geräte im LAN" ],
+    "richtig": 3
+  },
+  {
+    "frage": "Was bedeutet HTTP?",
+    "antworten": [ "Router Code", "Webprotokoll", "IP System", "Firewall" ],
     "richtig": 1
   },
   {
-    "frage": "What is the purpose of a default gateway?",
-    "antworten": [ "To assign IP addresses", "To route traffic outside the local network", "To block traffic", "To encrypt data" ],
+    "frage": "Was bedeutet HTTPS?",
+    "antworten": [ "IP Fehler", "WLAN Name", "Switch Typ", "Sichere Webverbindung" ],
+    "richtig": 3
+  },
+  {
+    "frage": "Was ist ARP?",
+    "antworten": [ "Firewall", "Routing", "IP zu MAC Zuordnung", "Virus" ],
+    "richtig": 2
+  },
+  {
+    "frage": "Was ist IPv6?",
+    "antworten": [ "Firewall", "Switch", "DNS", "Neue IP Version" ],
+    "richtig": 3
+  },
+
+  {
+    "frage": "Ist ein Router notwendig für Netzwerke?",
+    "antworten": [ "Nein", "Ja" ],
     "richtig": 1
   },
   {
-    "frage": "What command displays interface status and IP addresses briefly?",
-    "antworten": [ "show ip interface brief", "show running-config", "show vlan", "show ip route" ],
-    "richtig": 0
-  },
-  {
-    "frage": "What file extension does Packet Tracer save its project files as?",
-    "antworten": [ ".pkt", ".ptz", ".cisco", ".net" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Was Cisco Packet Tracer developed by Cisco?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does a crossover cable connect two switches together?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does a straight-through cable connect a PC to a switch?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does Simulation Mode let you watch packets travel step by step?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'enable' enter global configuration mode?",
+    "frage": "Arbeitet ein Switch auf Layer 3?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Does 'configure terminal' enter global configuration mode?",
+    "frage": "Vergibt DHCP IPs automatisch?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does 'show running-config' display the running configuration?",
+    "frage": "Ist DNS für Namensauflösung?",
+    "antworten": [ "Nein", "Ja" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Benutzt Ping TCP?",
+    "antworten": [ "Nein", "Ja" ],
+    "richtig": 0
+  },
+  {
+    "frage": "Trennt VLAN Netzwerke logisch?",
+    "antworten": [ "Nein", "Ja" ],
+    "richtig": 1
+  },
+  {
+    "frage": "Ist MAC-Adresse eindeutig?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 0
   },
   {
-    "frage": "Does a switch route packets based on IP addresses?",
+    "frage": "Hat IPv4 48 Bit?",
     "antworten": [ "Ja", "Nein" ],
     "richtig": 1
   },
   {
-    "frage": "Does a router connect different networks and route packets based on IP addresses?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does PDU stand for Protocol Data Unit?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'show ip route' display the routing table?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is ICMP used to test connectivity with ping?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does VLAN stand for Virtual Local Area Network?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does a hub operate at Layer 1 and repeat signals to all ports?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is 255.255.255.0 the default subnet mask for a Class C network?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'copy running-config startup-config' save the configuration permanently?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is a console cable used to connect a PC to a router or switch for configuration?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Is RIP a distance-vector routing protocol?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does DHCP automatically assign IP addresses to devices?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does a default gateway route traffic outside the local network?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does 'show ip interface brief' display interface status and IP addresses?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does Packet Tracer save its project files with the .pkt extension?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
-  },
-  {
-    "frage": "Does a hub use MAC addresses to intelligently forward frames?",
-    "antworten": [ "Ja", "Nein" ],
+    "frage": "Ist Packet Tracer eine Simulation?",
+    "antworten": [ "Nein", "Ja" ],
     "richtig": 1
   },
   {
-    "frage": "Is Realtime Mode used to simulate packets traveling step by step?",
-    "antworten": [ "Ja", "Nein" ],
+    "frage": "Kann Switch ohne Router LAN bilden?",
+    "antworten": [ "Nein", "Ja" ],
     "richtig": 1
   },
+
   {
-    "frage": "Does Cisco Packet Tracer support both Layer 2 and Layer 3 devices?",
-    "antworten": [ "Ja", "Nein" ],
-    "richtig": 0
+    "frage": "Was ist DHCP?",
+    "antworten": [ "IP Vergabe Dienst" ]
+  },
+  {
+    "frage": "Was ist DNS?",
+    "antworten": [ "Namensauflösung System" ]
+  },
+  {
+    "frage": "Was ist NAT?",
+    "antworten": [ "IP Übersetzung" ]
+  },
+  {
+    "frage": "Was ist Subnetting?",
+    "antworten": [ "Netzwerk Aufteilung" ]
+  },
+  {
+    "frage": "Was ist Firewall?",
+    "antworten": [ "Sicherheits System" ]
+  },
+  {
+    "frage": "Was ist Packet Tracer?",
+    "antworten": [ "Cisco Simulation Tool" ]
+  },
+  {
+    "frage": "Was ist ein Broadcast?",
+    "antworten": [ "Nachricht an alle Geräte" ]
+  },
+  {
+    "frage": "Was ist IPv4?",
+    "antworten": [ "32 Bit IP System" ]
+  },
+  {
+    "frage": "Was ist ein Collision Domain?",
+    "antworten": [ "Bereich mit Datenkollisionen" ]
+  },
+  {
+    "frage": "Was ist ein Access Point?",
+    "antworten": [ "WLAN Zugangspunkt" ]
+  },
+  {
+    "frage": "Was ist TCP?",
+    "antworten": [ "Zuverlässiges Protokoll" ]
+  },
+  {
+    "frage": "Was ist UDP?",
+    "antworten": [ "Schnelles Protokoll ohne Garantie" ]
+  },
+  {
+    "frage": "Was ist ein Router?",
+    "antworten": [ "Netzwerk Verbindung Gerät" ]
+  },
+  {
+    "frage": "Was ist ein Switch?",
+    "antworten": [ "LAN Gerät" ]
+  },
+  {
+    "frage": "Was ist eine IP-Adresse?",
+    "antworten": [ "Netzwerk Adresse" ]
+  },
+  {
+    "frage": "Was ist ARP?",
+    "antworten": [ "IP zu MAC Zuordnung" ]
+  },
+  {
+    "frage": "Was ist ein Default Gateway?",
+    "antworten": [ "Verbindung zu anderen Netzen" ]
+  },
+  {
+    "frage": "Was ist VLAN?",
+    "antworten": [ "Virtuelles Netzwerk" ]
+  },
+  {
+    "frage": "Was ist eine Firewall?",
+    "antworten": [ "Schutz System" ]
   }
 ]
