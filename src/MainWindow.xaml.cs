@@ -52,6 +52,7 @@ namespace Quiz_show
             Logging.logger.Debug("UI initialized + frames ready");
             StartOllamaServer();
             OllamaClient.SelectedModel = "llama3.2:1b";
+            CheckOllamaAsync();
             Logging.logger.Debug("Ollama started + model set");
             Main_frames.Content = Frames["Login"];
             Logging.logger.Debug("Login screen loaded");
@@ -89,6 +90,7 @@ namespace Quiz_show
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            ((QuizAuswahl)Frames["Quiz"]).check.Update();
             // Das Achievements ist eine Reference zu dem längsten Discord Call in dem Klassen Discord Server, welcher 18 Stunden ging.
             DispatcherTimer timer = new DispatcherTimer();
 
