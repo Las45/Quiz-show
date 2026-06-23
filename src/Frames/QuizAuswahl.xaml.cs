@@ -227,7 +227,7 @@ namespace Quiz_show.Frames
 
         private void RectQuiz2_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("CABS_Fragen.json", 1);
+            LadeQuiz("NSCS_Fragen.json", 1);
         }
 
         private void RectQuiz3_MouseUp(object sender, MouseButtonEventArgs e)
@@ -237,7 +237,7 @@ namespace Quiz_show.Frames
 
         private void RectQuiz4_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            LadeQuiz("Mathe_Fragen.json", 3);
+            LadeQuiz("CABS_Fragen.json", 3);
         }   
 
         private void RectQuiz5_MouseUp(object sender, MouseButtonEventArgs e)

@@ -50,12 +50,10 @@ namespace Quiz_show.src.usercontrols
                     if (answer_part.ToLower() == "true")
                     {
                         FrageBeendet?.Invoke(true);
-                        MessageBox.Show("Richtig");
                         return;
                     }
                 }
                 FrageBeendet?.Invoke(false);
-                MessageBox.Show("Falsch");
             }
             else if (_mainWindow.IsOllamaInstalled == false)
             {

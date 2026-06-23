@@ -52,6 +52,7 @@ namespace Quiz_show
             Logging.logger.Debug("UI initialized + frames ready");
             StartOllamaServer();
             OllamaClient.SelectedModel = "llama3.2:1b";
+            CheckOllamaAsync();
             Logging.logger.Debug("Ollama started + model set");
             Main_frames.Content = Frames["Login"];
             Logging.logger.Debug("Login screen loaded");
