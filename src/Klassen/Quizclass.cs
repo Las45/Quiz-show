@@ -7,8 +7,7 @@ namespace Quiz_show.Klassen
 {
     public class Quizclass
     {
-        public List<Frage> Questions =
-            new List<Frage>();
+        public List<Frage> Questions =new List<Frage>();
 
         public void Load(string path)
         {
