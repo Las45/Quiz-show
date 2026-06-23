@@ -21,11 +21,6 @@ namespace Quiz_show.src.Klassen
             get { return achievements; }
         }
 
-
-
-
-
-
         public static void Unlock(string name)
         {
             foreach (Achievement achievement in achievements)
