@@ -90,6 +90,7 @@ namespace Quiz_show
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            ((QuizAuswahl)Frames["Quiz"]).check.Update();
             // Das Achievements ist eine Reference zu dem längsten Discord Call in dem Klassen Discord Server, welcher 18 Stunden ging.
             DispatcherTimer timer = new DispatcherTimer();
 

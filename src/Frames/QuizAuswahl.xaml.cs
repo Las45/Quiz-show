@@ -16,7 +16,7 @@ namespace Quiz_show.Frames
     {
         private Quizclass quiz = new Quizclass();
 
-        private Checker_Menue check;
+        public Checker_Menue check;
 
         private Random random = new Random();
 
