@@ -21,8 +21,6 @@
                 <Label Content="CABS" Canvas.Left="90" Canvas.Top="207" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                 <Label Content="Englisch" Canvas.Left="90" Canvas.Top="263" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Content="Geschichte" Canvas.Left="90" Canvas.Top="319" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <ProgressBar x:Name="DIY_progressbar" Height="20" Canvas.Left="90" Canvas.Top="345" Width="610" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <Label Content="DIY Quiz" Canvas.Left="90" Canvas.Top="370" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Label Name="Pos_Prz" Content="0%" Canvas.Left="376" Canvas.Top="67"/>
                 <Label Name="NSCS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="123"/>
                 <Label Name="CABS_Prz" Content="0%" Canvas.Left="376" Canvas.Top="179"/>

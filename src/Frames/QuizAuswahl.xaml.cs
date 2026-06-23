@@ -74,6 +74,7 @@ namespace Quiz_show.Frames
                 if (!System.IO.File.Exists(path))
                 {
                     MessageBox.Show("JSON Datei wurde nicht gefunden:\n" + path);
+                    Logging.logger.Error("JSON Datei wurde nicht gefunden:\n" + path);
                     return;
                 }
 
@@ -81,6 +82,7 @@ namespace Quiz_show.Frames
                 if (progress.Subjects == null || fachIndex >= progress.Subjects.Count)
                 {
                     MessageBox.Show("Fach nicht gefunden. Index: " + fachIndex);
+                    Logging.logger.Error("Fach nicht gefunden. Index: " + fachIndex);
                     return;
                 }
 
@@ -119,7 +121,7 @@ namespace Quiz_show.Frames
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Fehler beim Laden:\n" + ex.Message);
+                Logging.logger.Error("Fehler beim Laden:\n" + ex.Message);
             }
         }
 
@@ -149,15 +151,25 @@ namespace Quiz_show.Frames
             }
         }
 
-        private void AntwortGegeben(bool richtig)
+        private async void AntwortGegeben(bool richtig)
         {
             Logging.logger.Debug($"Answer given");
+
             if (richtig)
             {
                 progress.Subjects[aktuellesFach].AddCorrect();
+                QuizContainer.Background = Brushes.LightGreen;
+                Logging.logger.Debug($"Answer was right");
+            }
+            else
+            {
+                QuizContainer.Background = Brushes.LightCoral;
             }
 
             aktuelleFrage++;
+            await Task.Delay(1000);
+            QuizContainer.Background = Brushes.Transparent;
+
 
             if (aktuelleFrage >= quizFragen.Count)
             {
@@ -196,13 +208,12 @@ namespace Quiz_show.Frames
                 QuizContainer.Visibility = Visibility.Hidden;
                 RectQuizBackground.Visibility = Visibility.Hidden;
 
-                MessageBox.Show(
+                Logging.logger.Information(
                     "Quiz beendet!\n" +
                     "Richtig: " +
                     progress.Subjects[aktuellesFach].Quizzes_correct +      
                     "/" +
                     quizFragen.Count);
-
                 return;
             }
 

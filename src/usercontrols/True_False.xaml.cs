@@ -37,6 +37,10 @@ namespace Quiz_show.src.usercontrols
         {
             bool richtig = frage.Check(index);
 
+            //if (richtig)
+            //    MessageBox.Show("Richtig!");
+            //else
+            //    MessageBox.Show("Falsch!");
 
 
             FrageBeendet?.Invoke(richtig);
