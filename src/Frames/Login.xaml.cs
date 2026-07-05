@@ -1,6 +1,9 @@
 ﻿using Quiz_show.src.Klassen;
 using System;
 using System.Diagnostics;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -32,27 +35,111 @@ namespace Quiz_show.Frames
             window.Height = 400;
             window.Width = 400;
         }
-
-      
-
         private async void Weiter_login_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                Logging.logger.Debug("Sign In with Password");
-                await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
+                Logging.logger.Debug("Sign In with Password (Online Versuch)");
+                Supabase.Gotrue.Session session = await this.client.Auth.SignInWithPassword(email_login.Text, password_login.Password);
+                SaveOfflineCredentials(email_login.Text, password_login.Password);
                 Weiter_login.IsEnabled = false;
                 Shop.Load();
                 mw.progress.Load();
                 src.Klassen.Achievements.Load();
                 this.mw.Change_Frame_by_name("Home");
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Es gibt diesen User nicht oder das Passwort ist falsch");
-                Logging.logger.Error("Login failed");
+                if (IsNetworkError(ex))
+                {
+                    Logging.logger.Warning("Keine Internetverbindung. Versuche Offline-Login");
+
+                    if (CheckOfflineCredentials(email_login.Text, password_login.Password))
+                    {
+                        MessageBox.Show("Erfolgreich im Offline-Modus angemeldet.");
+                        Shop.Load();
+                        mw.progress.Load();
+                        src.Klassen.Achievements.Load();
+                        this.mw.Change_Frame_by_name("Home");
+                        return;
+                    }
+                }
+                MessageBox.Show("Es gibt diesen User nicht, das Passwort ist falsch oder du bist offline.");
+                Logging.logger.Error($"Login failed: {ex.Message}");
             }
         }
+
+        private void SaveOfflineCredentials(string email, string password)
+            {
+                try
+                {
+                    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "offline_auth.txt");
+                    using (SHA256 sha256 = SHA256.Create())
+                    {
+                        byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+                        byte[] hashBytes = sha256.ComputeHash(passwordBytes);
+                        string hashedPassword = Convert.ToBase64String(hashBytes);
+                        string content = $"{email};{hashedPassword}";
+                        File.WriteAllText(path, content);
+                        Logging.logger.Debug("Offline-Anmeldedaten erfolgreich aktualisiert.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logging.logger.Error($"Fehler beim Speichern der Offline-Daten: {ex.Message}");
+                }
+            }
+
+        private bool CheckOfflineCredentials(string email, string password)
+        {
+            try
+            {
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "offline_auth.txt");
+
+                // Wenn noch nie ein Online-Login stattgefunden hat, gibt es keine Offline-Datei
+                if (!File.Exists(path))
+                {
+                    Logging.logger.Warning("Keine Offline-Anmeldedaten auf diesem PC gefunden.");
+                    return false;
+                }
+
+                string content = File.ReadAllText(path);
+                string[] parts = content.Split(';');
+
+                if (parts.Length == 2)
+                {
+                    string savedEmail = parts[0];
+                    string savedHash = parts[1];
+
+                    // Eingegebenes Passwort hashen, um es mit dem gespeicherten Hash zu vergleichen
+                    using (SHA256 sha256 = SHA256.Create())
+                    {
+                        byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
+                        byte[] hashBytes = sha256.ComputeHash(passwordBytes);
+                        string inputHash = Convert.ToBase64String(hashBytes);
+
+                        // Prüfen, ob E-Mail und Passwort-Hash übereinstimmen
+                        if (savedEmail.Equals(email, StringComparison.OrdinalIgnoreCase) && savedHash == inputHash)
+                        {
+                            Logging.logger.Information("Offline-Login erfolgreich via lokalem Hash.");
+                            return true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logging.logger.Error($"Fehler beim Prüfen der Offline-Daten: {ex.Message}");
+            }
+
+            return false;
+        }
+
+        private bool IsNetworkError(Exception ex)
+            {
+                // Hilfsmethode, um zu schauen, ob Supabase den Server einfach nicht erreichen konnte
+                return ex.InnerException is System.Net.Http.HttpRequestException || ex.Message.Contains("Failed to fetch");
+            }
 
         private void Password_fg_login_Click(object sender, RoutedEventArgs e)
         {
