@@ -1,185 +1,166 @@
 ﻿using Quiz_show;
-using Quiz_show.Frames;
 using Quiz_show.src.Klassen;
+using Supabase.Postgrest.Responses;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Media;
-
-// KI: ChatGPT 
-// Prompt: Wie kann ich Shop-Daten in JSON speichern und laden ohne eine separate Klasse zu verwenden? 
-// Anfang KI:
-public class ShopSaveData
-{
-    public double Money { get; set; }
-    public List<ShopItems> Freigeschaltet { get; set; }
-    public ShopItems AktiverButton { get; set; }
-    public ShopItems AktiverBackground { get; set; }
-}
-// Ende KI:
 
 public static class Shop
 {
     public static double Money = 0;
-
     public static event Action ShopUpdated;
 
     public static List<ShopItems> Freigeschaltet = new List<ShopItems>();
-
     public static ShopItems AktiverButton = ShopItems.OriginalButton;
     public static ShopItems AktiverBackground = ShopItems.OriginalBackground;
+
     private static MainWindow GetMainWindow() => (MainWindow)Application.Current.MainWindow;
 
-    public static void Purchase(ShopItems item)
+    public static async void Purchase(ShopItems item)
     {
         if (Freigeschaltet.Contains(item))
         {
             Select(item);
-            Save();
+            await Save();
 
             Logging.logger.Debug($"Shop item selected: {item}");
             ShopUpdated?.Invoke();
             return;
         }
 
-        int preis = GetPrice(item);
-
-        if (Money >= preis)
+        double price = GetPrice(item);
+        if (Money >= price)
         {
-            Money -= preis;
+            Money -= price;
             Freigeschaltet.Add(item);
+            Select(item);
+
+            await SaveItemPurchase(item);
+            await Save();
 
             Logging.logger.Debug($"Shop item purchased: {item}");
-
-            Select(item);
-            Save();
+            ShopUpdated?.Invoke();
         }
-
-        ShopUpdated?.Invoke();
+        else
+        {
+            MessageBox.Show("Nicht genug geld");
+        }
     }
 
     public static void Select(ShopItems item)
     {
-        switch (item)
+        if (item.ToString().EndsWith("Button"))
         {
-            case ShopItems.OriginalButton:
-            case ShopItems.RotButton:
-            case ShopItems.GoldButton:
-                AktiverButton = item;
-                break;
-
-            case ShopItems.OriginalBackground:
-            case ShopItems.GrünBackground:
-            case ShopItems.SilberBackground:
-                AktiverBackground = item;
-                break;
+            AktiverButton = item;
         }
-
-        ShopUpdated?.Invoke();
-
-    }
-
-    public static int GetPrice(ShopItems item)
-    {
-        switch (item)
+        else if (item.ToString().EndsWith("Background"))
         {
-            case ShopItems.RotButton:
-                return 20;
-
-            case ShopItems.GoldButton:
-                return 100;
-
-            case ShopItems.GrünBackground:
-                return 30;
-
-            case ShopItems.SilberBackground:
-                return 100;
-
-            default:
-                return 0;
+            AktiverBackground = item;
         }
     }
 
-
-    public static async void Save()
+    private static async Task SaveItemPurchase(ShopItems item)
     {
-        if (GetMainWindow() == null)
-        {
-            return;
-        }
         string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
-        if (string.IsNullOrEmpty(userId)) 
-            return;
-        ShopSaveData daten = new ShopSaveData
-        {
-            Money = Money,
-            Freigeschaltet = Freigeschaltet,
-            AktiverButton = AktiverButton,
-            AktiverBackground = AktiverBackground
-        };
-
-        string json = JsonSerializer.Serialize(daten, new JsonSerializerOptions
-        {
-            WriteIndented = false
-        });
+        if (string.IsNullOrEmpty(userId)) return;
 
         try
         {
-            // Der Code für das Speichern wurde teilweise von dem progress speichern übernommen, welcher teils von Ki stammt.
-            ShopSaveDataModel model = new ShopSaveDataModel
+            UserShopItemModel model = new UserShopItemModel
             {
                 UserId = userId,
-                ShopData = json
+                ItemId = (int)item,
+                UnlockedAt = DateTime.UtcNow
             };
 
-            await GetMainWindow().client.From<ShopSaveDataModel>().Upsert(model);
-            Logging.logger.Debug("Shop wurde gesaved");
-
+            await GetMainWindow().client.From<UserShopItemModel>().Upsert(model);
         }
         catch (Exception ex)
         {
-            Logging.logger.Error("Es konnte nicht auf Supabase gespeichert werden: " + ex.Message);
+            Logging.logger.Error($"Fehler beim Speichern des gekauften Items: {ex.Message}");
         }
-
     }
 
-    public static async void Load()
+    public static async Task Save()
     {
-        if (GetMainWindow() == null) 
-            return;
-
         string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
-        if (string.IsNullOrEmpty(userId)) 
-            return;
+        if (string.IsNullOrEmpty(userId)) return;
 
         try
         {
-            // Code wurde teilweise von Progress übernommen welcher teils von Ki stammt.
-            ShopSaveDataModel? row = await GetMainWindow().client
-                .From<ShopSaveDataModel>()
+            UserProfileModel profile = new UserProfileModel
+            {
+                UserId = userId,
+                Money = Money,
+                AktiverButton = (int)AktiverButton,
+                AktiverBackground = (int)AktiverBackground,
+                UpdatedAt = DateTime.UtcNow
+            };
+
+            await GetMainWindow().client.From<UserProfileModel>().Upsert(profile);
+            Logging.logger.Debug("Shop-Profil erfolgreich in Supabase gespeichert");
+        }
+        catch (Exception ex)
+        {
+            Logging.logger.Error($"Fehler beim Speichern des Profils: {ex.Message}");
+        }
+    }
+
+    public static async Task Load()
+    {
+        string userId = GetMainWindow().client.Auth.CurrentUser?.Id;
+        if (string.IsNullOrEmpty(userId)) return;
+
+        try
+        {
+            // 1. Profil (Geld & ausgewählte Styles) laden
+            UserProfileModel profileRes = await GetMainWindow().client
+                .From<UserProfileModel>()
                 .Where(x => x.UserId == userId)
                 .Single();
 
-            if (row?.ShopData == null) 
-                return;
+            if (profileRes != null)
+            {
+                Money = profileRes.Money;
+                AktiverButton = (ShopItems)profileRes.AktiverButton;
+                AktiverBackground = (ShopItems)profileRes.AktiverBackground;
+            }
 
-            ShopSaveData daten = JsonSerializer.Deserialize<ShopSaveData>(row.ShopData);
-            if (daten == null) 
-                return;
+            // 2. Freigeschaltete Items laden
+            ModeledResponse<UserShopItemModel> itemsRes = await GetMainWindow().client
+                .From<UserShopItemModel>()
+                .Where(x => x.UserId == userId)
+                .Get();
 
-            Money = daten.Money;
-            Freigeschaltet = daten.Freigeschaltet ?? new List<ShopItems>();
-            AktiverButton = daten.AktiverButton;
-            AktiverBackground = daten.AktiverBackground;
+            Freigeschaltet.Clear();
+            if (itemsRes?.Models != null)
+            {
+                foreach (UserShopItemModel item in itemsRes.Models)
+                {
+                    Freigeschaltet.Add((ShopItems)item.ItemId);
+                }
+            }
 
             ShopUpdated?.Invoke();
-            Logging.logger.Debug("Shop wurde geladen");
+            Logging.logger.Debug("Shop-Daten aus Supabase geladen");
         }
         catch (Exception ex)
         {
-            Logging.logger.Error("Es konnte nicht geladen werden: " + ex.Message);
+            Logging.logger.Error($"Fehler beim Laden der Shop-Daten: {ex.Message}");
+        }
+    }
+
+    public static double GetPrice(ShopItems item)
+    {
+        switch (item)
+        {
+            case ShopItems.RotButton: return 100;
+            case ShopItems.GoldButton: return 250;
+            case ShopItems.GrünBackground: return 150;
+            case ShopItems.SilberBackground: return 300;
+            default: return 0;
         }
     }
 
@@ -187,14 +168,9 @@ public static class Shop
     {
         switch (AktiverButton)
         {
-            case ShopItems.RotButton:
-                return Colors.Red;
-
-            case ShopItems.GoldButton:
-                return Colors.Gold;
-
-            default:
-                return Colors.SkyBlue;
+            case ShopItems.RotButton: return Colors.Red;
+            case ShopItems.GoldButton: return Colors.Gold;
+            default: return Colors.SkyBlue;
         }
     }
 
@@ -202,14 +178,9 @@ public static class Shop
     {
         switch (AktiverBackground)
         {
-            case ShopItems.GrünBackground:
-                return Colors.Green;
-
-            case ShopItems.SilberBackground:
-                return Colors.Silver;
-
-            default:
-                return Colors.White;
+            case ShopItems.GrünBackground: return Colors.Green;
+            case ShopItems.SilberBackground: return Colors.Silver;
+            default: return Colors.White;
         }
     }
 }

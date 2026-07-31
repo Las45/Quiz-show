@@ -1,10 +1,11 @@
 ﻿using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
+using System;
 
 namespace Quiz_show.src.Klassen
 {
-    [Table("user_progress")]
-    public class UserProgressModel : BaseModel
+    [Table("user_shop_items")]
+    public class UserShopItemModel : BaseModel
     {
         [PrimaryKey("id", false)]
         public long Id { get; set; }
@@ -12,10 +13,10 @@ namespace Quiz_show.src.Klassen
         [Column("user_id")]
         public string UserId { get; set; }
 
-        [Column("subject_index")]
-        public int SubjectIndex { get; set; }
+        [Column("item_id")]
+        public int ItemId { get; set; }
 
-        [Column("progress_data")]
-        public string ProgressData { get; set; }
+        [Column("unlocked_at")]
+        public DateTime UnlockedAt { get; set; }
     }
 }
