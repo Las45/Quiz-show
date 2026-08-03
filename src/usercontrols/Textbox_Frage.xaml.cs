@@ -26,6 +26,7 @@ namespace Quiz_show.src.usercontrols
         public event Action<bool> FrageBeendet;
         private OllamaSharp.Chat chat;
         private Frage frage;
+        StringBuilder stringBuilder = new StringBuilder();
         public Textbox_Frage(Frage frage)
         {
             InitializeComponent();
@@ -40,24 +41,23 @@ namespace Quiz_show.src.usercontrols
         {
             if (_mainWindow.IsOllamaInstalled)
             {
-                List<string> answer = new List<string>();
-                await foreach(string answertoken in chat.SendAsync($"Frage: {Frage_Ki.Content}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false"))
+                await foreach(string answertoken in chat.SendAsync($"Frage: {Antwort_textbox_ki.Text}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false und sei nicht sehr tolerant"))
                 {
-                    answer.Add(answertoken);
+                    stringBuilder.Append(answertoken);
                 }
-                foreach (string answer_part in answer)
+                string response = stringBuilder.ToString().Trim().ToLower();
+
+                if (response.Contains("true") || response.Contains("ja") || response.Contains("yes"))
                 {
-                    if (answer_part.ToLower() == "true")
-                    {
-                        FrageBeendet?.Invoke(true);
-                        return;
-                    }
+                    FrageBeendet?.Invoke(true);
+                    return;
                 }
-                FrageBeendet?.Invoke(false);
+                else
+                    FrageBeendet?.Invoke(false);
             }
             else if (_mainWindow.IsOllamaInstalled == false)
             {
-                if (frage.antworten[0] == Frage_Ki.Content)
+                if (frage.antworten[0].ToLower() == Antwort_textbox_ki.Text.ToLower())
                 {
                     FrageBeendet?.Invoke(true);
                 }
@@ -67,7 +67,5 @@ namespace Quiz_show.src.usercontrols
                 }
             }
         }
-
-
     }
 }

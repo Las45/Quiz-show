@@ -8,7 +8,9 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Quiz">
     <Viewbox>
-        <Grid x:Name="QuizContainer" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid x:Name="QuizContainer" HorizontalAlignment="Center" VerticalAlignment="Center" Height="450" Width="800">
+            <Label x:Name="Loesung" Content="" VerticalAlignment="Bottom" Margin="50,0,50,35" Height="50"/>
+
         </Grid>
     </Viewbox>
 </Page>

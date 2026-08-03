@@ -4,6 +4,7 @@ using Quiz_show.src.usercontrols;
 using Quiz_show.usercontrols;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,7 +55,7 @@ namespace Quiz_show.src.Frames
                 FrageUserControl frageControl = new FrageUserControl(f);
                 frageControl.FrageBeendet += AntwortGegeben;
                 frageControl.Width = 800;
-                frageControl.Height = 400;
+                frageControl.Height = 365;
                 QuizContainer.Children.Add(frageControl);
             }
             else if (f.antworten.Count == 2)
@@ -62,7 +63,7 @@ namespace Quiz_show.src.Frames
                 True_False frageControl = new True_False(f);
                 frageControl.FrageBeendet += AntwortGegeben;
                 frageControl.Width = 800;
-                frageControl.Height = 400;
+                frageControl.Height = 365;
                 QuizContainer.Children.Add(frageControl);
             }
             else if (f.antworten.Count == 1)
@@ -70,9 +71,10 @@ namespace Quiz_show.src.Frames
                 Textbox_Frage frageControl = new Textbox_Frage(f);
                 frageControl.FrageBeendet += AntwortGegeben;
                 frageControl.Width = 800;
-                frageControl.Height = 400;
+                frageControl.Height = 365;
                 QuizContainer.Children.Add(frageControl);
             }
+            QuizContainer.Children.Add(Loesung);
         }
 
         private async void AntwortGegeben(bool richtig)
@@ -88,12 +90,34 @@ namespace Quiz_show.src.Frames
             else
             {
                 QuizContainer.Background = Brushes.LightCoral;
+                if (quizFragen[aktuelleFrage].antworten.Count > 1){
+                    switch (quizFragen[aktuelleFrage].richtig)
+                    {
+                        case 0:
+                            Loesung.Content = "Richtig: A";
+                            break;
+                        case 1:
+                            Loesung.Content = "Richtig: B";
+                            break;
+                        case 2:
+                            Loesung.Content = "Richtig: C";
+                            break;
+                        case 3:
+                            Loesung.Content = "Richtig: D";
+                            break;
+                    }
+                }
+                else
+                {
+                    Loesung.Content = $"Richtig: {quizFragen[aktuelleFrage].antworten[0]}";
+                }
+                await Task.Delay(1000);
             }
 
             aktuelleFrage++;
             await Task.Delay(1000);
             QuizContainer.Background = Brushes.Transparent;
-
+            Loesung.Content = "";
 
             if (aktuelleFrage >= quizFragen.Count)
             {
