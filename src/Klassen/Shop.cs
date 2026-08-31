@@ -72,10 +72,12 @@ public static class Shop
             {
                 UserId = userId,
                 ItemId = (int)item,
-                UnlockedAt = DateTime.UtcNow
+                UnlockedAt = DateTime.UtcNow,
+                TimeStamp = DateTime.UtcNow
             };
 
-            await GetMainWindow().client.From<UserShopItemModel>().Upsert(model);
+            // Hier nutzen wir .Insert() statt .Upsert(), da ein Kauf immer ein neuer Eintrag ist.
+            await GetMainWindow().client.From<UserShopItemModel>().Insert(model);
         }
         catch (Exception ex)
         {
@@ -96,7 +98,7 @@ public static class Shop
                 Money = Money,
                 AktiverButton = (int)AktiverButton,
                 AktiverBackground = (int)AktiverBackground,
-                UpdatedAt = DateTime.UtcNow
+                TimeStamp = DateTime.UtcNow
             };
 
             await GetMainWindow().client.From<UserProfileModel>().Upsert(profile);

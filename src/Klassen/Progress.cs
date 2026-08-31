@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
+using System.IO;
 
 namespace Quiz_show.src.Klassen
 {
@@ -35,28 +36,51 @@ namespace Quiz_show.src.Klassen
 
             try
             {
-                // Für jedes Fach (0 bis 5) wird ein eigenen Eintrag in user_progress angelegt/aktualisiert
+                // 1. Hole zuerst alle bestehenden Einträge des Users
+                var existingResponse = await GetMainWindow().client
+                    .From<UserProgressModel>()
+                    .Where(x => x.UserId == userId)
+                    .Get();
+
+                var existingRecords = existingResponse?.Models ?? new List<UserProgressModel>();
+
                 for (int i = 0; i < Subjects.Count; i++)
                 {
                     string json = JsonSerializer.Serialize(Subjects[i]);
-
-                    UserProgressModel model = new UserProgressModel
+                    try
                     {
-                        UserId = userId,
-                        SubjectIndex = i,
-                        ProgressData = json
-                    };
+                        UserProgressModel model = new UserProgressModel
+                        {
+                            UserId = userId,
+                            SubjectIndex = i,
+                            ProgressData = json,
+                            TimeStamp = DateTime.UtcNow,
+                        };
 
-                    await GetMainWindow().client
-                        .From<UserProgressModel>()
-                        .Upsert(model);
+                        // 2. Prüfe, ob für dieses Fach (SubjectIndex) schon ein Eintrag existiert
+                        var existing = existingRecords.FirstOrDefault(x => x.SubjectIndex == i);
+                        if (existing != null)
+                        {
+                            // 3. Wenn ja, übernimm dessen Datenbank-Id für den Upsert!
+                            model.Id = existing.Id;
+                        }
+
+                        await GetMainWindow().client
+                            .From<UserProgressModel>()
+                            .Upsert(model);
+                    }
+                    catch (Exception ex)
+                    {
+                        Logging.logger.Error($"Error beim Speichern von Supabase: {ex.Message}");
+                    }
+                    File.WriteAllText("progress.json", $"{json}\n{DateTime.UtcNow}");
                 }
 
-                Logging.logger.Debug("Fortschritt für alle Fächer erfolgreich in Supabase gespeichert.");
+                Logging.logger.Debug("Fortschritt für alle Fächer erfolgreich gespeichert.");
             }
             catch (Exception ex)
             {
-                Logging.logger.Error($"Fehler beim Speichern des Fortschritts in Supabase: {ex.Message}");
+                Logging.logger.Error($"Fehler beim Speichern des Fortschritts: {ex.Message}");
             }
         }
 
@@ -71,14 +95,14 @@ namespace Quiz_show.src.Klassen
 
             try
             {
-                var response = await GetMainWindow().client
+                Supabase.Postgrest.Responses.ModeledResponse<UserProgressModel> response = await GetMainWindow().client
                     .From<UserProgressModel>()
                     .Where(x => x.UserId == userId)
                     .Get();
 
                 if (response?.Models != null)
                 {
-                    foreach (var row in response.Models)
+                    foreach (UserProgressModel row in response.Models)
                     {
                         // Stellt sicher, dass der Index im zulässigen Bereich liegt
                         if (row.SubjectIndex >= 0 && row.SubjectIndex < Subjects.Count && !string.IsNullOrEmpty(row.ProgressData))
@@ -92,11 +116,11 @@ namespace Quiz_show.src.Klassen
                     }
                 }
 
-                Logging.logger.Debug("Fortschritt für alle Fächer aus Supabase geladen.");
+                Logging.logger.Debug("Fortschritt für alle Fächer geladen.");
             }
             catch (Exception ex)
             {
-                Logging.logger.Error($"Fehler beim Laden des Fortschritts aus Supabase: {ex.Message}");
+                Logging.logger.Error($"Fehler beim Laden des Fortschritts: {ex.Message}");
             }
         }
     }

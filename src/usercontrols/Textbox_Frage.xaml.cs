@@ -41,7 +41,7 @@ namespace Quiz_show.src.usercontrols
         {
             if (_mainWindow.IsOllamaInstalled)
             {
-                await foreach(string answertoken in chat.SendAsync($"Frage: {Antwort_textbox_ki.Text}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false und sei nicht sehr tolerant"))
+                await foreach(string answertoken in chat.SendAsync($"Frage: {Antwort_textbox_ki.Text}\nAntwort: {frage.antworten[0]}\nStimmt die Frage und die Antwort Inhaltlich überein?\nBitte antworte mit nur true oder false"))
                 {
                     stringBuilder.Append(answertoken);
                 }

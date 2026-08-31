@@ -17,5 +17,8 @@ namespace Quiz_show.src.Klassen
 
         [Column("progress_data")]
         public string ProgressData { get; set; }
+
+        [Column("time_stamp")]
+        public DateTime TimeStamp { get; set; }
     }
 }

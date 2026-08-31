@@ -19,7 +19,7 @@ namespace Quiz_show.src.Klassen
         [Column("aktiver_background")]
         public int AktiverBackground { get; set; }
 
-        [Column("updated_at")]
-        public DateTime UpdatedAt { get; set; }
+        [Column("time_stamp")]
+        public DateTime TimeStamp { get; set; }
     }
 }

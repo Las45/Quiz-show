@@ -59,9 +59,6 @@ namespace Quiz_show.src.Klassen
             File.WriteAllText("achievements.json", json);
         }
 
-
-
-
         public static void Load()
         {
             if (!File.Exists("achievements.json"))

@@ -18,5 +18,8 @@ namespace Quiz_show.src.Klassen
 
         [Column("unlocked_at")]
         public DateTime UnlockedAt { get; set; }
+
+        [Column("time_stamp")]
+        public DateTime TimeStamp { get; set; }
     }
 }
